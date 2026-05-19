@@ -64,8 +64,7 @@ jobs:
           USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
           METALPRICE_API_KEY: ${{ secrets.METALPRICE_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
-          MOONSHOT_MODEL: ${{ secrets.MOONSHOT_MODEL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/generate_briefing.py
 
       - name: Email briefing
