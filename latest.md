@@ -34,18 +34,18 @@ _Auto-Fed-watch disabled._
 | Gold (spot) | $4,526.97 | +0.00% | — |
 | Silver (spot) | $76.38 | +0.00% | — |
 | Broad USD (DTWEXBGS)* | 119.28 | +0.52% | +1.05% |
-| HY OAS | 3 bp | +4 bp | -1 bp |
+| HY OAS | 3 bp | +3 bp | +4 bp |
 | IG OAS | 1 bp | -1 bp | -4 bp |
 
 *DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Fed-funds path via CME FedWatch not pulled.*
 
 ## Overnight headlines
-- **The New York Times sues the Pentagon a second time over Hegseth’s media restrictions** — *AP News*
-- **Trump to announce an expansion of his discounted-drug website TrumpRx** — *AP News*
-- **Tuesday briefing: Iran talks; San Diego shooting; Trump’s IRS deal; ‘forever chemicals’; better sleep; and more** — *The Washington Post*
-- **FirstFT: Court throws out Elon Musk lawsuit, handing legal victory to OpenAI** — *Financial Times*
-- **War’s peril for Trump — and the world** — *Politico*
-- **Project Astra: the $420bn merger powering the US AI revolution** — *Financial Times*
+- **Latest U.S. News | Top headlines from the USA** — *Reuters*
+- **World News** — *The New York Times*
+- **Top U.S. News Today | AP News** — *apnews.com*
+- **World | Latest News & Updates** — *BBC*
+- **World News | Latest Top Stories** — *Reuters*
+- **U.S. News** — *The New York Times*
 
 ---
 *Sources: FRED (St. Louis Fed); metalpriceapi.com; Tavily; interpretive sections via Moonshot Kimi. Data current as of 2026-05-19.*
