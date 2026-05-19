@@ -5,13 +5,8 @@ _Interpretive section disabled (MOONSHOT_API_KEY missing)._
 
 ## Yesterday's releases (Mon 5/18)
 - Business Leaders Survey
-- CBOE Market Statistics
-- Coinbase Cryptocurrencies
-- Commercial Paper
-- Daily Treasury Inflation-Indexed Securities
-- Economic Policy Uncertainty
-- Euro Short Term Rate
-- Federal Funds Data
+- Quarterly Retail E-Commerce Sales
+- State Unemployment Insurance Weekly Claims Report
 
 ## Today's calendar (Tue 5/19, ET)
 _Auto-calendar disabled._
@@ -36,8 +31,8 @@ _Auto-Fed-watch disabled._
 | NASDAQ Comp. | 26,090.73 | -0.51% | -0.70% |
 | WTI | $101.56 | +2.72% | -7.47% |
 | Brent | $106.11 | +2.54% | -10.27% |
-| Gold (spot) | $4,526.97 | — | — |
-| Silver (spot) | $76.38 | — | — |
+| Gold (spot) | $4,526.97 | +0.00% | — |
+| Silver (spot) | $76.38 | +0.00% | — |
 | Broad USD (DTWEXBGS)* | 119.28 | +0.52% | +1.05% |
 | HY OAS | 3 bp | +4 bp | -1 bp |
 | IG OAS | 1 bp | -1 bp | -4 bp |
@@ -45,12 +40,12 @@ _Auto-Fed-watch disabled._
 *DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Fed-funds path via CME FedWatch not pulled.*
 
 ## Overnight headlines
-- **US pauses joint defense effort with Canada that dates to WWII** — *AP News*
+- **The New York Times sues the Pentagon a second time over Hegseth’s media restrictions** — *AP News*
+- **Trump to announce an expansion of his discounted-drug website TrumpRx** — *AP News*
 - **Tuesday briefing: Iran talks; San Diego shooting; Trump’s IRS deal; ‘forever chemicals’; better sleep; and more** — *The Washington Post*
-- **Trump’s New $1.8 Billion Pot of Money, and a Deadly Mosque Attack in California** — *The New York Times*
-- **Big Tech Is Cutting Back on Buybacks. Nvidia Could Be the Exception.** — *WSJ*
-- **Trump pivots to midterms, affordability after China summit as Iran war persists** — *CNBC*
-- **Jim Cramer's top 10 things to watch in the stock market Tuesday** — *CNBC*
+- **FirstFT: Court throws out Elon Musk lawsuit, handing legal victory to OpenAI** — *Financial Times*
+- **War’s peril for Trump — and the world** — *Politico*
+- **Project Astra: the $420bn merger powering the US AI revolution** — *Financial Times*
 
 ---
 *Sources: FRED (St. Louis Fed); metalpriceapi.com; Tavily; interpretive sections via Moonshot Kimi. Data current as of 2026-05-19.*
