@@ -9,8 +9,6 @@ Environment variables required (set as GitHub Secrets or in local .env):
   EIA_API_KEY, USDA_API_KEY, METALPRICE_API_KEY, TAVILY_API_KEY,
   MOONSHOT_API_KEY   (for interpretive sections)
   MOONSHOT_MODEL     (optional, default "kimi-k2.6")
-
-Run:  python scripts/generate_briefing.py
 """
 
 import os
@@ -67,7 +65,19 @@ def fred_obs(series_id, limit=24):
     return [o for o in r.json().get("observations", []) if o.get("value", ".") != "."]
 
 
+# FRED release IDs that publish daily/continuously and are NOT substantive
+# economic releases. Dropped from the "yesterday's releases" list.
+DAILY_REFRESH_RELEASE_IDS = {
+    17, 18, 72, 86, 101, 185, 187, 190, 200, 209, 212, 221, 239, 242,
+    269, 271, 279, 280, 287, 304, 315, 317, 328, 342, 345, 354, 363,
+    371, 375, 378, 379, 383, 400, 427, 441, 443, 445, 454, 465, 468,
+    473, 483, 484, 487, 492, 494, 500, 502, 504, 637, 736, 739, 742,
+    769, 1105,
+}
+
+
 def fred_release_dates_today(target_date):
+    """Return list of (release_id, release_name) for substantive releases on target_date."""
     r = requests.get(
         f"{FRED_BASE}/releases/dates",
         params={
@@ -84,8 +94,12 @@ def fred_release_dates_today(target_date):
     r.raise_for_status()
     out = []
     for rd in r.json().get("release_dates", []):
-        if rd["date"] == target_date.isoformat():
-            out.append((rd["release_id"], rd.get("release_name", "")))
+        if rd["date"] != target_date.isoformat():
+            continue
+        rid = rd["release_id"]
+        if rid in DAILY_REFRESH_RELEASE_IDS:
+            continue
+        out.append((rid, rd.get("release_name", "")))
     return out
 
 
@@ -196,7 +210,7 @@ Output FOUR markdown sections in this exact order and with these exact headers:
 2–4 sentences. The single most important macro story right now, and what (if anything) overnight changed it. Reference specific numbers from the payload.
 
 ## Yesterday's releases ({date})
-Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation. If nothing of substance released, say so in one line.
+Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation. Use the FRED-confirmed releases plus any indicator in the payload that obviously released on that date. If nothing of substance released, say so in one line.
 
 ## Today's calendar ({today}, ET)
 Bulleted list of what's releasing today, with release time in ET and a one-line note on what to watch. Infer from typical BLS/BEA/Census/Fed release schedules — but if you are not confident, omit rather than fabricate.
