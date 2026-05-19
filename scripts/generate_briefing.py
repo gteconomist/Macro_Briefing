@@ -180,13 +180,13 @@ def fmt_pct(latest, prior):
         return "—"
 
 
-MOONSHOT_ENDPOINT = "https://api.moonshot.ai/v1/chat/completions"
-DEFAULT_MOONSHOT_MODEL = "kimi-k2.6"
-# K2.6 is a thinking model — it fills reasoning_content first, then content.
-# With 1800-token budget, reasoning consumed all of it and content came back
-# empty. Generous budget here so both fit.
-MOONSHOT_TIMEOUT_SEC = 240
-MOONSHOT_MAX_TOKENS = 8000
+# ---------------------------------------------------------------------------
+# LLM — Anthropic Claude (Messages API)
+# ---------------------------------------------------------------------------
+
+ANTHROPIC_ENDPOINT = "https://api.anthropic.com/v1/messages"
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6").strip()
+ANTHROPIC_TIMEOUT_SEC = 120
 
 INTERPRETIVE_SYSTEM = """You write the interpretive sections of a daily macro briefing for Alfie Meek, a Ph.D. economist and Director of the Center for Economic Development Research at Georgia Tech. He uses the briefing to start his workday and to inform talks he gives around the country on the U.S. macroeconomy.
 
@@ -197,24 +197,24 @@ Tone and style:
 
 You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the list of FRED-confirmed releases on the previous business day, headlines, and market levels. Use those numbers — do not invent any.
 
-Output FOUR markdown sections in this exact order and with these exact headers:
+Output these five markdown sections in this exact order, with these exact headers (the script will append a Markets close table and Overnight headlines below your output):
 
 ## Top of mind
 2–4 sentences. The single most important macro story right now, and what (if anything) overnight changed it. Reference specific numbers from the payload.
 
-## Yesterday's releases ({date})
-Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation.
+## Yesterday's releases ({last_business_day})
+Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation. If nothing of substance released, say so in one line.
 
 ## Today's calendar ({today}, ET)
-Bulleted list of what's releasing today, with release time in ET and a one-line note on what to watch. Infer from typical BLS/BEA/Census/Fed release schedules.
+Bulleted list of what's releasing today, with release time in ET and a one-line note on what to watch. Infer from typical BLS/BEA/Census/Fed release schedules. If nothing is on the calendar, say so.
 
 ## This week ahead
-Bulleted list, one bullet per remaining business day this week. Format: **Day M/D:** indicator(s).
+Bulleted list, one bullet per remaining business day this week. Format: **Day M/D:** indicator(s) (highlight the most important one — FOMC minutes, NFP, CPI, etc.).
 
 ## Fed watch
-2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days.
+2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days. No fabricated speaker names.
 
-Important: return ONLY those four sections in valid markdown. No preamble. Keep your reasoning brief — total reasoning + output should fit in ~6000 tokens. Output itself should be ~800 words."""
+Return only those five sections in valid markdown. No preamble. Total output ~800 words. Substitute the {last_business_day} and {today} placeholders with the actual dates from the payload (e.g., "Yesterday's releases (Fri 5/15)")."""
 
 
 def _condense_fred(fred):
@@ -230,10 +230,9 @@ def _condense_fred(fred):
 
 
 def call_llm_for_prose(today, data):
-    api_key = os.environ.get("MOONSHOT_API_KEY", "").strip()
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     if not api_key:
-        return _stub_prose(today, data, reason="MOONSHOT_API_KEY not present in environment")
-    model = os.environ.get("MOONSHOT_MODEL", DEFAULT_MOONSHOT_MODEL).strip() or DEFAULT_MOONSHOT_MODEL
+        return _stub_prose(today, data, reason="ANTHROPIC_API_KEY not present in environment")
     last_bday = today - timedelta(days=1)
     while last_bday.weekday() > 4:
         last_bday -= timedelta(days=1)
@@ -248,49 +247,43 @@ def call_llm_for_prose(today, data):
         "headlines": data.get("headlines", []),
     }
     body = {
-        "model": model,
-        "max_tokens": MOONSHOT_MAX_TOKENS,
-        "temperature": 1,
+        "model": ANTHROPIC_MODEL,
+        "max_tokens": 2500,
+        "system": INTERPRETIVE_SYSTEM,
         "messages": [
-            {"role": "system", "content": INTERPRETIVE_SYSTEM},
-            {"role": "user", "content": "Morning data payload follows. Write the four interpretive sections per system instructions:\n\n" + json.dumps(payload, indent=2, default=str)},
+            {
+                "role": "user",
+                "content": "Morning data payload follows. Write the five interpretive sections per system instructions:\n\n" + json.dumps(payload, indent=2, default=str),
+            }
         ],
     }
     try:
         r = requests.post(
-            MOONSHOT_ENDPOINT,
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json=body, timeout=MOONSHOT_TIMEOUT_SEC,
+            ANTHROPIC_ENDPOINT,
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json=body,
+            timeout=ANTHROPIC_TIMEOUT_SEC,
         )
     except Exception as e:
-        print(f"Moonshot connection error: {e}", file=sys.stderr)
+        print(f"Anthropic connection error: {e}", file=sys.stderr)
         return _stub_prose(today, data, reason=f"Connection error: {type(e).__name__}: {e}")
     if r.status_code >= 300:
         err_body = (r.text or "")[:600]
-        print(f"Moonshot call failed [{r.status_code}]: {err_body}", file=sys.stderr)
-        return _stub_prose(today, data, reason=f"HTTP {r.status_code} from {MOONSHOT_ENDPOINT} (model={model}). Response: {err_body}")
+        print(f"Anthropic call failed [{r.status_code}]: {err_body}", file=sys.stderr)
+        return _stub_prose(today, data, reason=f"HTTP {r.status_code} from {ANTHROPIC_ENDPOINT} (model={ANTHROPIC_MODEL}). Response: {err_body}")
     try:
         resp = r.json()
-        msg = resp.get("choices", [{}])[0].get("message", {})
-        text = msg.get("content", "")
-        # Fallback: if content is empty but reasoning_content has markdown headers,
-        # the model ran out of token budget mid-transition. Try to salvage from
-        # reasoning_content's tail.
-        if not text.strip():
-            reasoning = msg.get("reasoning_content", "") or ""
-            if "## " in reasoning:
-                # Take from the first "## Top of mind" onward
-                idx = reasoning.find("## Top of mind")
-                if idx == -1:
-                    idx = reasoning.find("## ")
-                text = reasoning[idx:].strip()
-                if text:
-                    print("WARN: salvaged prose from reasoning_content", file=sys.stderr)
-        if not text.strip():
-            return _stub_prose(today, data, reason=f"Moonshot returned empty content. Raw: {str(resp)[:400]}")
-        return text.strip()
+        parts = resp.get("content", [])
+        text = "".join(p.get("text", "") for p in parts if p.get("type") == "text").strip()
+        if not text:
+            return _stub_prose(today, data, reason=f"Anthropic returned empty content. Raw: {str(resp)[:400]}")
+        return text
     except Exception as e:
-        print(f"Moonshot parse error: {e}", file=sys.stderr)
+        print(f"Anthropic parse error: {e}", file=sys.stderr)
         return _stub_prose(today, data, reason=f"Parse error: {type(e).__name__}: {e}")
 
 
@@ -378,7 +371,7 @@ def render(today, data):
 {headlines_md}
 
 ---
-*Sources: FRED; metalpriceapi.com; Tavily; Moonshot Kimi. Data current as of {today.isoformat()}.*
+*Sources: FRED; metalpriceapi.com; Tavily; interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
 """
 
 
