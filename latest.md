@@ -1,7 +1,7 @@
 # Daily Macro Briefing — Tuesday, May 19, 2026
 
 ## Top of mind
-_Interpretive section disabled (MOONSHOT_API_KEY missing)._
+_LLM section unavailable. Reason: **HTTP 400 from https://api.moonshot.ai/v1/chat/completions (model=kimi-k2.6). Response: {"error":{"message":"invalid temperature: only 1 is allowed for this model","type":"invalid_request_error"}}**_
 
 ## Yesterday's releases (Mon 5/18)
 - Business Leaders Survey
@@ -9,13 +9,13 @@ _Interpretive section disabled (MOONSHOT_API_KEY missing)._
 - State Unemployment Insurance Weekly Claims Report
 
 ## Today's calendar (Tue 5/19, ET)
-_Auto-calendar disabled._
+_Auto-calendar unavailable (LLM step failed)._
 
 ## This week ahead
-_Auto-calendar disabled._
+_Auto-calendar unavailable (LLM step failed)._
 
 ## Fed watch
-_Auto-Fed-watch disabled._
+_Auto-Fed-watch unavailable (LLM step failed)._
 
 ## Markets close
 | | Level | d/d | w/w |
@@ -35,17 +35,17 @@ _Auto-Fed-watch disabled._
 | Silver (spot) | $76.38 | +0.00% | — |
 | Broad USD (DTWEXBGS)* | 119.28 | +0.52% | +1.05% |
 | HY OAS | 3 bp | +3 bp | +4 bp |
-| IG OAS | 1 bp | -1 bp | -4 bp |
+| IG OAS | 1 bp | +0 bp | -3 bp |
 
-*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Fed-funds path via CME FedWatch not pulled.*
+*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com.*
 
 ## Overnight headlines
-- **Latest U.S. News | Top headlines from the USA** — *Reuters*
-- **World News** — *The New York Times*
-- **Top U.S. News Today | AP News** — *apnews.com*
-- **World | Latest News & Updates** — *BBC*
-- **World News | Latest Top Stories** — *Reuters*
-- **U.S. News** — *The New York Times*
+- **Trump to announce an expansion of his discounted-drug website TrumpRx** — *AP News*
+- **Portland visits Indiana following Clark’s 21-point game** — *AP News*
+- **The New York Times sues the Pentagon a second time over Hegseth’s media restrictions** — *AP News*
+- **Tennessee lands VCU big man Christian Fermin, adding size and defense via portal** — *AP News*
+- **Trump’s New $1.8 Billion Pot of Money, and a Deadly Mosque Attack in California** — *The New York Times*
+- **What Trump’s ACA overhaul means** — *The Washington Post*
 
 ---
-*Sources: FRED (St. Louis Fed); metalpriceapi.com; Tavily; interpretive sections via Moonshot Kimi. Data current as of 2026-05-19.*
+*Sources: FRED; metalpriceapi.com; Tavily; Moonshot Kimi. Data current as of 2026-05-19.*
