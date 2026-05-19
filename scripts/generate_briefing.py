@@ -182,9 +182,11 @@ def fmt_pct(latest, prior):
 
 MOONSHOT_ENDPOINT = "https://api.moonshot.ai/v1/chat/completions"
 DEFAULT_MOONSHOT_MODEL = "kimi-k2.6"
-# K2.6 is a thinking model; observed real-world latency 60-180s on payloads of
-# this size. Generous timeout to avoid spurious failures.
+# K2.6 is a thinking model — it fills reasoning_content first, then content.
+# With 1800-token budget, reasoning consumed all of it and content came back
+# empty. Generous budget here so both fit.
 MOONSHOT_TIMEOUT_SEC = 240
+MOONSHOT_MAX_TOKENS = 8000
 
 INTERPRETIVE_SYSTEM = """You write the interpretive sections of a daily macro briefing for Alfie Meek, a Ph.D. economist and Director of the Center for Economic Development Research at Georgia Tech. He uses the briefing to start his workday and to inform talks he gives around the country on the U.S. macroeconomy.
 
@@ -212,7 +214,7 @@ Bulleted list, one bullet per remaining business day this week. Format: **Day M/
 ## Fed watch
 2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days.
 
-Important: return ONLY those four sections in valid markdown. No preamble. Be concise — total output under ~1200 words."""
+Important: return ONLY those four sections in valid markdown. No preamble. Keep your reasoning brief — total reasoning + output should fit in ~6000 tokens. Output itself should be ~800 words."""
 
 
 def _condense_fred(fred):
@@ -247,7 +249,7 @@ def call_llm_for_prose(today, data):
     }
     body = {
         "model": model,
-        "max_tokens": 1800,
+        "max_tokens": MOONSHOT_MAX_TOKENS,
         "temperature": 1,
         "messages": [
             {"role": "system", "content": INTERPRETIVE_SYSTEM},
@@ -269,7 +271,21 @@ def call_llm_for_prose(today, data):
         return _stub_prose(today, data, reason=f"HTTP {r.status_code} from {MOONSHOT_ENDPOINT} (model={model}). Response: {err_body}")
     try:
         resp = r.json()
-        text = resp.get("choices", [{}])[0].get("message", {}).get("content", "")
+        msg = resp.get("choices", [{}])[0].get("message", {})
+        text = msg.get("content", "")
+        # Fallback: if content is empty but reasoning_content has markdown headers,
+        # the model ran out of token budget mid-transition. Try to salvage from
+        # reasoning_content's tail.
+        if not text.strip():
+            reasoning = msg.get("reasoning_content", "") or ""
+            if "## " in reasoning:
+                # Take from the first "## Top of mind" onward
+                idx = reasoning.find("## Top of mind")
+                if idx == -1:
+                    idx = reasoning.find("## ")
+                text = reasoning[idx:].strip()
+                if text:
+                    print("WARN: salvaged prose from reasoning_content", file=sys.stderr)
         if not text.strip():
             return _stub_prose(today, data, reason=f"Moonshot returned empty content. Raw: {str(resp)[:400]}")
         return text.strip()
