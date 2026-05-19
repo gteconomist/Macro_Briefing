@@ -1,0 +1,142 @@
+date,report,time_et,agency
+01-14,Existing Home Sales,10:00,NAR
+01-14,Retail Sales,08:30,Census
+01-16,Industrial Production,09:15,Federal Reserve
+01-22,GDP,08:30,BEA
+01-26,Durable Goods (Advance),08:30,Census
+01-29,Factory Orders (Full Report),10:00,Census
+02-10,Retail Sales,08:30,Census
+02-12,Existing Home Sales,10:00,NAR
+02-18,Industrial Production,09:15,Federal Reserve
+02-20,GDP,08:30,BEA
+02-23,Durable Goods (Advance),08:30,Census
+02-23,Factory Orders (Full Report),10:00,Census
+03-06,Retail Sales,08:30,Census
+03-12,Existing Home Sales,10:00,NAR
+03-12,Housing Starts,08:30,Census
+03-13,GDP,08:30,BEA
+03-13,JOLTS,10:00,BLS
+03-16,Industrial Production,09:15,Federal Reserve
+03-18,Factory Orders (Full Report),10:00,Census
+03-19,New Home Sales,10:00,Census
+03-31,JOLTS,10:00,BLS
+04-01,Retail Sales,08:30,Census
+04-10,Existing Home Sales,10:00,NAR
+04-14,PPI,08:30,BLS
+04-15,NAHB Housing Market Index,10:00,NAHB
+04-16,Industrial Production,09:15,Federal Reserve
+04-21,Retail Sales,08:30,Census
+04-24,Consumer Sentiment (Final),10:00,University of Michigan
+04-28,Case-Shiller,09:00,S&P CoreLogic
+04-28,Consumer Confidence,10:00,Conference Board
+04-29,Durable Goods (Advance),08:30,Census
+04-29,Housing Starts,08:35,Census
+04-30,GDP,08:30,BEA
+04-30,PCE,08:35,BEA
+05-04,Factory Orders (Full Report),10:00,Census
+05-05,ISM Services,10:00,ISM
+05-05,JOLTS,10:05,BLS
+05-05,New Home Sales,10:10,Census
+05-07,Productivity and Costs,08:30,BLS
+05-07,Consumer Credit,15:00,Federal Reserve
+05-08,Employment Report,08:30,BLS
+05-08,Consumer Sentiment (Preliminary),10:00,University of Michigan
+05-11,Existing Home Sales,10:00,NAR
+05-13,CPI,08:30,BLS
+05-14,Retail Sales,08:30,Census
+05-14,PPI,08:30,BLS
+05-15,Industrial Production,09:15,Federal Reserve
+05-15,NAHB Housing Market Index,10:00,NAHB
+05-18,NAHB Housing Market Index,10:00,NAHB
+05-21,Housing Starts,08:30,Census
+05-22,Consumer Sentiment (Final),10:00,University of Michigan
+05-26,Case-Shiller,09:00,S&P CoreLogic
+05-26,Consumer Confidence,10:00,Conference Board
+05-27,Durable Goods (Advance),08:30,Census
+05-28,Durable Goods (Advance),08:30,Census
+05-28,New Home Sales,10:00,Census
+05-28,GDP,08:30,BEA
+05-28,PCE,08:30,BEA
+06-03,Factory Orders (Full Report),10:00,Census
+06-09,Existing Home Sales,10:00,NAR
+06-12,Consumer Sentiment (Preliminary),10:00,University of Michigan
+06-15,Industrial Production,09:15,Federal Reserve
+06-15,NAHB Housing Market Index,10:00,NAHB
+06-16,Housing Starts,08:30,Census
+06-16,Consumer Sentiment (Preliminary),10:00,University of Michigan
+06-17,Retail Sales,08:30,Census
+06-24,New Home Sales,10:00,Census
+06-25,GDP,08:30,BEA
+06-26,Consumer Sentiment (Final),10:00,University of Michigan
+06-30,Case-Shiller,09:00,S&P CoreLogic
+06-30,Consumer Confidence,10:00,Conference Board
+06-30,JOLTS,10:05,BLS
+07-09,Existing Home Sales,10:00,NAR
+07-10,Consumer Sentiment (Preliminary),10:00,University of Michigan
+07-16,Retail Sales,08:30,Census
+07-16,NAHB Housing Market Index,10:00,NAHB
+07-17,Industrial Production,09:15,Federal Reserve
+07-17,Housing Starts,08:30,Census
+07-24,Consumer Sentiment (Final),10:00,University of Michigan
+07-24,New Home Sales,10:05,Census
+07-27,Durable Goods (Advance),08:30,Census
+07-28,Case-Shiller,09:00,S&P CoreLogic
+07-28,Consumer Confidence,10:00,Conference Board
+07-30,GDP,08:30,BEA
+08-04,Factory Orders (Full Report),10:00,Census
+08-04,JOLTS,10:05,BLS
+08-11,Existing Home Sales,10:00,NAR
+08-14,Retail Sales,08:30,Census
+08-17,NAHB Housing Market Index,10:00,NAHB
+08-18,Industrial Production,09:15,Federal Reserve
+08-18,Housing Starts,08:30,Census
+08-25,Case-Shiller,09:00,S&P CoreLogic
+08-25,Consumer Confidence,10:00,Conference Board
+08-25,New Home Sales,10:05,Census
+08-26,Durable Goods (Advance),08:30,Census
+09-01,JOLTS,10:00,BLS
+09-02,Factory Orders (Full Report),10:00,Census
+09-10,Existing Home Sales,10:00,NAR
+09-16,NAHB Housing Market Index,10:00,NAHB
+09-16,Retail Sales,08:30,Census
+09-17,Housing Starts,08:30,Census
+09-18,Industrial Production,09:15,Federal Reserve
+09-24,New Home Sales,10:00,Census
+09-29,Case-Shiller,09:00,S&P CoreLogic
+09-29,Consumer Confidence,10:00,Conference Board
+09-29,JOLTS,10:05,BLS
+09-30,GDP,08:30,BEA
+10-02,Factory Orders (Full Report),10:00,Census
+10-13,Existing Home Sales,10:00,NAR
+10-15,Retail Sales,08:30,Census
+10-16,Industrial Production,09:15,Federal Reserve
+10-19,NAHB Housing Market Index,10:00,NAHB
+10-20,Housing Starts,08:30,Census
+10-27,Durable Goods (Advance),08:30,Census
+10-27,Case-Shiller,09:00,S&P CoreLogic
+10-27,Consumer Confidence,10:00,Conference Board
+10-27,New Home Sales,10:05,Census
+10-29,GDP,08:30,BEA
+11-03,Factory Orders (Full Report),10:00,Census
+11-03,JOLTS,10:05,BLS
+11-12,Existing Home Sales,10:00,NAR
+11-17,Industrial Production,09:15,Federal Reserve
+11-17,NAHB Housing Market Index,10:00,NAHB
+11-17,Retail Sales,08:30,Census
+11-18,Housing Starts,08:30,Census
+11-24,Case-Shiller,09:00,S&P CoreLogic
+11-24,Consumer Confidence,10:00,Conference Board
+11-25,Durable Goods (Advance),08:30,Census
+11-25,GDP,08:35,BEA
+11-25,New Home Sales,10:00,Census
+12-03,Factory Orders (Full Report),10:00,Census
+12-09,Existing Home Sales,10:00,NAR
+12-16,Industrial Production,09:15,Federal Reserve
+12-16,NAHB Housing Market Index,10:00,NAHB
+12-16,Retail Sales,08:30,Census
+12-17,Housing Starts,08:30,Census
+12-23,Durable Goods (Advance),08:30,Census
+12-23,GDP,08:35,BEA
+12-23,New Home Sales,10:00,Census
+12-29,Case-Shiller,09:00,S&P CoreLogic
+12-29,Consumer Confidence,10:00,Conference Board
