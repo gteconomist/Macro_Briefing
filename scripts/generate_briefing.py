@@ -182,6 +182,9 @@ def fmt_pct(latest, prior):
 
 MOONSHOT_ENDPOINT = "https://api.moonshot.ai/v1/chat/completions"
 DEFAULT_MOONSHOT_MODEL = "kimi-k2.6"
+# K2.6 is a thinking model; observed real-world latency 60-180s on payloads of
+# this size. Generous timeout to avoid spurious failures.
+MOONSHOT_TIMEOUT_SEC = 240
 
 INTERPRETIVE_SYSTEM = """You write the interpretive sections of a daily macro briefing for Alfie Meek, a Ph.D. economist and Director of the Center for Economic Development Research at Georgia Tech. He uses the briefing to start his workday and to inform talks he gives around the country on the U.S. macroeconomy.
 
@@ -209,7 +212,7 @@ Bulleted list, one bullet per remaining business day this week. Format: **Day M/
 ## Fed watch
 2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days.
 
-Important: return ONLY those four sections in valid markdown. No preamble."""
+Important: return ONLY those four sections in valid markdown. No preamble. Be concise — total output under ~1200 words."""
 
 
 def _condense_fred(fred):
@@ -244,7 +247,7 @@ def call_llm_for_prose(today, data):
     }
     body = {
         "model": model,
-        "max_tokens": 2500,
+        "max_tokens": 1800,
         "temperature": 1,
         "messages": [
             {"role": "system", "content": INTERPRETIVE_SYSTEM},
@@ -255,7 +258,7 @@ def call_llm_for_prose(today, data):
         r = requests.post(
             MOONSHOT_ENDPOINT,
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json=body, timeout=60,
+            json=body, timeout=MOONSHOT_TIMEOUT_SEC,
         )
     except Exception as e:
         print(f"Moonshot connection error: {e}", file=sys.stderr)
