@@ -1,14 +1,5 @@
 """
 Daily Macro Briefing generator for Alfie Meek (Director, CEDR @ Georgia Tech).
-
-Pulls live data from FRED, BLS, BEA, Census, EIA, metalpriceapi, and Tavily,
-then renders a single-page markdown briefing to briefings/briefing-YYYY-MM-DD.md.
-
-Environment variables required (set as GitHub Secrets or in local .env):
-  FRED_API_KEY, BLS_API_KEY, BEA_API_KEY, CENSUS_API_KEY,
-  EIA_API_KEY, USDA_API_KEY, METALPRICE_API_KEY, TAVILY_API_KEY,
-  MOONSHOT_API_KEY   (for interpretive sections)
-  MOONSHOT_MODEL     (optional, default "kimi-k2.6")
 """
 
 import os
@@ -65,8 +56,6 @@ def fred_obs(series_id, limit=24):
     return [o for o in r.json().get("observations", []) if o.get("value", ".") != "."]
 
 
-# FRED release IDs that publish daily/continuously and are NOT substantive
-# economic releases. Dropped from the "yesterday's releases" list.
 DAILY_REFRESH_RELEASE_IDS = {
     17, 18, 72, 86, 101, 185, 187, 190, 200, 209, 212, 221, 239, 242,
     269, 271, 279, 280, 287, 304, 315, 317, 328, 342, 345, 354, 363,
@@ -77,7 +66,6 @@ DAILY_REFRESH_RELEASE_IDS = {
 
 
 def fred_release_dates_today(target_date):
-    """Return list of (release_id, release_name) for substantive releases on target_date."""
     r = requests.get(
         f"{FRED_BASE}/releases/dates",
         params={
@@ -210,18 +198,18 @@ Output FOUR markdown sections in this exact order and with these exact headers:
 2–4 sentences. The single most important macro story right now, and what (if anything) overnight changed it. Reference specific numbers from the payload.
 
 ## Yesterday's releases ({date})
-Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation. Use the FRED-confirmed releases plus any indicator in the payload that obviously released on that date. If nothing of substance released, say so in one line.
+Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation.
 
 ## Today's calendar ({today}, ET)
-Bulleted list of what's releasing today, with release time in ET and a one-line note on what to watch. Infer from typical BLS/BEA/Census/Fed release schedules — but if you are not confident, omit rather than fabricate.
+Bulleted list of what's releasing today, with release time in ET and a one-line note on what to watch. Infer from typical BLS/BEA/Census/Fed release schedules.
 
 ## This week ahead
 Bulleted list, one bullet per remaining business day this week. Format: **Day M/D:** indicator(s).
 
 ## Fed watch
-2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days. No fabricated speaker names.
+2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days.
 
-Important: return ONLY those four sections in valid markdown. No preamble. Use the exact headers above with real dates substituted for placeholders."""
+Important: return ONLY those four sections in valid markdown. No preamble."""
 
 
 def _condense_fred(fred):
@@ -237,10 +225,10 @@ def _condense_fred(fred):
 
 
 def call_llm_for_prose(today, data):
-    api_key = os.environ.get("MOONSHOT_API_KEY")
+    api_key = os.environ.get("MOONSHOT_API_KEY", "").strip()
     if not api_key:
-        return _stub_prose(today, data)
-    model = os.environ.get("MOONSHOT_MODEL", DEFAULT_MOONSHOT_MODEL)
+        return _stub_prose(today, data, reason="MOONSHOT_API_KEY not present in environment")
+    model = os.environ.get("MOONSHOT_MODEL", DEFAULT_MOONSHOT_MODEL).strip() or DEFAULT_MOONSHOT_MODEL
     last_bday = today - timedelta(days=1)
     while last_bday.weekday() > 4:
         last_bday -= timedelta(days=1)
@@ -260,41 +248,54 @@ def call_llm_for_prose(today, data):
         "temperature": 0.3,
         "messages": [
             {"role": "system", "content": INTERPRETIVE_SYSTEM},
-            {"role": "user", "content": "Here is the morning data payload. Write the four interpretive sections per the system instructions. JSON follows:\n\n" + json.dumps(payload, indent=2, default=str)},
+            {"role": "user", "content": "Morning data payload follows. Write the four interpretive sections per system instructions:\n\n" + json.dumps(payload, indent=2, default=str)},
         ],
     }
-    r = requests.post(
-        MOONSHOT_ENDPOINT,
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        json=body, timeout=60,
-    )
+    try:
+        r = requests.post(
+            MOONSHOT_ENDPOINT,
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json=body, timeout=60,
+        )
+    except Exception as e:
+        print(f"Moonshot connection error: {e}", file=sys.stderr)
+        return _stub_prose(today, data, reason=f"Connection error: {type(e).__name__}: {e}")
     if r.status_code >= 300:
-        print(f"Moonshot call failed [{r.status_code}]: {r.text}", file=sys.stderr)
-        return _stub_prose(today, data)
-    resp = r.json()
-    return resp.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+        # Trim body to keep the briefing readable but useful for debugging
+        err_body = (r.text or "")[:600]
+        print(f"Moonshot call failed [{r.status_code}]: {err_body}", file=sys.stderr)
+        return _stub_prose(today, data, reason=f"HTTP {r.status_code} from {MOONSHOT_ENDPOINT} (model={model}). Response: {err_body}")
+    try:
+        resp = r.json()
+        text = resp.get("choices", [{}])[0].get("message", {}).get("content", "")
+        if not text.strip():
+            return _stub_prose(today, data, reason=f"Moonshot returned empty content. Raw: {str(resp)[:400]}")
+        return text.strip()
+    except Exception as e:
+        print(f"Moonshot parse error: {e}", file=sys.stderr)
+        return _stub_prose(today, data, reason=f"Parse error: {type(e).__name__}: {e}")
 
 
-def _stub_prose(today, data):
+def _stub_prose(today, data, reason="unknown"):
     last_bday = today - timedelta(days=1)
     while last_bday.weekday() > 4:
         last_bday -= timedelta(days=1)
     releases = data.get("releases_yday", [])
     rel_text = "\n".join(f"- {name}" for _, name in releases[:8]) if releases else f"_No major U.S. economic releases dated {last_bday.isoformat()}._"
     return f"""## Top of mind
-_Interpretive section disabled (MOONSHOT_API_KEY missing)._
+_LLM section unavailable. Reason: **{reason}**_
 
 ## Yesterday's releases ({last_bday.strftime('%a %-m/%-d')})
 {rel_text}
 
 ## Today's calendar ({today.strftime('%a %-m/%-d')}, ET)
-_Auto-calendar disabled._
+_Auto-calendar unavailable (LLM step failed)._
 
 ## This week ahead
-_Auto-calendar disabled._
+_Auto-calendar unavailable (LLM step failed)._
 
 ## Fed watch
-_Auto-Fed-watch disabled._"""
+_Auto-Fed-watch unavailable (LLM step failed)._"""
 
 
 def render(today, data):
@@ -353,13 +354,13 @@ def render(today, data):
 ## Markets close
 {markets_table}
 
-*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Fed-funds path via CME FedWatch not pulled.*
+*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com.*
 
 ## Overnight headlines
 {headlines_md}
 
 ---
-*Sources: FRED (St. Louis Fed); metalpriceapi.com; Tavily; interpretive sections via Moonshot Kimi. Data current as of {today.isoformat()}.*
+*Sources: FRED; metalpriceapi.com; Tavily; Moonshot Kimi. Data current as of {today.isoformat()}.*
 """
 
 
