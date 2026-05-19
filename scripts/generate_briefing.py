@@ -4,9 +4,10 @@ Daily Macro Briefing generator for Alfie Meek (Director, CEDR @ Georgia Tech).
 
 import os
 import sys
+import csv
 import json
 import requests
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,6 +24,7 @@ except ImportError:
 
 NOW_ET = datetime.now(ET)
 TODAY = NOW_ET.date()
+CAL_YEAR = TODAY.year
 
 
 def load_dotenv(path):
@@ -36,6 +38,65 @@ def load_dotenv(path):
 
 load_dotenv(ROOT / ".env")
 
+
+# ---------------------------------------------------------------------------
+# Release calendar (single source of truth — overrides FRED's release-dates)
+# ---------------------------------------------------------------------------
+
+CALENDAR_PATH = ROOT / f"economic_release_schedule_{CAL_YEAR}.csv"
+
+
+def load_release_calendar():
+    """Return dict[date] -> list of {report, time_et, agency}."""
+    cal = {}
+    if not CALENDAR_PATH.exists():
+        print(f"WARN: calendar CSV not found at {CALENDAR_PATH}", file=sys.stderr)
+        return cal
+    with CALENDAR_PATH.open() as f:
+        for row in csv.DictReader(f):
+            try:
+                md = row["date"]  # "MM-DD"
+                m, d = md.split("-")
+                key = date(CAL_YEAR, int(m), int(d))
+            except Exception:
+                continue
+            cal.setdefault(key, []).append({
+                "report": row["report"],
+                "time_et": row.get("time_et", ""),
+                "agency": row.get("agency", ""),
+            })
+    # Add Initial Jobless Claims for every Thursday of the year
+    d = date(CAL_YEAR, 1, 1)
+    while d.year == CAL_YEAR:
+        if d.weekday() == 3:  # Thursday
+            cal.setdefault(d, []).append({
+                "report": "Initial Jobless Claims",
+                "time_et": "08:30",
+                "agency": "DOL",
+            })
+        d += timedelta(days=1)
+    return cal
+
+
+def calendar_for(cal, target_date):
+    """Return list of release entries on target_date (or empty list)."""
+    return cal.get(target_date, [])
+
+
+def calendar_range(cal, start_date, end_date):
+    """Return dict of {date: [entries]} for dates in [start, end] inclusive."""
+    out = {}
+    d = start_date
+    while d <= end_date:
+        if d in cal:
+            out[d.isoformat()] = cal[d]
+        d += timedelta(days=1)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# FRED helpers
+# ---------------------------------------------------------------------------
 
 FRED_BASE = "https://api.stlouisfed.org/fred"
 
@@ -54,41 +115,6 @@ def fred_obs(series_id, limit=24):
     )
     r.raise_for_status()
     return [o for o in r.json().get("observations", []) if o.get("value", ".") != "."]
-
-
-DAILY_REFRESH_RELEASE_IDS = {
-    17, 18, 72, 86, 101, 185, 187, 190, 200, 209, 212, 221, 239, 242,
-    269, 271, 279, 280, 287, 304, 315, 317, 328, 342, 345, 354, 363,
-    371, 375, 378, 379, 383, 400, 427, 441, 443, 445, 454, 465, 468,
-    473, 483, 484, 487, 492, 494, 500, 502, 504, 637, 736, 739, 742,
-    769, 1105,
-}
-
-
-def fred_release_dates_today(target_date):
-    r = requests.get(
-        f"{FRED_BASE}/releases/dates",
-        params={
-            "api_key": os.environ["FRED_API_KEY"],
-            "file_type": "json",
-            "realtime_start": target_date.isoformat(),
-            "realtime_end": target_date.isoformat(),
-            "include_release_dates_with_no_data": "false",
-            "limit": 1000,
-            "sort_order": "asc",
-        },
-        timeout=15,
-    )
-    r.raise_for_status()
-    out = []
-    for rd in r.json().get("release_dates", []):
-        if rd["date"] != target_date.isoformat():
-            continue
-        rid = rd["release_id"]
-        if rid in DAILY_REFRESH_RELEASE_IDS:
-            continue
-        out.append((rid, rd.get("release_name", "")))
-    return out
 
 
 METALS_CACHE = CACHE_DIR / "metals_prev.json"
@@ -195,26 +221,28 @@ Tone and style:
 - Direct and concise. No disclaimers. No corporate language. No "in summary." No repeating the question.
 - Numbers, context, what changed, what to watch — not commentary about commentary.
 
-You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the list of FRED-confirmed releases on the previous business day, headlines, and market levels. Use those numbers — do not invent any.
+You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the authoritative release calendar (already filtered to yesterday/today/this-week), headlines, and market levels. Use those numbers — do not invent any.
+
+For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases — the calendar is authoritative and built from each agency's published schedule (BLS, BEA, Census, Fed, NAR, S&P, NAHB, ISM, Conference Board, U Michigan).
 
 Output these five markdown sections in this exact order, with these exact headers (the script will append a Markets close table and Overnight headlines below your output):
 
 ## Top of mind
 2–4 sentences. The single most important macro story right now, and what (if anything) overnight changed it. Reference specific numbers from the payload.
 
-## Yesterday's releases ({last_business_day})
-Bulleted list of indicators released on the prior business day. Each bullet: **Indicator name (period):** value (vs. prior or vs. consensus) — one-line interpretation. If nothing of substance released, say so in one line.
+## Yesterday's releases ({last_business_day_short})
+For each release in `calendar_yesterday`, a bullet: **Indicator (period if known):** value from FRED if available, with a one-line interpretation. If `calendar_yesterday` is empty, say "No major releases" in one line.
 
-## Today's calendar ({today}, ET)
-Bulleted list of what's releasing today, with release time in ET and a one-line note on what to watch. Infer from typical BLS/BEA/Census/Fed release schedules. If nothing is on the calendar, say so.
+## Today's calendar ({today_short}, ET)
+For each release in `calendar_today`, a bullet: **Indicator, time ET** — one-line on what to watch. If empty, say so.
 
 ## This week ahead
-Bulleted list, one bullet per remaining business day this week. Format: **Day M/D:** indicator(s) (highlight the most important one — FOMC minutes, NFP, CPI, etc.).
+For each remaining business day in `calendar_week_ahead`, a bullet grouped by day: **Day M/D:** comma-separated indicators (highlight the most important — FOMC, NFP, CPI, GDP).
 
 ## Fed watch
-2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC speech, minutes, Beige Book, or SEP refresh in the next 5 business days. No fabricated speaker names.
+2–4 sentences. Current target range (use DFEDTARU/DFEDTARL from payload), effective rate (DFF), SOFR. Note any FOMC statement, minutes, Beige Book, or SEP refresh in the next 5 business days (check `calendar_week_ahead` for these). No fabricated speaker names.
 
-Return only those five sections in valid markdown. No preamble. Total output ~800 words. Substitute the {last_business_day} and {today} placeholders with the actual dates from the payload (e.g., "Yesterday's releases (Fri 5/15)")."""
+Return only those five sections in valid markdown. No preamble. Total output ~700–900 words. Substitute the {last_business_day_short} and {today_short} placeholders with actual dates from the payload."""
 
 
 def _condense_fred(fred):
@@ -229,20 +257,29 @@ def _condense_fred(fred):
     return out
 
 
-def call_llm_for_prose(today, data):
+def call_llm_for_prose(today, data, calendar):
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     if not api_key:
-        return _stub_prose(today, data, reason="ANTHROPIC_API_KEY not present in environment")
+        return _stub_prose(today, data, calendar, reason="ANTHROPIC_API_KEY not present in environment")
     last_bday = today - timedelta(days=1)
     while last_bday.weekday() > 4:
         last_bday -= timedelta(days=1)
+    # Friday of the current week (today is Mon..Fri)
+    days_to_friday = 4 - today.weekday() if today.weekday() <= 4 else 7
+    week_end = today + timedelta(days=days_to_friday if days_to_friday > 0 else 4)
+    week_start = today + timedelta(days=1)  # tomorrow through end of week
+
     payload = {
         "today": today.isoformat(),
         "today_weekday": today.strftime("%A"),
+        "today_short": today.strftime("%a %-m/%-d"),
         "last_business_day": last_bday.isoformat(),
         "last_business_day_weekday": last_bday.strftime("%A"),
+        "last_business_day_short": last_bday.strftime("%a %-m/%-d"),
         "fred": _condense_fred(data.get("fred", {})),
-        "fred_releases_last_business_day": [name for _, name in data.get("releases_yday", [])],
+        "calendar_yesterday": calendar_for(calendar, last_bday),
+        "calendar_today": calendar_for(calendar, today),
+        "calendar_week_ahead": calendar_range(calendar, week_start, week_end),
         "metals": data.get("metals", {}),
         "headlines": data.get("headlines", []),
     }
@@ -270,37 +307,39 @@ def call_llm_for_prose(today, data):
         )
     except Exception as e:
         print(f"Anthropic connection error: {e}", file=sys.stderr)
-        return _stub_prose(today, data, reason=f"Connection error: {type(e).__name__}: {e}")
+        return _stub_prose(today, data, calendar, reason=f"Connection error: {type(e).__name__}: {e}")
     if r.status_code >= 300:
         err_body = (r.text or "")[:600]
         print(f"Anthropic call failed [{r.status_code}]: {err_body}", file=sys.stderr)
-        return _stub_prose(today, data, reason=f"HTTP {r.status_code} from {ANTHROPIC_ENDPOINT} (model={ANTHROPIC_MODEL}). Response: {err_body}")
+        return _stub_prose(today, data, calendar, reason=f"HTTP {r.status_code} from {ANTHROPIC_ENDPOINT} (model={ANTHROPIC_MODEL}). Response: {err_body}")
     try:
         resp = r.json()
         parts = resp.get("content", [])
         text = "".join(p.get("text", "") for p in parts if p.get("type") == "text").strip()
         if not text:
-            return _stub_prose(today, data, reason=f"Anthropic returned empty content. Raw: {str(resp)[:400]}")
+            return _stub_prose(today, data, calendar, reason=f"Anthropic returned empty content. Raw: {str(resp)[:400]}")
         return text
     except Exception as e:
         print(f"Anthropic parse error: {e}", file=sys.stderr)
-        return _stub_prose(today, data, reason=f"Parse error: {type(e).__name__}: {e}")
+        return _stub_prose(today, data, calendar, reason=f"Parse error: {type(e).__name__}: {e}")
 
 
-def _stub_prose(today, data, reason="unknown"):
+def _stub_prose(today, data, calendar, reason="unknown"):
     last_bday = today - timedelta(days=1)
     while last_bday.weekday() > 4:
         last_bday -= timedelta(days=1)
-    releases = data.get("releases_yday", [])
-    rel_text = "\n".join(f"- {name}" for _, name in releases[:8]) if releases else f"_No major U.S. economic releases dated {last_bday.isoformat()}._"
+    y = calendar_for(calendar, last_bday)
+    t = calendar_for(calendar, today)
+    y_text = "\n".join(f"- {r['report']} ({r['agency']})" for r in y) if y else "_No major U.S. economic releases dated this day._"
+    t_text = "\n".join(f"- **{r['report']}** ({r['time_et']} ET, {r['agency']})" for r in t) if t else "_No major releases scheduled today._"
     return f"""## Top of mind
 _LLM section unavailable. Reason: **{reason}**_
 
 ## Yesterday's releases ({last_bday.strftime('%a %-m/%-d')})
-{rel_text}
+{y_text}
 
 ## Today's calendar ({today.strftime('%a %-m/%-d')}, ET)
-_Auto-calendar unavailable (LLM step failed)._
+{t_text}
 
 ## This week ahead
 _Auto-calendar unavailable (LLM step failed)._
@@ -309,7 +348,7 @@ _Auto-calendar unavailable (LLM step failed)._
 _Auto-Fed-watch unavailable (LLM step failed)._"""
 
 
-def render(today, data):
+def render(today, data, calendar):
     weekday = today.strftime("%A")
     date_str = today.strftime("%B %d, %Y")
     rows = []
@@ -356,7 +395,7 @@ def render(today, data):
     hl_lines = [f"- **{h['title']}** — *{h['source']}*" for h in data.get("headlines", [])]
     headlines_md = "\n".join(hl_lines) if hl_lines else "_No headlines pulled this run._"
 
-    prose = call_llm_for_prose(today, data)
+    prose = call_llm_for_prose(today, data, calendar)
 
     return f"""# Daily Macro Briefing — {weekday}, {date_str}
 
@@ -371,7 +410,7 @@ def render(today, data):
 {headlines_md}
 
 ---
-*Sources: FRED; metalpriceapi.com; Tavily; interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
+*Sources: FRED; metalpriceapi.com; Tavily; release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
 """
 
 
@@ -391,19 +430,15 @@ FRED_SERIES = [
 
 
 def main():
-    data = {"fred": {}, "metals": {}, "headlines": [], "releases_yday": []}
+    data = {"fred": {}, "metals": {}, "headlines": []}
+    calendar = load_release_calendar()
+    print(f"Loaded calendar with {sum(len(v) for v in calendar.values())} entries across {len(calendar)} dates")
+
     for sid in FRED_SERIES:
         try:
             data["fred"][sid] = fred_obs(sid, limit=12)
         except Exception as e:
             print(f"FRED {sid} failed: {e}", file=sys.stderr)
-    last_bday = TODAY - timedelta(days=1)
-    while last_bday.weekday() > 4:
-        last_bday -= timedelta(days=1)
-    try:
-        data["releases_yday"] = fred_release_dates_today(last_bday)
-    except Exception as e:
-        print(f"FRED releases failed: {e}", file=sys.stderr)
     try:
         data["metals"] = pull_metals()
     except Exception as e:
@@ -412,7 +447,7 @@ def main():
         data["headlines"] = pull_headlines(n=6)
     except Exception as e:
         print(f"Tavily failed: {e}", file=sys.stderr)
-    md = render(TODAY, data)
+    md = render(TODAY, data, calendar)
     out_path = BRIEFINGS_DIR / f"briefing-{TODAY.isoformat()}.md"
     out_path.write_text(md)
     (ROOT / "latest.md").write_text(md)
