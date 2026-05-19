@@ -1,7 +1,7 @@
 # Daily Macro Briefing — Tuesday, May 19, 2026
 
 ## Top of mind
-_LLM section unavailable. Reason: **HTTP 400 from https://api.moonshot.ai/v1/chat/completions (model=kimi-k2.6). Response: {"error":{"message":"invalid temperature: only 1 is allowed for this model","type":"invalid_request_error"}}**_
+_LLM section unavailable. Reason: **Connection error: ReadTimeout: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=60)**_
 
 ## Yesterday's releases (Mon 5/18)
 - Business Leaders Survey
