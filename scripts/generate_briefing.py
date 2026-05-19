@@ -245,7 +245,7 @@ def call_llm_for_prose(today, data):
     body = {
         "model": model,
         "max_tokens": 2500,
-        "temperature": 0.3,
+        "temperature": 1,
         "messages": [
             {"role": "system", "content": INTERPRETIVE_SYSTEM},
             {"role": "user", "content": "Morning data payload follows. Write the four interpretive sections per system instructions:\n\n" + json.dumps(payload, indent=2, default=str)},
@@ -261,7 +261,6 @@ def call_llm_for_prose(today, data):
         print(f"Moonshot connection error: {e}", file=sys.stderr)
         return _stub_prose(today, data, reason=f"Connection error: {type(e).__name__}: {e}")
     if r.status_code >= 300:
-        # Trim body to keep the briefing readable but useful for debugging
         err_body = (r.text or "")[:600]
         print(f"Moonshot call failed [{r.status_code}]: {err_body}", file=sys.stderr)
         return _stub_prose(today, data, reason=f"HTTP {r.status_code} from {MOONSHOT_ENDPOINT} (model={model}). Response: {err_body}")
