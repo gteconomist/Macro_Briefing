@@ -40,14 +40,13 @@ load_dotenv(ROOT / ".env")
 
 
 # ---------------------------------------------------------------------------
-# Release calendar (single source of truth — overrides FRED's release-dates)
+# Release calendar
 # ---------------------------------------------------------------------------
 
 CALENDAR_PATH = ROOT / f"economic_release_schedule_{CAL_YEAR}.csv"
 
 
 def load_release_calendar():
-    """Return dict[date] -> list of {report, time_et, agency}."""
     cal = {}
     if not CALENDAR_PATH.exists():
         print(f"WARN: calendar CSV not found at {CALENDAR_PATH}", file=sys.stderr)
@@ -55,8 +54,7 @@ def load_release_calendar():
     with CALENDAR_PATH.open() as f:
         for row in csv.DictReader(f):
             try:
-                md = row["date"]  # "MM-DD"
-                m, d = md.split("-")
+                m, d = row["date"].split("-")
                 key = date(CAL_YEAR, int(m), int(d))
             except Exception:
                 continue
@@ -65,10 +63,9 @@ def load_release_calendar():
                 "time_et": row.get("time_et", ""),
                 "agency": row.get("agency", ""),
             })
-    # Add Initial Jobless Claims for every Thursday of the year
     d = date(CAL_YEAR, 1, 1)
     while d.year == CAL_YEAR:
-        if d.weekday() == 3:  # Thursday
+        if d.weekday() == 3:
             cal.setdefault(d, []).append({
                 "report": "Initial Jobless Claims",
                 "time_et": "08:30",
@@ -79,12 +76,10 @@ def load_release_calendar():
 
 
 def calendar_for(cal, target_date):
-    """Return list of release entries on target_date (or empty list)."""
     return cal.get(target_date, [])
 
 
 def calendar_range(cal, start_date, end_date):
-    """Return dict of {date: [entries]} for dates in [start, end] inclusive."""
     out = {}
     d = start_date
     while d <= end_date:
@@ -93,10 +88,6 @@ def calendar_range(cal, start_date, end_date):
         d += timedelta(days=1)
     return out
 
-
-# ---------------------------------------------------------------------------
-# FRED helpers
-# ---------------------------------------------------------------------------
 
 FRED_BASE = "https://api.stlouisfed.org/fred"
 
@@ -206,10 +197,6 @@ def fmt_pct(latest, prior):
         return "—"
 
 
-# ---------------------------------------------------------------------------
-# LLM — Anthropic Claude (Messages API)
-# ---------------------------------------------------------------------------
-
 ANTHROPIC_ENDPOINT = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6").strip()
 ANTHROPIC_TIMEOUT_SEC = 120
@@ -223,7 +210,7 @@ Tone and style:
 
 You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the authoritative release calendar (already filtered to yesterday/today/this-week), headlines, and market levels. Use those numbers — do not invent any.
 
-For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases — the calendar is authoritative and built from each agency's published schedule (BLS, BEA, Census, Fed, NAR, S&P, NAHB, ISM, Conference Board, U Michigan).
+For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases — the calendar is authoritative and built from each agency's published schedule.
 
 Output these five markdown sections in this exact order, with these exact headers (the script will append a Markets close table and Overnight headlines below your output):
 
@@ -264,10 +251,9 @@ def call_llm_for_prose(today, data, calendar):
     last_bday = today - timedelta(days=1)
     while last_bday.weekday() > 4:
         last_bday -= timedelta(days=1)
-    # Friday of the current week (today is Mon..Fri)
     days_to_friday = 4 - today.weekday() if today.weekday() <= 4 else 7
     week_end = today + timedelta(days=days_to_friday if days_to_friday > 0 else 4)
-    week_start = today + timedelta(days=1)  # tomorrow through end of week
+    week_start = today + timedelta(days=1)
 
     payload = {
         "today": today.isoformat(),
@@ -354,18 +340,45 @@ def render(today, data, calendar):
     rows = []
 
     def m(name, sid, fmt="{:.2f}"):
+        """Format a markets table row. Per-series formatting:
+        - BAML* (OAS): FRED stores as decimal percent (0.76 = 76 bp). Display level/d/d/w/w in bp.
+        - T10Y2Y / T10Y3M (spreads): same decimal-percent storage; display in bp.
+        - DGS* / SOFR / DFF (yields): display level as %, d/d/w/w in bp.
+        - SP500/DJIA/NASDAQ/DTWEXBGS (indexes): level numeric, d/d/w/w in %.
+        - WTI/Brent (prices): level $, d/d/w/w in %.
+        """
         obs = data["fred"].get(sid, [])
         if len(obs) < 2:
             return f"| {name} | — | — | — |"
         latest = float(obs[0]["value"])
         prior = float(obs[1]["value"])
         wk_ago = float(obs[5]["value"]) if len(obs) > 5 else None
-        if "%" in name or "bp" in name.lower() or sid.startswith("DGS") or sid in ("SOFR", "T10Y2Y", "T10Y3M", "BAMLC0A0CM", "BAMLH0A0HYM2"):
-            dd_str = f"{(latest - prior) * 100:+.0f} bp" if sid.startswith("BAML") else f"{latest - prior:+.2f}"
-            ww_str = f"{(latest - wk_ago) * 100:+.0f} bp" if (wk_ago is not None and sid.startswith("BAML")) else (f"{latest - wk_ago:+.2f}" if wk_ago is not None else "—")
-        else:
-            dd_str = fmt_pct(latest, prior)
-            ww_str = fmt_pct(latest, wk_ago) if wk_ago is not None else "—"
+
+        # OAS series — convert decimal percent (0.76) to bp (76)
+        if sid.startswith("BAML"):
+            level_str = f"{latest * 100:.0f} bp"
+            dd_bp = (latest - prior) * 100
+            dd_str = f"{dd_bp:+.0f} bp"
+            ww_str = f"{(latest - wk_ago) * 100:+.0f} bp" if wk_ago is not None else "—"
+            return f"| {name} | {level_str} | {dd_str} | {ww_str} |"
+
+        # Spread series (curve)
+        if sid in ("T10Y2Y", "T10Y3M"):
+            level_str = f"{latest * 100:+.0f} bp"
+            dd_str = f"{(latest - prior) * 100:+.0f} bp"
+            ww_str = f"{(latest - wk_ago) * 100:+.0f} bp" if wk_ago is not None else "—"
+            return f"| {name} | {level_str} | {dd_str} | {ww_str} |"
+
+        # Yields and policy rates
+        if sid.startswith("DGS") or sid in ("SOFR", "DFF"):
+            level_str = f"{latest:.2f}"
+            dd_str = f"{(latest - prior) * 100:+.0f} bp"
+            ww_str = f"{(latest - wk_ago) * 100:+.0f} bp" if wk_ago is not None else "—"
+            return f"| {name} | {level_str} | {dd_str} | {ww_str} |"
+
+        # Everything else: pct change for d/d and w/w
+        dd_str = fmt_pct(latest, prior)
+        ww_str = fmt_pct(latest, wk_ago) if wk_ago is not None else "—"
         return f"| {name} | {fmt.format(latest)} | {dd_str} | {ww_str} |"
 
     rows.append(m("UST 2y", "DGS2"))
@@ -387,8 +400,8 @@ def render(today, data, calendar):
         sd = f"{metals['silver_dd']:+.2f}%" if metals.get("silver_dd") is not None else "—"
         rows.append(f"| Silver (spot) | ${metals['silver']:,.2f} | {sd} | — |")
     rows.append(m("Broad USD (DTWEXBGS)*", "DTWEXBGS", "{:.2f}"))
-    rows.append(m("HY OAS", "BAMLH0A0HYM2", "{:.0f} bp"))
-    rows.append(m("IG OAS", "BAMLC0A0CM", "{:.0f} bp"))
+    rows.append(m("HY OAS", "BAMLH0A0HYM2"))
+    rows.append(m("IG OAS", "BAMLC0A0CM"))
 
     markets_table = "\n".join(["| | Level | d/d | w/w |", "|---|---|---|---|"] + rows)
 
