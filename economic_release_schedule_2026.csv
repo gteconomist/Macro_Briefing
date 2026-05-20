@@ -120,16 +120,16 @@ date,report,time_et,agency
 05-15,Empire State Manufacturing,08:30,NY Fed
 05-15,Industrial Production,09:15,Federal Reserve
 05-18,NAHB Housing Market Index,10:00,NAHB
-05-19,Housing Starts,08:30,Census
 05-20,FOMC Minutes,14:00,Federal Reserve
+05-21,Housing Starts,08:30,Census
 05-21,Philadelphia Fed Manufacturing,08:30,Philly Fed
 05-22,Consumer Sentiment (Final),10:00,University of Michigan
 05-26,Case-Shiller,09:00,S&P CoreLogic
 05-26,Chicago Fed NAI,08:30,Chicago Fed
 05-26,Consumer Confidence,10:00,Conference Board
-05-27,New Home Sales,10:00,Census
 05-28,Durable Goods (Advance),08:30,Census
 05-28,GDP,08:30,BEA
+05-28,New Home Sales,10:00,Census
 05-28,PCE,08:30,BEA
 06-01,ISM Manufacturing,10:00,ISM
 06-02,JOLTS,10:00,BLS
