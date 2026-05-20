@@ -5,8 +5,8 @@ on:
     # GitHub Actions cron is UTC. 7 AM ET = 11:00 UTC during EDT (Mar-Nov),
     # 12:00 UTC during EST (Nov-Mar). Run at both; the script checks ET hour
     # and exits if it's not actually 7 AM ET, so only one fires per day.
-    - cron: "0 11 * * 1-5"
-    - cron: "0 12 * * 1-5"
+    - cron: "37 10 * * 1-5"
+    - cron: "37 11 * * 1-5"
   workflow_dispatch:        # allow manual runs from the Actions tab
     inputs:
       skip_time_check:
@@ -46,7 +46,7 @@ jobs:
           fi
           ET_HOUR=$(TZ=America/New_York date +%H)
           echo "Current hour in ET: $ET_HOUR"
-          if [ "$ET_HOUR" = "07" ]; then
+          if [ "$ET_HOUR" = "06" ]; then
             echo "go=true" >> "$GITHUB_OUTPUT"
           else
             echo "Not 7 AM ET — exiting cleanly."
