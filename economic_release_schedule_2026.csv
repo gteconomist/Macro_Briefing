@@ -1,333 +1,333 @@
 date,report,time_et,agency
-01-01,ISM Manufacturing,10:00,ISM
-01-05,ISM Services,10:00,ISM
-01-07,ADP National Employment,08:15,ADP
-01-07,Factory Orders (Full Report),10:00,Census
-01-08,Consumer Credit,15:00,Federal Reserve
-01-08,NAHB Housing Market Index,10:00,NAHB
-01-09,Consumer Sentiment (Preliminary),10:00,University of Michigan
-01-09,Employment Report,08:30,BLS
-01-09,Housing Starts,08:30,Census
-01-13,CPI,08:30,BLS
-01-13,New Home Sales,10:00,Census
-01-14,Existing Home Sales,10:00,NAR
-01-14,PPI,08:30,BLS
-01-14,Retail Sales,08:30,Census
-01-15,Empire State Manufacturing,08:30,NY Fed
-01-15,Import/Export Prices,08:30,BLS
-01-15,Philadelphia Fed Manufacturing,08:30,Philly Fed
-01-16,Industrial Production,09:15,Federal Reserve
-01-23,Consumer Sentiment (Final),10:00,University of Michigan
-01-26,Chicago Fed NAI,08:30,Chicago Fed
-01-26,Durable Goods (Advance),08:30,Census
-01-27,Case-Shiller,09:00,S&P CoreLogic
-01-27,Consumer Confidence,10:00,Conference Board
-01-28,FOMC Statement,14:00,Federal Reserve
-01-29,Factory Orders (Full Report),10:00,Census
-01-29,GDP,08:30,BEA
-01-29,PCE,08:30,BEA
-01-30,Employment Cost Index,08:30,BLS
-02-02,ISM Manufacturing,10:00,ISM
-02-04,ADP National Employment,08:15,ADP
-02-04,ISM Services,10:00,ISM
-02-05,Productivity and Costs,08:30,BLS
-02-06,Consumer Credit,15:00,Federal Reserve
-02-06,Employment Report,08:30,BLS
-02-10,Retail Sales,08:30,Census
-02-11,CPI,08:30,BLS
-02-12,Existing Home Sales,10:00,NAR
-02-12,PPI,08:30,BLS
-02-13,Consumer Sentiment (Preliminary),10:00,University of Michigan
-02-16,Empire State Manufacturing,08:30,NY Fed
-02-17,NAHB Housing Market Index,10:00,NAHB
-02-18,Durable Goods (Advance),08:30,Census
-02-18,FOMC Minutes,14:00,Federal Reserve
-02-18,Housing Starts,08:30,Census
-02-18,Import/Export Prices,08:30,BLS
-02-18,Industrial Production,09:15,Federal Reserve
-02-19,Philadelphia Fed Manufacturing,08:30,Philly Fed
-02-20,New Home Sales,10:00,Census
-02-23,Chicago Fed NAI,08:30,Chicago Fed
-02-23,Factory Orders (Full Report),10:00,Census
-02-24,Case-Shiller,09:00,S&P CoreLogic
-02-24,Consumer Confidence,10:00,Conference Board
-02-26,GDP,08:30,BEA
-02-26,PCE,08:30,BEA
-02-27,Consumer Sentiment (Final),10:00,University of Michigan
-03-02,ISM Manufacturing,10:00,ISM
-03-04,ADP National Employment,08:15,ADP
-03-04,ISM Services,10:00,ISM
-03-05,Productivity and Costs,08:30,BLS
-03-06,Consumer Credit,15:00,Federal Reserve
-03-06,Employment Report,08:30,BLS
-03-06,Retail Sales,08:30,Census
-03-11,CPI,08:30,BLS
-03-12,Existing Home Sales,10:00,NAR
-03-12,PPI,08:30,BLS
-03-13,Consumer Sentiment (Preliminary),10:00,University of Michigan
-03-13,JOLTS,10:00,BLS
-03-16,Empire State Manufacturing,08:30,NY Fed
-03-16,Industrial Production,09:15,Federal Reserve
-03-17,Import/Export Prices,08:30,BLS
-03-18,FOMC Statement,14:00,Federal Reserve
-03-19,Philadelphia Fed Manufacturing,08:30,Philly Fed
-03-23,Chicago Fed NAI,08:30,Chicago Fed
-03-27,Consumer Sentiment (Final),10:00,University of Michigan
-03-27,GDP,08:30,BEA
-03-27,PCE,08:30,BEA
-03-31,Case-Shiller,09:00,S&P CoreLogic
-03-31,Consumer Confidence,10:00,Conference Board
-03-31,JOLTS,10:00,BLS
-04-01,ADP National Employment,08:15,ADP
-04-01,ISM Manufacturing,10:00,ISM
-04-01,Retail Sales,08:30,Census
-04-03,Employment Report,08:30,BLS
-04-03,ISM Services,10:00,ISM
-04-07,Consumer Credit,15:00,Federal Reserve
-04-08,FOMC Minutes,14:00,Federal Reserve
-04-10,CPI,08:30,BLS
-04-10,Consumer Sentiment (Preliminary),10:00,University of Michigan
-04-10,Existing Home Sales,10:00,NAR
-04-14,PPI,08:30,BLS
-04-15,Empire State Manufacturing,08:30,NY Fed
-04-15,Import/Export Prices,08:30,BLS
-04-15,NAHB Housing Market Index,10:00,NAHB
-04-16,Industrial Production,09:15,Federal Reserve
-04-16,Philadelphia Fed Manufacturing,08:30,Philly Fed
-04-24,Consumer Sentiment (Final),10:00,University of Michigan
-04-27,Chicago Fed NAI,08:30,Chicago Fed
-04-28,Case-Shiller,09:00,S&P CoreLogic
-04-28,Consumer Confidence,10:00,Conference Board
-04-29,FOMC Statement,14:00,Federal Reserve
-04-29,Housing Starts,08:30,Census
-04-30,Employment Cost Index,08:30,BLS
-04-30,GDP,08:30,BEA
-04-30,PCE,08:30,BEA
-05-01,ISM Manufacturing,10:00,ISM
-05-04,Factory Orders (Full Report),10:00,Census
-05-05,ISM Services,10:00,ISM
-05-05,JOLTS,10:00,BLS
-05-06,ADP National Employment,08:15,ADP
-05-07,Consumer Credit,15:00,Federal Reserve
-05-07,Productivity and Costs,08:30,BLS
-05-08,Consumer Sentiment (Preliminary),10:00,University of Michigan
-05-08,Employment Report,08:30,BLS
-05-11,Existing Home Sales,10:00,NAR
-05-12,CPI,08:30,BLS
-05-13,PPI,08:30,BLS
-05-14,Import/Export Prices,08:30,BLS
-05-14,Retail Sales,08:30,Census
-05-15,Empire State Manufacturing,08:30,NY Fed
-05-15,Industrial Production,09:15,Federal Reserve
-05-18,NAHB Housing Market Index,10:00,NAHB
-05-20,FOMC Minutes,14:00,Federal Reserve
-05-21,Housing Starts,08:30,Census
-05-21,Philadelphia Fed Manufacturing,08:30,Philly Fed
-05-22,Consumer Sentiment (Final),10:00,University of Michigan
-05-26,Case-Shiller,09:00,S&P CoreLogic
-05-26,Chicago Fed NAI,08:30,Chicago Fed
-05-26,Consumer Confidence,10:00,Conference Board
-05-28,Durable Goods (Advance),08:30,Census
-05-28,GDP,08:30,BEA
-05-28,New Home Sales,10:00,Census
-05-28,PCE,08:30,BEA
-06-01,ISM Manufacturing,10:00,ISM
-06-02,JOLTS,10:00,BLS
-06-03,ADP National Employment,08:15,ADP
-06-03,Factory Orders (Full Report),10:00,Census
-06-03,ISM Services,10:00,ISM
-06-04,Productivity and Costs,08:30,BLS
-06-05,Consumer Credit,15:00,Federal Reserve
-06-05,Employment Report,08:30,BLS
-06-09,Existing Home Sales,10:00,NAR
-06-10,CPI,08:30,BLS
-06-11,PPI,08:30,BLS
-06-12,Consumer Sentiment (Preliminary),10:00,University of Michigan
-06-15,Empire State Manufacturing,08:30,NY Fed
-06-15,Industrial Production,09:15,Federal Reserve
-06-15,NAHB Housing Market Index,10:00,NAHB
-06-16,Housing Starts,08:30,Census
-06-16,Import/Export Prices,08:30,BLS
-06-17,FOMC Statement,14:00,Federal Reserve
-06-17,Retail Sales,08:30,Census
-06-18,Philadelphia Fed Manufacturing,08:30,Philly Fed
-06-24,New Home Sales,10:00,Census
-06-25,Durable Goods (Advance),08:30,Census
-06-25,GDP,08:30,BEA
-06-25,PCE,08:30,BEA
-06-26,Consumer Sentiment (Final),10:00,University of Michigan
-06-29,Chicago Fed NAI,08:30,Chicago Fed
-06-30,ADP National Employment,08:15,ADP
-06-30,Case-Shiller,09:00,S&P CoreLogic
-06-30,Consumer Confidence,10:00,Conference Board
-06-30,JOLTS,10:00,BLS
-07-01,ISM Manufacturing,10:00,ISM
-07-02,Employment Report,08:30,BLS
-07-02,Factory Orders (Full Report),10:00,Census
-07-03,ISM Services,10:00,ISM
-07-07,JOLTS,10:00,BLS
-07-08,Consumer Credit,15:00,Federal Reserve
-07-08,FOMC Minutes,14:00,Federal Reserve
-07-09,Existing Home Sales,10:00,NAR
-07-10,Consumer Sentiment (Preliminary),10:00,University of Michigan
-07-14,CPI,08:30,BLS
-07-15,Empire State Manufacturing,08:30,NY Fed
-07-15,PPI,08:30,BLS
-07-16,NAHB Housing Market Index,10:00,NAHB
-07-16,Philadelphia Fed Manufacturing,08:30,Philly Fed
-07-16,Retail Sales,08:30,Census
-07-17,Housing Starts,08:30,Census
-07-17,Import/Export Prices,08:30,BLS
-07-17,Industrial Production,09:15,Federal Reserve
-07-24,Consumer Sentiment (Final),10:00,University of Michigan
-07-24,New Home Sales,10:00,Census
-07-27,Chicago Fed NAI,08:30,Chicago Fed
-07-27,Durable Goods (Advance),08:30,Census
-07-28,Case-Shiller,09:00,S&P CoreLogic
-07-28,Consumer Confidence,10:00,Conference Board
-07-29,FOMC Statement,14:00,Federal Reserve
-07-30,GDP,08:30,BEA
-07-30,PCE,08:30,BEA
-07-31,Employment Cost Index,08:30,BLS
-08-03,ISM Manufacturing,10:00,ISM
-08-04,Factory Orders (Full Report),10:00,Census
-08-04,JOLTS,10:00,BLS
-08-05,ADP National Employment,08:15,ADP
-08-05,ISM Services,10:00,ISM
-08-06,Productivity and Costs,08:30,BLS
-08-07,Consumer Credit,15:00,Federal Reserve
-08-07,Employment Report,08:30,BLS
-08-11,Existing Home Sales,10:00,NAR
-08-12,CPI,08:30,BLS
-08-13,PPI,08:30,BLS
-08-14,Consumer Sentiment (Preliminary),10:00,University of Michigan
-08-14,Retail Sales,08:30,Census
-08-17,Empire State Manufacturing,08:30,NY Fed
-08-17,NAHB Housing Market Index,10:00,NAHB
-08-18,Housing Starts,08:30,Census
-08-18,Import/Export Prices,08:30,BLS
-08-18,Industrial Production,09:15,Federal Reserve
-08-19,FOMC Minutes,14:00,Federal Reserve
-08-20,Philadelphia Fed Manufacturing,08:30,Philly Fed
-08-24,Chicago Fed NAI,08:30,Chicago Fed
-08-25,Case-Shiller,09:00,S&P CoreLogic
-08-25,Consumer Confidence,10:00,Conference Board
-08-25,New Home Sales,10:00,Census
-08-26,Durable Goods (Advance),08:30,Census
-08-26,GDP,08:30,BEA
-08-26,PCE,08:30,BEA
-08-28,Consumer Sentiment (Final),10:00,University of Michigan
-09-01,ISM Manufacturing,10:00,ISM
-09-01,JOLTS,10:00,BLS
-09-02,ADP National Employment,08:15,ADP
-09-02,Factory Orders (Full Report),10:00,Census
-09-03,ISM Services,10:00,ISM
-09-03,Productivity and Costs,08:30,BLS
-09-04,Employment Report,08:30,BLS
-09-08,Consumer Credit,15:00,Federal Reserve
-09-10,Existing Home Sales,10:00,NAR
-09-10,PPI,08:30,BLS
-09-11,CPI,08:30,BLS
-09-11,Consumer Sentiment (Preliminary),10:00,University of Michigan
-09-15,Empire State Manufacturing,08:30,NY Fed
-09-16,FOMC Statement,14:00,Federal Reserve
-09-16,Import/Export Prices,08:30,BLS
-09-16,NAHB Housing Market Index,10:00,NAHB
-09-16,Retail Sales,08:30,Census
-09-17,Housing Starts,08:30,Census
-09-17,Philadelphia Fed Manufacturing,08:30,Philly Fed
-09-18,Industrial Production,09:15,Federal Reserve
-09-24,New Home Sales,10:00,Census
-09-25,Consumer Sentiment (Final),10:00,University of Michigan
-09-25,Durable Goods (Advance),08:30,Census
-09-28,Chicago Fed NAI,08:30,Chicago Fed
-09-29,Case-Shiller,09:00,S&P CoreLogic
-09-29,Consumer Confidence,10:00,Conference Board
-09-29,JOLTS,10:00,BLS
-09-30,ADP National Employment,08:15,ADP
-09-30,GDP,08:30,BEA
-09-30,PCE,08:30,BEA
-10-01,ISM Manufacturing,10:00,ISM
-10-02,Employment Report,08:30,BLS
-10-02,Factory Orders (Full Report),10:00,Census
-10-05,ISM Services,10:00,ISM
-10-06,JOLTS,10:00,BLS
-10-07,Consumer Credit,15:00,Federal Reserve
-10-07,FOMC Minutes,14:00,Federal Reserve
-10-09,Consumer Sentiment (Preliminary),10:00,University of Michigan
-10-13,Existing Home Sales,10:00,NAR
-10-14,CPI,08:30,BLS
-10-15,Empire State Manufacturing,08:30,NY Fed
-10-15,PPI,08:30,BLS
-10-15,Philadelphia Fed Manufacturing,08:30,Philly Fed
-10-15,Retail Sales,08:30,Census
-10-16,Import/Export Prices,08:30,BLS
-10-16,Industrial Production,09:15,Federal Reserve
-10-19,NAHB Housing Market Index,10:00,NAHB
-10-20,Housing Starts,08:30,Census
-10-23,Consumer Sentiment (Final),10:00,University of Michigan
-10-26,Chicago Fed NAI,08:30,Chicago Fed
-10-27,Case-Shiller,09:00,S&P CoreLogic
-10-27,Consumer Confidence,10:00,Conference Board
-10-27,Durable Goods (Advance),08:30,Census
-10-27,New Home Sales,10:00,Census
-10-28,FOMC Statement,14:00,Federal Reserve
-10-29,GDP,08:30,BEA
-10-29,PCE,08:30,BEA
-10-30,Employment Cost Index,08:30,BLS
-11-02,ISM Manufacturing,10:00,ISM
-11-03,Factory Orders (Full Report),10:00,Census
-11-03,JOLTS,10:00,BLS
-11-04,ADP National Employment,08:15,ADP
-11-04,ISM Services,10:00,ISM
-11-05,Productivity and Costs,08:30,BLS
-11-06,Consumer Credit,15:00,Federal Reserve
-11-06,Employment Report,08:30,BLS
-11-10,CPI,08:30,BLS
-11-12,Existing Home Sales,10:00,NAR
-11-13,Consumer Sentiment (Preliminary),10:00,University of Michigan
-11-13,PPI,08:30,BLS
-11-16,Empire State Manufacturing,08:30,NY Fed
-11-17,Import/Export Prices,08:30,BLS
-11-17,Industrial Production,09:15,Federal Reserve
-11-17,NAHB Housing Market Index,10:00,NAHB
-11-17,Retail Sales,08:30,Census
-11-18,FOMC Minutes,14:00,Federal Reserve
-11-18,Housing Starts,08:30,Census
-11-19,Philadelphia Fed Manufacturing,08:30,Philly Fed
-11-23,Chicago Fed NAI,08:30,Chicago Fed
-11-24,Case-Shiller,09:00,S&P CoreLogic
-11-24,Consumer Confidence,10:00,Conference Board
-11-25,Durable Goods (Advance),08:30,Census
-11-25,GDP,08:30,BEA
-11-25,New Home Sales,10:00,Census
-11-25,PCE,08:30,BEA
-11-27,Consumer Sentiment (Final),10:00,University of Michigan
-12-01,ISM Manufacturing,10:00,ISM
-12-01,JOLTS,10:00,BLS
-12-02,ADP National Employment,08:15,ADP
-12-03,Factory Orders (Full Report),10:00,Census
-12-03,ISM Services,10:00,ISM
-12-04,Employment Report,08:30,BLS
-12-07,Consumer Credit,15:00,Federal Reserve
-12-08,Productivity and Costs,08:30,BLS
-12-09,Existing Home Sales,10:00,NAR
-12-09,FOMC Statement,14:00,Federal Reserve
-12-10,CPI,08:30,BLS
-12-11,Consumer Sentiment (Preliminary),10:00,University of Michigan
-12-15,Empire State Manufacturing,08:30,NY Fed
-12-15,PPI,08:30,BLS
-12-16,Industrial Production,09:15,Federal Reserve
-12-16,NAHB Housing Market Index,10:00,NAHB
-12-16,Retail Sales,08:30,Census
-12-17,Housing Starts,08:30,Census
-12-17,Import/Export Prices,08:30,BLS
-12-17,Philadelphia Fed Manufacturing,08:30,Philly Fed
-12-23,Durable Goods (Advance),08:30,Census
-12-23,GDP,08:30,BEA
-12-23,New Home Sales,10:00,Census
-12-23,PCE,08:30,BEA
-12-28,Chicago Fed NAI,08:30,Chicago Fed
-12-29,Case-Shiller,09:00,S&P CoreLogic
-12-29,Consumer Confidence,10:00,Conference Board
-12-30,FOMC Minutes,14:00,Federal Reserve
+1-Jan,ISM Manufacturing,10:00,ISM
+5-Jan,ISM Services,10:00,ISM
+7-Jan,ADP National Employment,8:15,ADP
+7-Jan,Factory Orders (Full Report),10:00,Census
+8-Jan,Consumer Credit,15:00,Federal Reserve
+8-Jan,NAHB Housing Market Index,10:00,NAHB
+9-Jan,Consumer Sentiment (Preliminary),10:00,University of Michigan
+9-Jan,Employment Report,8:30,BLS
+9-Jan,Housing Starts,8:30,Census
+13-Jan,CPI,8:30,BLS
+13-Jan,New Home Sales,10:00,Census
+14-Jan,Existing Home Sales,10:00,NAR
+14-Jan,PPI,8:30,BLS
+14-Jan,Retail Sales,8:30,Census
+15-Jan,Empire State Manufacturing,8:30,NY Fed
+15-Jan,Import/Export Prices,8:30,BLS
+15-Jan,Philadelphia Fed Manufacturing,8:30,Philly Fed
+16-Jan,Industrial Production,9:15,Federal Reserve
+23-Jan,Consumer Sentiment (Final),10:00,University of Michigan
+26-Jan,Chicago Fed NAI,8:30,Chicago Fed
+26-Jan,Durable Goods (Advance),8:30,Census
+27-Jan,Case-Shiller,9:00,S&P CoreLogic
+27-Jan,Consumer Confidence,10:00,Conference Board
+28-Jan,FOMC Statement,14:00,Federal Reserve
+29-Jan,Factory Orders (Full Report),10:00,Census
+29-Jan,GDP,8:30,BEA
+29-Jan,Personal Income & Outlays (PCE),8:30,BEA
+30-Jan,Employment Cost Index,8:30,BLS
+2-Feb,ISM Manufacturing,10:00,ISM
+4-Feb,ADP National Employment,8:15,ADP
+4-Feb,ISM Services,10:00,ISM
+5-Feb,Productivity and Costs,8:30,BLS
+6-Feb,Consumer Credit,15:00,Federal Reserve
+6-Feb,Employment Report,8:30,BLS
+10-Feb,Retail Sales,8:30,Census
+11-Feb,CPI,8:30,BLS
+12-Feb,Existing Home Sales,10:00,NAR
+12-Feb,PPI,8:30,BLS
+13-Feb,Consumer Sentiment (Preliminary),10:00,University of Michigan
+16-Feb,Empire State Manufacturing,8:30,NY Fed
+17-Feb,NAHB Housing Market Index,10:00,NAHB
+18-Feb,Durable Goods (Advance),8:30,Census
+18-Feb,FOMC Minutes,14:00,Federal Reserve
+18-Feb,Housing Starts,8:30,Census
+18-Feb,Import/Export Prices,8:30,BLS
+18-Feb,Industrial Production,9:15,Federal Reserve
+19-Feb,Philadelphia Fed Manufacturing,8:30,Philly Fed
+20-Feb,New Home Sales,10:00,Census
+23-Feb,Chicago Fed NAI,8:30,Chicago Fed
+23-Feb,Factory Orders (Full Report),10:00,Census
+24-Feb,Case-Shiller,9:00,S&P CoreLogic
+24-Feb,Consumer Confidence,10:00,Conference Board
+26-Feb,GDP,8:30,BEA
+26-Feb,Personal Income & Outlays (PCE),8:30,BEA
+27-Feb,Consumer Sentiment (Final),10:00,University of Michigan
+2-Mar,ISM Manufacturing,10:00,ISM
+4-Mar,ADP National Employment,8:15,ADP
+4-Mar,ISM Services,10:00,ISM
+5-Mar,Productivity and Costs,8:30,BLS
+6-Mar,Consumer Credit,15:00,Federal Reserve
+6-Mar,Employment Report,8:30,BLS
+6-Mar,Retail Sales,8:30,Census
+11-Mar,CPI,8:30,BLS
+12-Mar,Existing Home Sales,10:00,NAR
+12-Mar,PPI,8:30,BLS
+13-Mar,Consumer Sentiment (Preliminary),10:00,University of Michigan
+13-Mar,JOLTS,10:00,BLS
+16-Mar,Empire State Manufacturing,8:30,NY Fed
+16-Mar,Industrial Production,9:15,Federal Reserve
+17-Mar,Import/Export Prices,8:30,BLS
+18-Mar,FOMC Statement,14:00,Federal Reserve
+19-Mar,Philadelphia Fed Manufacturing,8:30,Philly Fed
+23-Mar,Chicago Fed NAI,8:30,Chicago Fed
+27-Mar,Consumer Sentiment (Final),10:00,University of Michigan
+27-Mar,GDP,8:30,BEA
+27-Mar,Personal Income & Outlays (PCE),8:30,BEA
+31-Mar,Case-Shiller,9:00,S&P CoreLogic
+31-Mar,Consumer Confidence,10:00,Conference Board
+31-Mar,JOLTS,10:00,BLS
+1-Apr,ADP National Employment,8:15,ADP
+1-Apr,ISM Manufacturing,10:00,ISM
+1-Apr,Retail Sales,8:30,Census
+3-Apr,Employment Report,8:30,BLS
+3-Apr,ISM Services,10:00,ISM
+7-Apr,Consumer Credit,15:00,Federal Reserve
+8-Apr,FOMC Minutes,14:00,Federal Reserve
+10-Apr,CPI,8:30,BLS
+10-Apr,Consumer Sentiment (Preliminary),10:00,University of Michigan
+10-Apr,Existing Home Sales,10:00,NAR
+14-Apr,PPI,8:30,BLS
+15-Apr,Empire State Manufacturing,8:30,NY Fed
+15-Apr,Import/Export Prices,8:30,BLS
+15-Apr,NAHB Housing Market Index,10:00,NAHB
+16-Apr,Industrial Production,9:15,Federal Reserve
+16-Apr,Philadelphia Fed Manufacturing,8:30,Philly Fed
+24-Apr,Consumer Sentiment (Final),10:00,University of Michigan
+27-Apr,Chicago Fed NAI,8:30,Chicago Fed
+28-Apr,Case-Shiller,9:00,S&P CoreLogic
+28-Apr,Consumer Confidence,10:00,Conference Board
+29-Apr,FOMC Statement,14:00,Federal Reserve
+29-Apr,Housing Starts,8:30,Census
+30-Apr,Employment Cost Index,8:30,BLS
+30-Apr,GDP,8:30,BEA
+30-Apr,Personal Income & Outlays (PCE),8:30,BEA
+1-May,ISM Manufacturing,10:00,ISM
+4-May,Factory Orders (Full Report),10:00,Census
+5-May,ISM Services,10:00,ISM
+5-May,JOLTS,10:00,BLS
+6-May,ADP National Employment,8:15,ADP
+7-May,Consumer Credit,15:00,Federal Reserve
+7-May,Productivity and Costs,8:30,BLS
+8-May,Consumer Sentiment (Preliminary),10:00,University of Michigan
+8-May,Employment Report,8:30,BLS
+11-May,Existing Home Sales,10:00,NAR
+12-May,CPI,8:30,BLS
+13-May,PPI,8:30,BLS
+14-May,Import/Export Prices,8:30,BLS
+14-May,Retail Sales,8:30,Census
+15-May,Empire State Manufacturing,8:30,NY Fed
+15-May,Industrial Production,9:15,Federal Reserve
+18-May,NAHB Housing Market Index,10:00,NAHB
+20-May,FOMC Minutes,14:00,Federal Reserve
+21-May,Housing Starts,8:30,Census
+21-May,Philadelphia Fed Manufacturing,8:30,Philly Fed
+22-May,Consumer Sentiment (Final),10:00,University of Michigan
+26-May,Case-Shiller,9:00,S&P CoreLogic
+26-May,Chicago Fed NAI,8:30,Chicago Fed
+26-May,Consumer Confidence,10:00,Conference Board
+28-May,Durable Goods (Advance),8:30,Census
+28-May,GDP,8:30,BEA
+28-May,New Home Sales,10:00,Census
+28-May,Personal Income & Outlays (PCE),8:30,BEA
+1-Jun,ISM Manufacturing,10:00,ISM
+2-Jun,JOLTS,10:00,BLS
+3-Jun,ADP National Employment,8:15,ADP
+3-Jun,Factory Orders (Full Report),10:00,Census
+3-Jun,ISM Services,10:00,ISM
+4-Jun,Productivity and Costs,8:30,BLS
+5-Jun,Consumer Credit,15:00,Federal Reserve
+5-Jun,Employment Report,8:30,BLS
+9-Jun,Existing Home Sales,10:00,NAR
+10-Jun,CPI,8:30,BLS
+11-Jun,PPI,8:30,BLS
+12-Jun,Consumer Sentiment (Preliminary),10:00,University of Michigan
+15-Jun,Empire State Manufacturing,8:30,NY Fed
+15-Jun,Industrial Production,9:15,Federal Reserve
+15-Jun,NAHB Housing Market Index,10:00,NAHB
+16-Jun,Housing Starts,8:30,Census
+16-Jun,Import/Export Prices,8:30,BLS
+17-Jun,FOMC Statement,14:00,Federal Reserve
+17-Jun,Retail Sales,8:30,Census
+18-Jun,Philadelphia Fed Manufacturing,8:30,Philly Fed
+24-Jun,New Home Sales,10:00,Census
+25-Jun,Durable Goods (Advance),8:30,Census
+25-Jun,GDP,8:30,BEA
+25-Jun,Personal Income & Outlays (PCE),8:30,BEA
+26-Jun,Consumer Sentiment (Final),10:00,University of Michigan
+29-Jun,Chicago Fed NAI,8:30,Chicago Fed
+30-Jun,ADP National Employment,8:15,ADP
+30-Jun,Case-Shiller,9:00,S&P CoreLogic
+30-Jun,Consumer Confidence,10:00,Conference Board
+30-Jun,JOLTS,10:00,BLS
+1-Jul,ISM Manufacturing,10:00,ISM
+2-Jul,Employment Report,8:30,BLS
+2-Jul,Factory Orders (Full Report),10:00,Census
+3-Jul,ISM Services,10:00,ISM
+7-Jul,JOLTS,10:00,BLS
+8-Jul,Consumer Credit,15:00,Federal Reserve
+8-Jul,FOMC Minutes,14:00,Federal Reserve
+9-Jul,Existing Home Sales,10:00,NAR
+10-Jul,Consumer Sentiment (Preliminary),10:00,University of Michigan
+14-Jul,CPI,8:30,BLS
+15-Jul,Empire State Manufacturing,8:30,NY Fed
+15-Jul,PPI,8:30,BLS
+16-Jul,NAHB Housing Market Index,10:00,NAHB
+16-Jul,Philadelphia Fed Manufacturing,8:30,Philly Fed
+16-Jul,Retail Sales,8:30,Census
+17-Jul,Housing Starts,8:30,Census
+17-Jul,Import/Export Prices,8:30,BLS
+17-Jul,Industrial Production,9:15,Federal Reserve
+24-Jul,Consumer Sentiment (Final),10:00,University of Michigan
+24-Jul,New Home Sales,10:00,Census
+27-Jul,Chicago Fed NAI,8:30,Chicago Fed
+27-Jul,Durable Goods (Advance),8:30,Census
+28-Jul,Case-Shiller,9:00,S&P CoreLogic
+28-Jul,Consumer Confidence,10:00,Conference Board
+29-Jul,FOMC Statement,14:00,Federal Reserve
+30-Jul,GDP,8:30,BEA
+30-Jul,Personal Income & Outlays (PCE),8:30,BEA
+31-Jul,Employment Cost Index,8:30,BLS
+3-Aug,ISM Manufacturing,10:00,ISM
+4-Aug,Factory Orders (Full Report),10:00,Census
+4-Aug,JOLTS,10:00,BLS
+5-Aug,ADP National Employment,8:15,ADP
+5-Aug,ISM Services,10:00,ISM
+6-Aug,Productivity and Costs,8:30,BLS
+7-Aug,Consumer Credit,15:00,Federal Reserve
+7-Aug,Employment Report,8:30,BLS
+11-Aug,Existing Home Sales,10:00,NAR
+12-Aug,CPI,8:30,BLS
+13-Aug,PPI,8:30,BLS
+14-Aug,Consumer Sentiment (Preliminary),10:00,University of Michigan
+14-Aug,Retail Sales,8:30,Census
+17-Aug,Empire State Manufacturing,8:30,NY Fed
+17-Aug,NAHB Housing Market Index,10:00,NAHB
+18-Aug,Housing Starts,8:30,Census
+18-Aug,Import/Export Prices,8:30,BLS
+18-Aug,Industrial Production,9:15,Federal Reserve
+19-Aug,FOMC Minutes,14:00,Federal Reserve
+20-Aug,Philadelphia Fed Manufacturing,8:30,Philly Fed
+24-Aug,Chicago Fed NAI,8:30,Chicago Fed
+25-Aug,Case-Shiller,9:00,S&P CoreLogic
+25-Aug,Consumer Confidence,10:00,Conference Board
+25-Aug,New Home Sales,10:00,Census
+26-Aug,Durable Goods (Advance),8:30,Census
+26-Aug,GDP,8:30,BEA
+26-Aug,Personal Income & Outlays (PCE),8:30,BEA
+28-Aug,Consumer Sentiment (Final),10:00,University of Michigan
+1-Sep,ISM Manufacturing,10:00,ISM
+1-Sep,JOLTS,10:00,BLS
+2-Sep,ADP National Employment,8:15,ADP
+2-Sep,Factory Orders (Full Report),10:00,Census
+3-Sep,ISM Services,10:00,ISM
+3-Sep,Productivity and Costs,8:30,BLS
+4-Sep,Employment Report,8:30,BLS
+8-Sep,Consumer Credit,15:00,Federal Reserve
+10-Sep,Existing Home Sales,10:00,NAR
+10-Sep,PPI,8:30,BLS
+11-Sep,CPI,8:30,BLS
+11-Sep,Consumer Sentiment (Preliminary),10:00,University of Michigan
+15-Sep,Empire State Manufacturing,8:30,NY Fed
+16-Sep,FOMC Statement,14:00,Federal Reserve
+16-Sep,Import/Export Prices,8:30,BLS
+16-Sep,NAHB Housing Market Index,10:00,NAHB
+16-Sep,Retail Sales,8:30,Census
+17-Sep,Housing Starts,8:30,Census
+17-Sep,Philadelphia Fed Manufacturing,8:30,Philly Fed
+18-Sep,Industrial Production,9:15,Federal Reserve
+24-Sep,New Home Sales,10:00,Census
+25-Sep,Consumer Sentiment (Final),10:00,University of Michigan
+25-Sep,Durable Goods (Advance),8:30,Census
+28-Sep,Chicago Fed NAI,8:30,Chicago Fed
+29-Sep,Case-Shiller,9:00,S&P CoreLogic
+29-Sep,Consumer Confidence,10:00,Conference Board
+29-Sep,JOLTS,10:00,BLS
+30-Sep,ADP National Employment,8:15,ADP
+30-Sep,GDP,8:30,BEA
+30-Sep,Personal Income & Outlays (PCE),8:30,BEA
+1-Oct,ISM Manufacturing,10:00,ISM
+2-Oct,Employment Report,8:30,BLS
+2-Oct,Factory Orders (Full Report),10:00,Census
+5-Oct,ISM Services,10:00,ISM
+6-Oct,JOLTS,10:00,BLS
+7-Oct,Consumer Credit,15:00,Federal Reserve
+7-Oct,FOMC Minutes,14:00,Federal Reserve
+9-Oct,Consumer Sentiment (Preliminary),10:00,University of Michigan
+13-Oct,Existing Home Sales,10:00,NAR
+14-Oct,CPI,8:30,BLS
+15-Oct,Empire State Manufacturing,8:30,NY Fed
+15-Oct,PPI,8:30,BLS
+15-Oct,Philadelphia Fed Manufacturing,8:30,Philly Fed
+15-Oct,Retail Sales,8:30,Census
+16-Oct,Import/Export Prices,8:30,BLS
+16-Oct,Industrial Production,9:15,Federal Reserve
+19-Oct,NAHB Housing Market Index,10:00,NAHB
+20-Oct,Housing Starts,8:30,Census
+23-Oct,Consumer Sentiment (Final),10:00,University of Michigan
+26-Oct,Chicago Fed NAI,8:30,Chicago Fed
+27-Oct,Case-Shiller,9:00,S&P CoreLogic
+27-Oct,Consumer Confidence,10:00,Conference Board
+27-Oct,Durable Goods (Advance),8:30,Census
+27-Oct,New Home Sales,10:00,Census
+28-Oct,FOMC Statement,14:00,Federal Reserve
+29-Oct,GDP,8:30,BEA
+29-Oct,Personal Income & Outlays (PCE),8:30,BEA
+30-Oct,Employment Cost Index,8:30,BLS
+2-Nov,ISM Manufacturing,10:00,ISM
+3-Nov,Factory Orders (Full Report),10:00,Census
+3-Nov,JOLTS,10:00,BLS
+4-Nov,ADP National Employment,8:15,ADP
+4-Nov,ISM Services,10:00,ISM
+5-Nov,Productivity and Costs,8:30,BLS
+6-Nov,Consumer Credit,15:00,Federal Reserve
+6-Nov,Employment Report,8:30,BLS
+10-Nov,CPI,8:30,BLS
+12-Nov,Existing Home Sales,10:00,NAR
+13-Nov,Consumer Sentiment (Preliminary),10:00,University of Michigan
+13-Nov,PPI,8:30,BLS
+16-Nov,Empire State Manufacturing,8:30,NY Fed
+17-Nov,Import/Export Prices,8:30,BLS
+17-Nov,Industrial Production,9:15,Federal Reserve
+17-Nov,NAHB Housing Market Index,10:00,NAHB
+17-Nov,Retail Sales,8:30,Census
+18-Nov,FOMC Minutes,14:00,Federal Reserve
+18-Nov,Housing Starts,8:30,Census
+19-Nov,Philadelphia Fed Manufacturing,8:30,Philly Fed
+23-Nov,Chicago Fed NAI,8:30,Chicago Fed
+24-Nov,Case-Shiller,9:00,S&P CoreLogic
+24-Nov,Consumer Confidence,10:00,Conference Board
+25-Nov,Durable Goods (Advance),8:30,Census
+25-Nov,GDP,8:30,BEA
+25-Nov,New Home Sales,10:00,Census
+25-Nov,Personal Income & Outlays (PCE),8:30,BEA
+27-Nov,Consumer Sentiment (Final),10:00,University of Michigan
+1-Dec,ISM Manufacturing,10:00,ISM
+1-Dec,JOLTS,10:00,BLS
+2-Dec,ADP National Employment,8:15,ADP
+3-Dec,Factory Orders (Full Report),10:00,Census
+3-Dec,ISM Services,10:00,ISM
+4-Dec,Employment Report,8:30,BLS
+7-Dec,Consumer Credit,15:00,Federal Reserve
+8-Dec,Productivity and Costs,8:30,BLS
+9-Dec,Existing Home Sales,10:00,NAR
+9-Dec,FOMC Statement,14:00,Federal Reserve
+10-Dec,CPI,8:30,BLS
+11-Dec,Consumer Sentiment (Preliminary),10:00,University of Michigan
+15-Dec,Empire State Manufacturing,8:30,NY Fed
+15-Dec,PPI,8:30,BLS
+16-Dec,Industrial Production,9:15,Federal Reserve
+16-Dec,NAHB Housing Market Index,10:00,NAHB
+16-Dec,Retail Sales,8:30,Census
+17-Dec,Housing Starts,8:30,Census
+17-Dec,Import/Export Prices,8:30,BLS
+17-Dec,Philadelphia Fed Manufacturing,8:30,Philly Fed
+23-Dec,Durable Goods (Advance),8:30,Census
+23-Dec,GDP,8:30,BEA
+23-Dec,New Home Sales,10:00,Census
+23-Dec,Personal Income & Outlays (PCE),8:30,BEA
+28-Dec,Chicago Fed NAI,8:30,Chicago Fed
+29-Dec,Case-Shiller,9:00,S&P CoreLogic
+29-Dec,Consumer Confidence,10:00,Conference Board
+30-Dec,FOMC Minutes,14:00,Federal Reserve
