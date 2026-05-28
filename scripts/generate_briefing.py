@@ -51,18 +51,25 @@ def load_release_calendar():
     if not CALENDAR_PATH.exists():
         print(f"WARN: calendar CSV not found at {CALENDAR_PATH}", file=sys.stderr)
         return cal
+    parse_failures = 0
     with CALENDAR_PATH.open() as f:
         for row in csv.DictReader(f):
+            raw = (row.get("date") or "").strip()
             try:
-                m, d = row["date"].split("-")
-                key = date(CAL_YEAR, int(m), int(d))
-            except Exception:
+                # CSV stores dates as "28-May" (day-monthname-abbrev)
+                key = datetime.strptime(f"{raw}-{CAL_YEAR}", "%d-%b-%Y").date()
+            except Exception as e:
+                parse_failures += 1
+                if parse_failures <= 3:
+                    print(f"WARN: calendar row date parse failed for {raw!r}: {e}", file=sys.stderr)
                 continue
             cal.setdefault(key, []).append({
                 "report": row["report"],
                 "time_et": row.get("time_et", ""),
                 "agency": row.get("agency", ""),
             })
+    if parse_failures:
+        print(f"WARN: {parse_failures} calendar rows failed to parse", file=sys.stderr)
     d = date(CAL_YEAR, 1, 1)
     while d.year == CAL_YEAR:
         if d.weekday() == 3:
@@ -210,7 +217,7 @@ Tone and style:
 
 You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the authoritative release calendar (already filtered to yesterday/today/this-week), headlines, and market levels. Use those numbers — do not invent any.
 
-For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases — the calendar is authoritative and built from each agency's published schedule.
+For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases from your own training data, world knowledge, or assumed release cadences — the calendar is authoritative and built from each agency's published schedule. If a calendar field is empty, say so explicitly (e.g., "No major releases scheduled today.") — do NOT fill it in from memory of what usually drops on that day.
 
 Output these five markdown sections in this exact order, with these exact headers (the script will append a Markets close table and Overnight headlines below your output):
 
