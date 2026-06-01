@@ -2,7 +2,7 @@
 
 ## Top of mind
 
-The dominant macro story entering June is the divergence between a rebounding activity picture and still-elevated inflation expectations. GDPNow has moved sharply from 1.24% (Q1) to 3.82% (Q2 as of April), industrial production is up and capacity utilization reached 76.1%, while the NY Fed's business conditions index surged to 19.6 in May from 11.0 in April — yet Michigan 1-year inflation expectations hit 4.7%, up from 3.8%, and core PCE ticked up to 129.63 from 129.32. Overnight, U.S. strikes on Iranian radar installations and drone assets — with Kuwait also hit by drone and missile fire — add a geopolitical risk premium heading into the week; Brent had already slid to $102.75 from $106.90 last week, but the Middle East escalation warrants watching for a reversal.
+Oil is the dominant macro signal entering June. WTI dropped $2.72 to $97.63 and Brent fell $4.15 to $102.75 in the most recent session — both still elevated in a historically significant range — with overnight headlines flagging "Iran war ending fragility" as a driver of intraday gains in Asian equities and oil. The geopolitical risk premium embedded in crude at these levels has direct pass-through implications for headline CPI and goods PPI, which already showed meaningful pressure in April (core CPI index up 1.26 points, PPI up 2.12 points month-over-month). Whether the Iran situation stabilizes or re-escalates is the primary exogenous variable for the near-term inflation path.
 
 ---
 
@@ -14,22 +14,22 @@ No major releases.
 
 ## Today's calendar (Mon 6/1, ET)
 
-- **ISM Manufacturing, 10:00** — First look at May manufacturing conditions; watch the new orders and prices-paid components carefully given the inflation/activity tension. The Philly Fed's general activity index collapsed to -0.4 in May from 26.7 in April, suggesting regional manufacturing softened sharply — ISM will tell whether that's idiosyncratic or broad-based.
+- **ISM Manufacturing, 10:00** — May read; watch whether the index clears the 50 contraction/expansion threshold. The NY Fed's Global Supply Chain Pressure Index jumped to 19.6 in May from 11.0 in April, signaling renewed supply-side stress that could affect new orders and prices-paid components. Any divergence between those two sub-indices will be telling on the stagflation-vs.-slowdown question.
 
 ---
 
 ## This week ahead
 
-- **Tue 6/2:** JOLTS (10:00) — April job openings; labor demand signal ahead of Friday's employment report.
-- **Wed 6/3:** ADP National Employment (8:15), Factory Orders — full report (10:00), ISM Services (10:00) — ADP gives a private-sector payroll read; ISM Services prices-paid will be a second inflation datapoint for the week.
-- **Thu 6/4:** Productivity and Costs (8:30), Initial Jobless Claims (8:30) — unit labor costs alongside claims; initial claims edged up to 215K from 210K last week, worth watching for a trend break.
-- **Fri 6/5:** **Employment Report** (8:30) — the week's marquee release. Unemployment held at 4.3% for two consecutive months (March–April); any move up, or a sub-150K payroll print, would sharpen the Fed's dual-mandate tension. Average hourly earnings at $32.23 imply roughly 3.4% y/y growth — watch the monthly tick.
+- **Tue 6/2:** JOLTS (April) — openings have been drifting down (6,866K in March vs. 6,922K in February); another leg lower would reinforce labor market softening.
+- **Wed 6/3:** ADP National Employment (May), Factory Orders (full, March), ISM Services (May) — ADP and ISM Services are the key reads; services employment and activity will clarify whether April's labor market stall extended into May.
+- **Thu 6/4:** Productivity and Costs (Q1 revised), Initial Jobless Claims — continuing claims ticked up to 1.786M as of May 16 from 1.771M; watch for further drift. Productivity revision matters for unit labor cost trajectory.
+- **Fri 6/5:** **Employment Report (May)** — the week's marquee number. April PAYEMS came in at 158,736K (+115K), unemployment held at 4.3% for the second consecutive month. A third consecutive 4.3% or higher print would be difficult to characterize as anything but a trend.
 
 ---
 
 ## Fed watch
 
-The target range sits at 3.75–4.00% (DFEDTARU 4.00, DFEDTARL 3.75); the effective fed funds rate is 3.62% and SOFR is likewise 3.62%, both hugging the lower end of the corridor. The 2s/10s spread is 46 bps (3.99% / 4.45%), slightly steeper than a week ago, consistent with markets pricing modest easing over the medium term but not urgently. Nothing on the calendar this week flags an FOMC statement, minutes release, Beige Book, or SEP update, so the employment report Friday is the primary input that could shift the rate path narrative — a second consecutive month of 4.3% unemployment against a 4.7% inflation expectations print is precisely the kind of stagflationary signal that keeps the Committee on hold.
+The target range remains 3.50–3.75%, with the effective fed funds rate at 3.62% as of May 28 — running 13 bps below the upper bound, consistent with recent corridor behavior. No FOMC statement, minutes, Beige Book, or SEP release appears in this week's calendar. The policy-relevant tension is unchanged: Michigan 1-year inflation expectations have risen to 4.7% (from 3.8% in March) while consumer sentiment has deteriorated to 49.8, putting the Committee squarely in a stagflationary bind. Friday's employment report will be the most important data point before the next FOMC decision, and any further softening in payrolls combined with still-elevated oil prices keeps the easing path narrow.
 
 ## Markets close
 | | Level | d/d | w/w |
@@ -38,28 +38,28 @@ The target range sits at 3.75–4.00% (DFEDTARU 4.00, DFEDTARL 3.75); the effect
 | UST 10y | 4.45 | -3 bp | -12 bp |
 | UST 30y | — | — | — |
 | 3m10y | — | — | — |
-| SOFR | 3.62 | -1 bp | +12 bp |
+| SOFR | — | — | — |
 | Eff. fed funds | 3.62 | +0 bp | +0 bp |
 | S&P 500 | 7,580.06 | +0.22% | +1.80% |
-| Dow Jones | 51,032.46 | +0.72% | +1.49% |
+| Dow Jones | — | — | — |
 | NASDAQ Comp. | — | — | — |
-| WTI | — | — | — |
+| WTI | $97.63 | -2.71% | -13.02% |
 | Brent | $102.75 | -3.88% | -11.98% |
-| Gold (spot) | $4,539.25 | +2.06% | — |
-| Silver (spot) | $75.29 | +1.06% | — |
-| Broad USD (DTWEXBGS)* | 119.29 | -0.07% | +0.00% |
-| HY OAS | 272 bp | +1 bp | -6 bp |
+| Gold (spot) | $4,539.25 | +0.00% | — |
+| Silver (spot) | $75.29 | +0.00% | — |
+| Broad USD (DTWEXBGS)* | — | — | — |
+| HY OAS | — | — | — |
 | IG OAS | — | — | — |
 
 *DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com.*
 
 ## Overnight headlines
 - **US strike on an alleged drug boat kills 3 in the eastern Pacific Ocean in fourth attack this week** — *AP News*
-- **US targets Iranian radar and drone strikes and Kuwait hit by drone and missile fire** — *AP News*
-- **Newark mayor imposes curfew around Delaney Hall after clashes over immigration detention center** — *AP News*
-- **Total blackout strikes St. Thomas and St. John in the US Virgin Islands twice this weekend** — *AP News*
-- **Monday briefing: Iran strikes; Democratic presidential contenders; Kennedy Center; how to fight anxiety; and more** — *The Washington Post*
+- **Tensions linger between Republicans and White House over the ‘anti-weaponization’ fund** — *AP News*
+- **The bad news keeps coming for Keir Starmer with new trove of Mandelson files due to be published** — *AP News*
 - **Palestinian man is shot and killed at a West Bank barrier near Jerusalem** — *AP News*
+- **Monday briefing: Iran strikes; Democratic presidential contenders; Kennedy Center; how to fight anxiety; and more** — *The Washington Post*
+- **Japan, South Korea stocks hit more records, as oil gains on Iran war ending fragility** — *AP News*
 
 ---
 *Sources: FRED; metalpriceapi.com; Tavily; release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-06-01.*
