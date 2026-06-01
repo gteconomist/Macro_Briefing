@@ -32,4 +32,4 @@ Single page, ~500–700 words, no charts. Sections in this order:
 - Save the output to `briefings/briefing-YYYY-MM-DD.md` and update `latest.md`.
 
 ## Schedule
-Scheduled task runs weekday mornings at 7:00 AM ET.
+Runs weekday mornings at 6:30 AM ET. The trigger is Alfie's external OpenClaw agent, which POSTs to the GitHub Actions `workflow_dispatch` endpoint (`.github/workflows/daily-briefing.yml`). The workflow's `skip_time_check` input defaults to `"true"`, so the in-workflow hour gate is bypassed for OpenClaw-triggered runs. GitHub Actions cron (`- cron:` lines in the workflow file) has never fired on this repo and is not relied on — it can be ignored or removed.
