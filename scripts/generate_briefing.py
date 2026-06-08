@@ -195,6 +195,56 @@ def pull_headlines(n=6):
     return cleaned
 
 
+# Keyless RSS fallback for when Tavily is over quota or otherwise unreachable.
+# Google News top-stories RSS needs no API key; titles arrive as "Headline - Source".
+HEADLINE_RSS_URL = (
+    "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
+)
+
+
+def pull_headlines_rss(n=6):
+    import xml.etree.ElementTree as ElemTree
+
+    r = requests.get(
+        HEADLINE_RSS_URL,
+        headers={"User-Agent": "Mozilla/5.0 (macro-briefing-bot)"},
+        timeout=20,
+    )
+    r.raise_for_status()
+    root = ElemTree.fromstring(r.content)
+    drop_kw = ("cannes", "box office", "humpback", "barbra streisand",
+               "cate blanchett", "metoo", "palme")
+    cleaned = []
+    seen = set()
+    for item in root.iter("item"):
+        title = (item.findtext("title") or "").strip()
+        if not title:
+            continue
+        low = title.lower()
+        if any(k in low for k in drop_kw):
+            continue
+        source_el = item.find("source")
+        source = source_el.text.strip() if (source_el is not None and (source_el.text or "").strip()) else None
+        # Google News appends " - <Source>" to every title; strip it for display
+        # (and use it as the source if the <source> element was absent).
+        if " - " in title:
+            head, _, tail = title.rpartition(" - ")
+            title = head
+            if source is None:
+                source = tail
+        if source is None:
+            source = "Google News"
+        key = title[:60].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        link = (item.findtext("link") or "").strip()
+        cleaned.append({"title": title, "url": link, "source": source})
+        if len(cleaned) >= n:
+            break
+    return cleaned
+
+
 def fmt_pct(latest, prior):
     if not (latest and prior):
         return "—"
@@ -216,6 +266,8 @@ Tone and style:
 - Numbers, context, what changed, what to watch — not commentary about commentary.
 
 You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the authoritative release calendar (already filtered to yesterday/today/this-week), headlines, and market levels. Use those numbers — do not invent any.
+
+Series-ID notes for less-obvious FRED keys: TOTALSL = total consumer credit outstanding ($millions, monthly, G.19); REVOLSL = revolving consumer credit; NONREVSL = non-revolving. For a Consumer Credit release, report the latest level and the month-over-month change (latest minus prior), and note the revolving vs. non-revolving split if relevant.
 
 For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases from your own training data, world knowledge, or assumed release cadences — the calendar is authoritative and built from each agency's published schedule. If a calendar field is empty, say so explicitly (e.g., "No major releases scheduled today.") — do NOT fill it in from memory of what usually drops on that day.
 
@@ -430,7 +482,7 @@ def render(today, data, calendar):
 {headlines_md}
 
 ---
-*Sources: FRED; metalpriceapi.com; Tavily; release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
+*Sources: FRED; metalpriceapi.com; Tavily (Google News RSS fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
 """
 
 
@@ -444,6 +496,7 @@ FRED_SERIES = [
     "UNRATE", "PAYEMS", "CIVPART", "AHETPI", "ICSA", "CCSA", "JTSJOL",
     "CPIAUCSL", "CPILFESL", "PPIFIS", "PCEPI", "PCEPILFE",
     "RSAFS", "RSFSXMV", "INDPRO", "TCU", "HOUST", "PERMIT", "HSN1F",
+    "TOTALSL", "REVOLSL", "NONREVSL",
     "GACDISA066MSFRBNY", "GACDFSA066MSFRBPHI", "CFNAI",
     "UMCSENT", "MICH", "GDPNOW", "IR", "IQ",
 ]
@@ -467,6 +520,12 @@ def main():
         data["headlines"] = pull_headlines(n=6)
     except Exception as e:
         print(f"Tavily failed: {e}", file=sys.stderr)
+    if not data["headlines"]:
+        try:
+            data["headlines"] = pull_headlines_rss(n=6)
+            print("Used RSS headline fallback (Tavily empty/unavailable)", file=sys.stderr)
+        except Exception as e:
+            print(f"RSS headline fallback failed: {e}", file=sys.stderr)
     md = render(TODAY, data, calendar)
     out_path = BRIEFINGS_DIR / f"briefing-{TODAY.isoformat()}.md"
     out_path.write_text(md)
