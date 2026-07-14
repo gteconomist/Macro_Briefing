@@ -149,7 +149,38 @@ def pull_metals():
     return {"gold": gold, "silver": silver, "gold_dd": gold_dd, "silver_dd": silver_dd}
 
 
+import urllib.parse
+
+# Titles that are site landing pages / section fronts rather than real articles.
+_HOMEPAGE_TITLE_BITS = (
+    "breaking news", "latest news", "top headlines", "top stories",
+    "latest headlines", "news & views", "| latest", "world news",
+    "us news", "u.s. news", "homepage", "latest & ", "news & updates",
+)
+
+
+def _looks_like_homepage(title, url):
+    """Filter out section/landing pages (the Tavily 'BBC Home' problem) without
+    nuking real article headlines that happen to contain words like 'breaking'."""
+    t = (title or "").strip().lower()
+    # Marketing-style front-page titles: "World | Latest News & Updates".
+    if " | " in t and any(bit in t for bit in _HOMEPAGE_TITLE_BITS):
+        return True
+    if t in ("bbc home", "home", "homepage", "cnn", "reuters", "bbc news"):
+        return True
+    try:
+        p = urllib.parse.urlparse(url or "")
+        # A bare domain with no article path is a homepage.
+        if p.path in ("", "/"):
+            return True
+    except Exception:
+        pass
+    return False
+
+
 def pull_headlines(n=6):
+    """Tavily fallback. include_domains removed — it was returning those sites'
+    homepages instead of articles; homepage results are filtered out below."""
     r = requests.post(
         "https://api.tavily.com/search",
         headers={
@@ -157,17 +188,12 @@ def pull_headlines(n=6):
             "Content-Type": "application/json",
         },
         json={
-            "query": "most important top news stories today United States global",
+            "query": "top news headlines today",
             "topic": "news",
-            "max_results": 15,
+            "max_results": 20,
             "days": 1,
             "include_answer": False,
             "search_depth": "advanced",
-            "include_domains": [
-                "reuters.com", "apnews.com", "bloomberg.com", "ft.com",
-                "wsj.com", "nytimes.com", "washingtonpost.com", "bbc.com",
-                "cnbc.com", "axios.com", "politico.com", "economist.com",
-            ],
         },
         timeout=20,
     )
@@ -178,8 +204,11 @@ def pull_headlines(n=6):
     seen = set()
     for res in results:
         title = res.get("title", "").strip()
+        url = res.get("url", "")
         low = title.lower()
         if any(k in low for k in drop_kw):
+            continue
+        if _looks_like_homepage(title, url):
             continue
         key = title.split(" - ")[0][:60].lower()
         if key in seen:
@@ -190,8 +219,8 @@ def pull_headlines(n=6):
             source = tail
             title = head
         else:
-            source = res.get("url", "").split("/")[2].replace("www.", "")
-        cleaned.append({"title": title, "url": res["url"], "source": source})
+            source = url.split("/")[2].replace("www.", "") if "/" in url else ""
+        cleaned.append({"title": title, "url": url, "source": source})
         if len(cleaned) >= n:
             break
     return cleaned
@@ -241,6 +270,8 @@ def pull_headlines_rss(n=6):
             continue
         seen.add(key)
         link = (item.findtext("link") or "").strip()
+        if _looks_like_homepage(title, link):
+            continue
         cleaned.append({"title": title, "url": link, "source": source})
         if len(cleaned) >= n:
             break
@@ -442,12 +473,7 @@ def render(today, data, calendar):
         ww_str = fmt_pct(latest, wk_ago) if wk_ago is not None else "—"
         return f"| {name} | {fmt.format(latest)} | {dd_str} | {ww_str} |"
 
-    rows.append(m("UST 2y", "DGS2"))
     rows.append(m("UST 10y", "DGS10"))
-    rows.append(m("UST 30y", "DGS30"))
-    rows.append(m("3m10y", "T10Y3M"))
-    rows.append(m("SOFR", "SOFR"))
-    rows.append(m("Eff. fed funds", "DFF"))
     rows.append(m("S&P 500", "SP500", "{:,.2f}"))
     rows.append(m("Dow Jones", "DJIA", "{:,.2f}"))
     rows.append(m("NASDAQ Comp.", "NASDAQCOM", "{:,.2f}"))
@@ -461,12 +487,16 @@ def render(today, data, calendar):
         sd = f"{metals['silver_dd']:+.2f}%" if metals.get("silver_dd") is not None else "—"
         rows.append(f"| Silver (spot) | ${metals['silver']:,.2f} | {sd} | — |")
     rows.append(m("Broad USD (DTWEXBGS)*", "DTWEXBGS", "{:.2f}"))
-    rows.append(m("HY OAS", "BAMLH0A0HYM2"))
-    rows.append(m("IG OAS", "BAMLC0A0CM"))
 
     markets_table = "\n".join(["| | Level | d/d | w/w |", "|---|---|---|---|"] + rows)
 
-    hl_lines = [f"- **{h['title']}** — *{h['source']}*" for h in data.get("headlines", [])]
+    hl_lines = []
+    for h in data.get("headlines", []):
+        title, url, src = h.get("title", ""), h.get("url", ""), h.get("source", "")
+        if url:
+            hl_lines.append(f"- **[{title}]({url})** — *{src}*")
+        else:
+            hl_lines.append(f"- **{title}** — *{src}*")
     headlines_md = "\n".join(hl_lines) if hl_lines else "_No headlines pulled this run._"
 
     try:
@@ -495,7 +525,7 @@ def render(today, data, calendar):
 {headlines_md}
 
 ---
-*Sources: FRED; metalpriceapi.com; Tavily (Google News RSS fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
+*Sources: FRED; metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
 """
 
 
@@ -529,16 +559,20 @@ def main():
         data["metals"] = pull_metals()
     except Exception as e:
         print(f"metalpriceapi failed: {e}", file=sys.stderr)
+    # Google News RSS is primary: it returns real article headlines + links.
+    # Tavily is a fallback only if RSS comes back thin/empty.
     try:
-        data["headlines"] = pull_headlines(n=6)
+        data["headlines"] = pull_headlines_rss(n=6)
     except Exception as e:
-        print(f"Tavily failed: {e}", file=sys.stderr)
-    if not data["headlines"]:
+        print(f"Google News RSS failed: {e}", file=sys.stderr)
+    if len(data["headlines"]) < 4 and os.environ.get("TAVILY_API_KEY"):
         try:
-            data["headlines"] = pull_headlines_rss(n=6)
-            print("Used RSS headline fallback (Tavily empty/unavailable)", file=sys.stderr)
+            tv = pull_headlines(n=6)
+            if len(tv) > len(data["headlines"]):
+                data["headlines"] = tv
+                print("Used Tavily headlines (RSS thin/unavailable)", file=sys.stderr)
         except Exception as e:
-            print(f"RSS headline fallback failed: {e}", file=sys.stderr)
+            print(f"Tavily headline fallback failed: {e}", file=sys.stderr)
     md = render(TODAY, data, calendar)
     out_path = BRIEFINGS_DIR / f"briefing-{TODAY.isoformat()}.md"
     out_path.write_text(md)

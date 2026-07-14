@@ -1,14 +1,15 @@
 name: Daily Macro Briefing
 
 on:
-  # Trigger-file driven. The Cowork scheduled task bumps .github/briefing-trigger
-  # each weekday at 7:00 AM ET, and that push runs this workflow. GitHub's own
-  # cron is deliberately not used here — scheduled workflows on this repo fire
-  # unreliably (Actions-bot commits don't reset GitHub's scheduler-disable timer).
+  # Timing is driven externally by the Cowork scheduled task, which bumps
+  # .github/briefing-trigger on main at 7 AM ET on weekdays. Any push to that
+  # file starts a run. GitHub's own schedule: cron was retired because it fires
+  # unreliably on this repo, and the ET-hour gate is gone with it — the
+  # scheduled task now controls timing.
   push:
     branches: [main]
     paths:
-      - '.github/briefing-trigger'
+      - ".github/briefing-trigger"
   workflow_dispatch:        # allow manual runs from the Actions tab
 
 permissions:
@@ -59,8 +60,10 @@ jobs:
       # Archive the briefing to the repo even if the email step failed (e.g. a
       # bounce). always() decouples this from the email step's success so we
       # never lose the day's archive; the run still shows red when email fails.
+      # Only briefings/, latest.md and cache/ are committed -- never the trigger
+      # file -- so this push cannot re-trigger the workflow.
       - name: Commit briefing back to repo
-        if: always()
+        if: ${{ always() }}
         run: |
           git config user.name "macro-briefing-bot"
           git config user.email "actions@github.com"

@@ -17,6 +17,7 @@ Direct and concise. No disclaimers, no corporate language, no "Great question". 
 
 ## Format reminders
 Single page, ~500–700 words, no charts. Sections in this order:
+0. Your calendar today — combined personal + work events, from the ICS feeds in `CAL_FEED_1..N` (parsed by `scripts/calendars.py`). Rendered deterministically by the script, not the LLM.
 1. Top of mind (2–4 sentences)
 2. Yesterday's releases
 3. Today's calendar
@@ -32,4 +33,6 @@ Single page, ~500–700 words, no charts. Sections in this order:
 - Save the output to `briefings/briefing-YYYY-MM-DD.md` and update `latest.md`.
 
 ## Schedule
-Runs weekday mornings at 6:30 AM ET. The trigger is Alfie's external OpenClaw agent, which POSTs to the GitHub Actions `workflow_dispatch` endpoint (`.github/workflows/daily-briefing.yml`). The workflow's `skip_time_check` input defaults to `"true"`, so the in-workflow hour gate is bypassed for OpenClaw-triggered runs. GitHub Actions cron (`- cron:` lines in the workflow file) has never fired on this repo and is not relied on — it can be ignored or removed.
+Runs weekday mornings at 7:00 AM ET. The trigger is a **Cowork scheduled task** (`macro-briefing-trigger`, cron `0 7 * * 1-5`) that bumps the file `.github/briefing-trigger` on `main`; that push runs `.github/workflows/daily-briefing.yml`, which triggers `on: push` to that file (plus manual `workflow_dispatch`). The workflow no longer has an ET-hour gate — the scheduled task controls timing.
+
+Retired: the external **OpenClaw** cron and GitHub's own `schedule:` cron. GitHub scheduled workflows fire unreliably on this repo (Actions-bot commits don't reset GitHub's 60-day scheduler-disable timer), which is why timing is driven externally by the scheduled task instead. Caveat: Cowork scheduled tasks run only while the Claude desktop app is open — if it's closed at 7 AM, the task runs on next launch.
