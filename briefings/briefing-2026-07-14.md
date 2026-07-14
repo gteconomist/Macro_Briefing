@@ -1,8 +1,11 @@
 # Daily Macro Briefing — Tuesday, July 14, 2026
 
+## Your calendar today
+_No events on your calendars today._
+
 ## Top of mind
 
-The dominant macro story this morning is the U.S.-Iran military exchange and the threat to Strait of Hormuz transit — a supply shock risk that lands directly on an economy already navigating elevated long-end rates and soft consumer sentiment. Oil prices were jumping overnight on the headlines, though the most recent FRED print (WTI $69.60, Brent $69.56 as of 7/6) predates the escalation and is stale. The 10Y closed at 4.56% Friday with the 2Y at 4.21% — the T10Y3M spread has widened to +73 bps — and the equity selloff Monday (S&P -0.79% to 7,515, Nasdaq -1.55% to 25,873) likely reflects both geopolitical repricing and positioning ahead of this morning's CPI.
+CPI for June drops at 8:30 this morning and is the week's marquee print. The last read (May) showed headline CPI at 332.568 vs. 333.979 in April — an outright monthly decline — while core (CPILFESL) was essentially flat at 336.065 vs. 336.121. If June confirms that disinflation is broadening and sticky, it sharpens the case for Fed cuts later this year; a reversal would complicate a rate path that markets are already pricing cautiously given the 10Y at 4.56% and the 2Y at 4.21%. Equities sold off Monday — S&P 500 down to 7,515 from 7,575, Nasdaq off ~408 points — suggesting some pre-CPI risk reduction.
 
 ---
 
@@ -14,21 +17,21 @@ No major releases.
 
 ## Today's calendar (Tue 7/14, ET)
 
-- **CPI, 8:30 AM** — The print that matters most right now. Last available FRED data is May (headline index 333.979, core 336.121); June CPI is what drops this morning. Watch the month-over-month core read closely — any tariff passthrough showing up in goods prices will be the story, especially with the Hormuz situation adding a forward energy complication. The Fed's next move is directly conditioned on whether core inflation is decelerating convincingly.
+- **CPI (June), 8:30** — Watch both the monthly change in headline (last print was negative MoM) and whether core sustains its near-flat trajectory; the shelter and services ex-energy components are the key swing factors for Fed reaction function.
 
 ---
 
 ## This week ahead
 
-- **Wed 7/15:** Empire State Manufacturing (8:30), **PPI** (8:30) — PPI will contextualize today's CPI; watch pipeline price pressures in goods and trade services margins.
-- **Thu 7/16:** **Retail Sales** (8:30), Initial Jobless Claims (8:30), Philadelphia Fed Manufacturing (8:30), NAHB Housing Market Index (10:00) — Retail Sales is the headline mover; with consumer credit outstanding effectively flat in May ($5,154,539M vs. $5,154,721M prior, driven by revolving credit contracting ~$5.3B), consumption data will signal whether households are pulling back in earnest.
-- **Fri 7/17:** Housing Starts (8:30), Import/Export Prices (8:30), Industrial Production (9:15) — Housing starts fell sharply in May (1,177K vs. 1,392K prior); another soft read would confirm the sector is in contraction. Import prices will be the first clean read on whether the Hormuz disruption is feeding through to traded goods costs.
+- **Wed 7/15:** Empire State Manufacturing (8:30), **PPI** (8:30) — PPI will be the immediate follow-on to CPI; pipeline pressures via goods PPI are worth tracking given still-elevated import costs.
+- **Thu 7/16:** **Retail Sales** (8:30), Initial Jobless Claims (8:30), Philadelphia Fed Manufacturing (8:30), NAHB Housing Market Index (10:00) — Retail Sales is the week's second most important print; last read was $763.7B (May), up from $757.0B in April, so watch whether consumer spending momentum is holding into Q3.
+- **Fri 7/17:** Housing Starts (8:30), Import/Export Prices (8:30), Industrial Production (9:15) — Starts fell sharply in May (1,177K vs. 1,392K in April), so another weak print would confirm housing construction is genuinely rolling over; IP has been marginally positive but capacity utilization (76.2%) remains soft.
 
 ---
 
 ## Fed watch
 
-The target range holds at 3.50–3.75%, with the effective fed funds rate at 3.62% and SOFR at 3.55% as of 7/10. Nothing in the calendar for the next five business days indicates an FOMC statement, minutes release, Beige Book, or SEP. The policy debate remains straightforwardly data-dependent: a hot June CPI this morning forecloses near-term cuts; a benign print reopens the September discussion, though the Hormuz escalation injects a stagflationary tail risk that complicates any easing signal the Fed might otherwise be inclined to give. The long end — 30Y at 5.06% — is already pricing fiscal and geopolitical risk premiums that the Fed cannot easily offset with rate guidance alone.
+Target range holds at 3.50–3.75%; the effective fed funds rate is 3.62% and SOFR printed 3.60 on Monday, both well-anchored near the floor of the range. The 10Y–3M spread has widened to +73 bps (up from +71 bps Friday), consistent with a curve that is steepening modestly but not signaling imminent recession pressure. No FOMC statement, minutes, Beige Book, or SEP release appears in the calendar for the remainder of this week; today's CPI and Thursday's Retail Sales are the primary data inputs that will shape how the Committee frames the next meeting.
 
 ## Markets close
 | | Level | d/d | w/w |
@@ -37,28 +40,28 @@ The target range holds at 3.50–3.75%, with the effective fed funds rate at 3.6
 | UST 10y | 4.56 | +2 bp | +7 bp |
 | UST 30y | 5.06 | +1 bp | +8 bp |
 | 3m10y | +73 bp | +2 bp | +12 bp |
-| SOFR | 3.55 | +2 bp | -9 bp |
+| SOFR | 3.60 | +5 bp | -3 bp |
 | Eff. fed funds | 3.62 | +0 bp | -1 bp |
 | S&P 500 | 7,515.34 | -0.79% | -0.29% |
 | Dow Jones | 52,498.64 | -0.26% | -1.05% |
 | NASDAQ Comp. | 25,873.18 | -1.55% | -0.95% |
 | WTI | $69.60 | -0.19% | -1.00% |
 | Brent | $69.56 | +1.28% | -2.84% |
-| Gold (spot) | $4,086.76 | -0.72% | — |
-| Silver (spot) | $59.25 | -1.02% | — |
+| Gold (spot) | $4,086.76 | +0.00% | — |
+| Silver (spot) | $59.25 | +0.00% | — |
 | Broad USD (DTWEXBGS)* | 120.50 | -0.21% | -0.15% |
-| HY OAS | 269 bp | -1 bp | -5 bp |
-| IG OAS | 77 bp | +1 bp | +2 bp |
+| HY OAS | 269 bp | +0 bp | -3 bp |
+| IG OAS | 78 bp | +1 bp | +3 bp |
 
 *DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com.*
 
 ## Overnight headlines
-- **Judge blasts Trump's IRS lawsuit as filed for 'improper purpose,' recommends attorney discipline** — *AP News*
-- **US attacks Iran and Tehran retaliates across the Middle East as both vie for control of strait** — *AP News*
-- **Subpoenas issued to NY Times reporters seen as ‘unprecedented’ threat to press freedom** — *AP News*
-- **Hundreds of economists say 'we must act now' on AI’s economic impact and job displacement risks** — *AP News*
-- **Oil prices jump as fighting flares in the Middle East, while Asian shares are mixed** — *AP News*
-- **A strait line back to war** — *Politico*
+- **Latest U.S. News | Top headlines from the USA** — *reuters.com*
+- **BBC Home** — *Breaking News, World News, US News, Sports ...*
+- **United States** — *BBC News*
+- **Associated Press News: Breaking News, Latest Headlines ...** — *apnews.com*
+- **World | Latest News & Updates** — *bbc.com*
+- **Reuters | Breaking International News & Views** — *reuters.com*
 
 ---
 *Sources: FRED; metalpriceapi.com; Tavily (Google News RSS fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-07-14.*
