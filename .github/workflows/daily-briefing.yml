@@ -3,10 +3,10 @@ name: Daily Macro Briefing
 on:
   schedule:
     # GitHub Actions cron is UTC. 7 AM ET = 11:00 UTC during EDT (Mar-Nov),
-    # 12:00 UTC during EST (Nov-Mar). Run at both; the script checks ET hour
-    # and exits if it's not actually 7 AM ET, so only one fires per day.
-    - cron: "37 10 * * 1-5"
-    - cron: "37 11 * * 1-5"
+    # 12:00 UTC during EST (Nov-Mar). Both fire; the ET-hour gate below lets
+    # only the one that lands at 07:00 ET through, so exactly one runs per day.
+    - cron: "0 11 * * 1-5"
+    - cron: "0 12 * * 1-5"
   workflow_dispatch:        # allow manual runs from the Actions tab
     inputs:
       skip_time_check:
@@ -46,7 +46,7 @@ jobs:
           fi
           ET_HOUR=$(TZ=America/New_York date +%H)
           echo "Current hour in ET: $ET_HOUR"
-          if [ "$ET_HOUR" = "06" ]; then
+          if [ "$ET_HOUR" = "07" ]; then
             echo "go=true" >> "$GITHUB_OUTPUT"
           else
             echo "Not 7 AM ET — exiting cleanly."
@@ -65,6 +65,11 @@ jobs:
           METALPRICE_API_KEY: ${{ secrets.METALPRICE_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Calendar feeds, each stored as "Label|URL" (webcal:// is fine)
+          CAL_FEED_1: ${{ secrets.CAL_FEED_1 }}
+          CAL_FEED_2: ${{ secrets.CAL_FEED_2 }}
+          CAL_FEED_3: ${{ secrets.CAL_FEED_3 }}
+          CAL_FEED_4: ${{ secrets.CAL_FEED_4 }}
         run: python scripts/generate_briefing.py
 
       - name: Email briefing

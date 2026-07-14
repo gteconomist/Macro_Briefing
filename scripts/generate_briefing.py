@@ -10,6 +10,8 @@ import requests
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
+import calendars as cal
+
 ROOT = Path(__file__).resolve().parent.parent
 BRIEFINGS_DIR = ROOT / "briefings"
 CACHE_DIR = ROOT / "cache"
@@ -467,9 +469,20 @@ def render(today, data, calendar):
     hl_lines = [f"- **{h['title']}** — *{h['source']}*" for h in data.get("headlines", [])]
     headlines_md = "\n".join(hl_lines) if hl_lines else "_No headlines pulled this run._"
 
+    try:
+        feeds = cal.feeds_from_env()
+        calendar_md = (cal.render_calendar_section(feeds, today) if feeds
+                       else "_No calendar feeds configured (set CAL_FEED_1..N)._")
+    except Exception as e:
+        print(f"Calendar section failed: {e}", file=sys.stderr)
+        calendar_md = "_Calendar unavailable this run._"
+
     prose = call_llm_for_prose(today, data, calendar)
 
     return f"""# Daily Macro Briefing — {weekday}, {date_str}
+
+## Your calendar today
+{calendar_md}
 
 {prose}
 
