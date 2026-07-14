@@ -1,11 +1,13 @@
 # Daily Macro Briefing — Tuesday, July 14, 2026
 
 ## Your calendar today
-_No events on your calendars today._
+- **2:00 pm–3:00 pm:** Test meeting 2 · _Personal_
+- **4:00 pm–4:30 pm:** Test Meeting · _Work (Outlook)_
+- **5:00 pm–6:00 pm:** test meeting 3 · _EIG (Proton)_
 
 ## Top of mind
 
-CPI for June drops at 8:30 this morning and is the week's marquee print. The last read (May) showed headline CPI at 332.568 vs. 333.979 in April — an outright monthly decline — while core (CPILFESL) was essentially flat at 336.065 vs. 336.121. If June confirms that disinflation is broadening and sticky, it sharpens the case for Fed cuts later this year; a reversal would complicate a rate path that markets are already pricing cautiously given the 10Y at 4.56% and the 2Y at 4.21%. Equities sold off Monday — S&P 500 down to 7,515 from 7,575, Nasdaq off ~408 points — suggesting some pre-CPI risk reduction.
+CPI for June drops at 8:30 this morning and is the week's marquee print. The FRED data already show headline CPI fell from 333.979 to 332.568 (May data), and with the 10Y at 4.56 and the 2Y at 4.21, the term structure is pricing in a Fed that remains on hold but is not tightening further. The geopolitical backdrop adds an oil wrinkle: Trump's Hormuz fee reversal and a reported resumption of U.S.-Iran naval tensions are live variables for energy pass-through, though WTI has been range-bound near $69.60. How today's CPI reads on core shelter and services will set the tone for the entire week's inflation sequence.
 
 ---
 
@@ -17,31 +19,26 @@ No major releases.
 
 ## Today's calendar (Tue 7/14, ET)
 
-- **CPI (June), 8:30** — Watch both the monthly change in headline (last print was negative MoM) and whether core sustains its near-flat trajectory; the shelter and services ex-energy components are the key swing factors for Fed reaction function.
+- **CPI (June), 8:30** — Watch headline month-over-month for any energy-driven softness and core services ex-shelter for persistence signals; the prior month's headline index level was 333.979, and with energy prices subdued, another flat-to-down headline is plausible, but core stickiness remains the Fed's concern. The read will anchor expectations ahead of PPI Wednesday and condition rate-cut timing probability for the September FOMC.
 
 ---
 
 ## This week ahead
 
-- **Wed 7/15:** Empire State Manufacturing (8:30), **PPI** (8:30) — PPI will be the immediate follow-on to CPI; pipeline pressures via goods PPI are worth tracking given still-elevated import costs.
-- **Thu 7/16:** **Retail Sales** (8:30), Initial Jobless Claims (8:30), Philadelphia Fed Manufacturing (8:30), NAHB Housing Market Index (10:00) — Retail Sales is the week's second most important print; last read was $763.7B (May), up from $757.0B in April, so watch whether consumer spending momentum is holding into Q3.
-- **Fri 7/17:** Housing Starts (8:30), Import/Export Prices (8:30), Industrial Production (9:15) — Starts fell sharply in May (1,177K vs. 1,392K in April), so another weak print would confirm housing construction is genuinely rolling over; IP has been marginally positive but capacity utilization (76.2%) remains soft.
+- **Wed 7/15:** Empire State Manufacturing (8:30), **PPI** (8:30) — PPI follows directly on CPI; producer-side pipeline pressures, particularly in goods, are the key read-through to PCE.
+- **Thu 7/16:** **Retail Sales** (8:30), Initial Jobless Claims (8:30), Philadelphia Fed Manufacturing (8:30), NAHB Housing Market Index (10:00) — Retail Sales is the demand anchor for the week; claims stay low (215K last print) but continuing claims have been quietly drifting up to 1.814M.
+- **Fri 7/17:** Housing Starts (8:30), Import/Export Prices (8:30), Industrial Production (9:15) — Starts bear watching given the May collapse from 1,392K to 1,177K; IP and capacity utilization (76.2% in May) will round out the real-activity picture.
 
 ---
 
 ## Fed watch
 
-Target range holds at 3.50–3.75%; the effective fed funds rate is 3.62% and SOFR printed 3.60 on Monday, both well-anchored near the floor of the range. The 10Y–3M spread has widened to +73 bps (up from +71 bps Friday), consistent with a curve that is steepening modestly but not signaling imminent recession pressure. No FOMC statement, minutes, Beige Book, or SEP release appears in the calendar for the remainder of this week; today's CPI and Thursday's Retail Sales are the primary data inputs that will shape how the Committee frames the next meeting.
+Target range remains 3.50–3.75%, with the effective fed funds rate at 3.62% and SOFR at 3.60 as of Monday — both sitting comfortably at the midpoint of the corridor. The 10Y–3M spread has turned modestly positive at +73 bps, continuing its gradual steepening off the inversion that persisted through much of 2024–25. No FOMC meetings, minutes, Beige Book, or SEP releases appear in this week's calendar payload. Today's CPI and Wednesday's PPI are the operative inputs for the July 28–29 FOMC; anything that pushes core inflation sustainably lower reopens the September cut conversation, while an upside surprise likely extends the hold into Q4.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
-| UST 2y | 4.21 | +5 bp | +7 bp |
 | UST 10y | 4.56 | +2 bp | +7 bp |
-| UST 30y | 5.06 | +1 bp | +8 bp |
-| 3m10y | +73 bp | +2 bp | +12 bp |
-| SOFR | 3.60 | +5 bp | -3 bp |
-| Eff. fed funds | 3.62 | +0 bp | -1 bp |
 | S&P 500 | 7,515.34 | -0.79% | -0.29% |
 | Dow Jones | 52,498.64 | -0.26% | -1.05% |
 | NASDAQ Comp. | 25,873.18 | -1.55% | -0.95% |
@@ -50,18 +47,16 @@ Target range holds at 3.50–3.75%; the effective fed funds rate is 3.62% and SO
 | Gold (spot) | $4,086.76 | +0.00% | — |
 | Silver (spot) | $59.25 | +0.00% | — |
 | Broad USD (DTWEXBGS)* | 120.50 | -0.21% | -0.15% |
-| HY OAS | 269 bp | +0 bp | -3 bp |
-| IG OAS | 78 bp | +1 bp | +3 bp |
 
 *DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com.*
 
 ## Overnight headlines
-- **Latest U.S. News | Top headlines from the USA** — *reuters.com*
-- **BBC Home** — *Breaking News, World News, US News, Sports ...*
-- **United States** — *BBC News*
-- **Associated Press News: Breaking News, Latest Headlines ...** — *apnews.com*
-- **World | Latest News & Updates** — *bbc.com*
-- **Reuters | Breaking International News & Views** — *reuters.com*
+- **[Joan Sebastian Guerrero: What we know about man killed by ICE in Biddeford, Maine](https://news.google.com/rss/articles/CBMilgFBVV95cUxOX2pONDZ0RktGbUtXdEt2bm01d2FFYVFZcEllaWZBZmdmbExWYkh2UDN6QjNzMkRhYTJnYXo1ODhJT2hheF9VU0FXZ09KbEllVDZ3eXBMY2p1SWpWUkhfbjBoUnpIbXlTVmR6V0NkellGcjRvYVhmaW1EU0k4bXdBeEw1N2tOR0ZSU0xxRGxsZGJ2WWpSVnc?oc=5)** — *WMTW*
+- **[Trump backtracks on plan to charge 20 percent fee for ships traveling through Strait of Hormuz](https://news.google.com/rss/articles/CBMimAFBVV95cUxON0JDdDM2YkFycU82VGNRLW9DZEo2RXJLWHBnc3pnYjAzWFc1bkVzX3dwUWFiQmZhN3Y4cGM3NlZXVlVRYmUxaU1ucHpaY0NjOUZzMVgwRU1jTHVoMzdDOWxBdmZ1WW8xaGVCaU9PLWxmeHNxNGxJNkN1dWV3RzhmVUJucEJwYWpGNEgtTXdfY1Z3b3RFM3BFaw?oc=5)** — *Politico*
+- **[Live updates: Iran war news; US and Iran intensify conflict, with naval blockade set to resume](https://news.google.com/rss/articles/CBMibkFVX3lxTE5mclRqN1M1Z0RvTWloR0xWUE5tdlJLQnNuMjVQNnlZNVpSWWgyUmtkMDVodVBzU1RKTnVPbUt6MDJ2Q1B0QS0xeWR1U0RLRW9feEdpQU1CbUw4S3VmMy1PREVGbl9KaFhaa3RFQTFB?oc=5)** — *CNN*
+- **[Supreme Court Justice Barrett says 'the threat level is really high' in budget testimony](https://news.google.com/rss/articles/CBMihwFBVV95cUxNemlMNUxHX0dPNS0wZnBoaG1fNEc1cEtHbk5vZVA3emptb0ZkYnNOVHh5elBNT2lhemR4ak1TRlUySlprSjZSSWoxSnBzQVNITWRmR1piOHB5R1YtTS16UkJJcUI1UVRWT1NMdXFaYjMxNGtGRXRLSHZVUGVTMHkxS2tmMlc1MnfSAYwBQVVfeXFMTmtLZmFOd1JDRW9NcjFXVUVwT25lMjQ2TFB0RXR4TmJ4VVZCR0dYQ1lqQXlDMURFZ1RPU3hUOHdWREJYMk4zZjZPTjl1S2FqcmtpcWdpSmMwTU5hVy1TZXZuN0l0NVNoektlbUxjSDlheGRiXzRyRmhfZ2Z0cVlhNzFzRF9fcVZLOFUzUUM?oc=5)** — *CNBC*
+- **[Lindsey Graham’s successor to be sworn in and Maine ICE shooting sparks outcry: Morning Rundown](https://news.google.com/rss/articles/CBMipwFBVV95cUxPU1JhUjhST2RiT3lxUmY2WS1CdTNqM0pFYUs3LWJTZWV4NHI3V2E4MmxZa2ljWlR5WHNob19HNW02NzZDN2xDY1ZFbDkwQ0R5REVNV0hWOS1FLVk1d3dKNmltNHFmdS1QWWJRSUtoNUhWakIzUXhHOEFKM1hIWmhjSmFJYUNpdmlyRkRDQVdkYnZlNlFmYTBha1N6ODdFVmFtYjhuVVE4QQ?oc=5)** — *NBC News*
+- **[E. Jean Carroll Receives $5.6 Million Payment From Trump in Civil Case](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVlaMDN6X1BlNERid3ZXdEpjRElkWTM5VlJFTEZxYTlBNGxJYUpTV3ByZTNXenFheHRuUm8zbUNJX0QyMEJiNEhibzByQ01teWtNSFNTUzBielJXQ242T28xaWpobkJVbk5XSnNfOFV5d21DRUUzU0JkRHF2LXVuQm5LckRfOEVQ?oc=5)** — *The New York Times*
 
 ---
-*Sources: FRED; metalpriceapi.com; Tavily (Google News RSS fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-07-14.*
+*Sources: FRED; metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-07-14.*
