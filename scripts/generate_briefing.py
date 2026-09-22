@@ -205,6 +205,68 @@ def pull_oil(data, today):
     return notes
 
 
+# ---------------------------------------------------------------------------
+# Treasury yields — same-day par curve from Treasury instead of FRED's DGS*
+# ---------------------------------------------------------------------------
+# FRED's DGS2/DGS10/DGS30/T10Y3M are Treasury's par yield curve republished
+# through the H.15, which lands on FRED the next business day — so at 7 AM
+# the newest FRED yield is two sessions old. Treasury posts the same curve
+# on its own site the afternoon of the trading day. Pull that CSV and drop
+# it into the FRED slots; T10Y3M is rebuilt from the same rows.
+
+TREASURY_CSV = (
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
+    "daily-treasury-rates.csv/{year}/all?type=daily_treasury_yield_curve"
+    "&field_tdr_date_value={year}&page&_format=csv"
+)
+TREASURY_COLS = {"DGS3MO": "3 Mo", "DGS2": "2 Yr", "DGS10": "10 Yr", "DGS30": "30 Yr"}
+
+
+def _treasury_rows(year):
+    r = requests.get(TREASURY_CSV.format(year=year), headers=_UA, timeout=20)
+    r.raise_for_status()
+    rows = []
+    for row in csv.DictReader(r.text.splitlines()):
+        try:
+            d = datetime.strptime(row["Date"].strip(), "%m/%d/%Y").date()
+        except Exception:
+            continue
+        rows.append((d, row))
+    return rows
+
+
+def pull_treasury(data, today):
+    """Replace FRED DGS*/T10Y3M with Treasury's own par curve where available."""
+    rows = _treasury_rows(today.year)
+    if today.month == 1:
+        rows += _treasury_rows(today.year - 1)
+    rows = [(d, r) for d, r in rows if d < today]
+    rows.sort(key=lambda x: x[0], reverse=True)
+    rows = rows[:15]
+    if len(rows) < 2:
+        raise RuntimeError("Treasury CSV returned fewer than 2 usable rows")
+
+    def col(r, name):
+        v = (r.get(name) or "").strip()
+        return float(v) if v and v.upper() != "N/A" else None
+
+    for sid, name in TREASURY_COLS.items():
+        obs = [{"date": d.isoformat(), "value": f"{col(r, name):.2f}"}
+               for d, r in rows if col(r, name) is not None]
+        if len(obs) >= 2:
+            data["fred"][sid] = obs
+    spread = []
+    for d, r in rows:
+        t10, t3 = col(r, "10 Yr"), col(r, "3 Mo")
+        if t10 is not None and t3 is not None:
+            spread.append({"date": d.isoformat(), "value": f"{t10 - t3:.2f}"})
+    if len(spread) >= 2:
+        data["fred"]["T10Y3M"] = spread
+    latest = rows[0][0].isoformat()
+    data["rates_source"] = f"Treasury daily par yield curve, {latest}"
+    return data["rates_source"]
+
+
 def pull_metals():
     r = requests.get(
         "https://api.metalpriceapi.com/v1/latest",
@@ -383,7 +445,7 @@ Tone and style:
 
 You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the authoritative release calendar (already filtered to yesterday/today/this-week), headlines, and market levels. Use those numbers — do not invent any.
 
-Every value in the payload carries its observation date. Treat a value as "current" only if its date is the last business day (or the one before). If a series is older than that, either skip it or cite it explicitly as "as of <date>" — never describe a stale observation as what happened yesterday or overnight, and never build "Top of mind" around a stale series. DCOILWTICO and DCOILBRENTEU are front-month futures settlements (CL/BZ), not EIA spot, unless `oil_sources` says otherwise.
+Every value in the payload carries its observation date. Treat a value as "current" only if its date is the last business day (or the one before). If a series is older than that, either skip it or cite it explicitly as "as of <date>" — never describe a stale observation as what happened yesterday or overnight, and never build "Top of mind" around a stale series. DCOILWTICO and DCOILBRENTEU are front-month futures settlements (CL/BZ), not EIA spot, unless `oil_sources` says otherwise. DGS2/DGS10/DGS30/T10Y3M come from Treasury's daily par yield curve (see `rates_source`), so the latest observation is the prior session's close.
 
 Series-ID notes for less-obvious FRED keys: TOTALSL = total consumer credit outstanding ($millions, monthly, G.19); REVOLSL = revolving consumer credit; NONREVSL = non-revolving. For a Consumer Credit release, report the latest level and the month-over-month change (latest minus prior), and note the revolving vs. non-revolving split if relevant.
 
@@ -445,6 +507,7 @@ def call_llm_for_prose(today, data, calendar):
         "calendar_week_ahead": calendar_range(calendar, week_start, week_end),
         "metals": data.get("metals", {}),
         "oil_sources": data.get("oil_sources", {}),
+        "rates_source": data.get("rates_source", "FRED H.15 (one-day lag)"),
         "headlines": data.get("headlines", []),
     }
     body = {
@@ -615,18 +678,18 @@ def render(today, data, calendar):
 ## Markets close
 {markets_table}
 
-*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
+*Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
 {headlines_md}
 
 ---
-*Sources: FRED; Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
 """
 
 
 FRED_SERIES = [
-    "DGS2", "DGS10", "DGS30", "T10Y3M", "SOFR", "DFF",
+    "DGS3MO", "DGS2", "DGS10", "DGS30", "T10Y3M", "SOFR", "DFF",
     "DFEDTARU", "DFEDTARL",
     "SP500", "DJIA", "NASDAQCOM",
     "DCOILWTICO", "DCOILBRENTEU",
@@ -642,7 +705,7 @@ FRED_SERIES = [
 
 
 def main():
-    data = {"fred": {}, "metals": {}, "oil_sources": {}, "headlines": []}
+    data = {"fred": {}, "metals": {}, "oil_sources": {}, "rates_source": "", "headlines": []}
     calendar = load_release_calendar()
     print(f"Loaded calendar with {sum(len(v) for v in calendar.values())} entries across {len(calendar)} dates")
 
@@ -651,6 +714,10 @@ def main():
             data["fred"][sid] = fred_obs(sid, limit=12)
         except Exception as e:
             print(f"FRED {sid} failed: {e}", file=sys.stderr)
+    try:
+        print(f"rates: {pull_treasury(data, TODAY)}")
+    except Exception as e:
+        print(f"Treasury curve unavailable, keeping FRED DGS*: {e}", file=sys.stderr)
     try:
         data["oil_sources"] = pull_oil(data, TODAY)
         for sid, note in data["oil_sources"].items():
