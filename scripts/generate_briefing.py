@@ -7,6 +7,7 @@ import sys
 import csv
 import json
 import requests
+import urllib.parse
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
@@ -120,6 +121,90 @@ def fred_obs(series_id, limit=24):
 METALS_CACHE = CACHE_DIR / "metals_prev.json"
 
 
+# ---------------------------------------------------------------------------
+# Crude oil — live front-month futures instead of FRED's lagged EIA spot
+# ---------------------------------------------------------------------------
+# FRED's DCOILWTICO / DCOILBRENTEU mirror EIA daily spot prices, which EIA
+# publishes about a week late. The rest of the markets table is next-day
+# data, so oil was routinely stale. Pull CL=F / BZ=F daily settlements from
+# Yahoo Finance (stooq as fallback) and drop them into the same FRED-shaped
+# slot so the table and LLM payload need no other changes. FRED remains the
+# last-resort fallback, flagged with its as-of date.
+
+OIL_SOURCES = {
+    # FRED id: (yahoo symbol, stooq symbol, label)
+    "DCOILWTICO": ("CL=F", "cl.f", "WTI front-month (CL)"),
+    "DCOILBRENTEU": ("BZ=F", "cb.f", "Brent front-month (BZ)"),
+}
+_UA = {"User-Agent": "Mozilla/5.0 (macro-briefing-bot)"}
+
+
+def _yahoo_daily(symbol, today):
+    """Daily closes, newest first, excluding today's still-open bar."""
+    r = requests.get(
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}",
+        params={"range": "1mo", "interval": "1d"},
+        headers=_UA,
+        timeout=15,
+    )
+    r.raise_for_status()
+    res = r.json()["chart"]["result"][0]
+    closes = res["indicators"]["quote"][0]["close"]
+    out = []
+    for ts, c in zip(res["timestamp"], closes):
+        if c is None:
+            continue
+        d = datetime.fromtimestamp(ts, ET).date()
+        if d >= today:
+            continue
+        out.append({"date": d.isoformat(), "value": f"{c:.2f}"})
+    out.sort(key=lambda o: o["date"], reverse=True)
+    return out
+
+
+def _stooq_daily(symbol, today):
+    r = requests.get(
+        "https://stooq.com/q/d/l/",
+        params={"s": symbol, "i": "d"},
+        headers=_UA,
+        timeout=15,
+    )
+    r.raise_for_status()
+    out = []
+    for row in csv.DictReader(r.text.splitlines()):
+        d, c = row.get("Date", ""), row.get("Close", "")
+        if not d or not c or d >= today.isoformat():
+            continue
+        out.append({"date": d, "value": f"{float(c):.2f}"})
+    out.sort(key=lambda o: o["date"], reverse=True)
+    return out[:20]
+
+
+def pull_oil(data, today):
+    """Replace FRED oil series with live futures where available.
+    Returns {fred_id: source_note} for the payload/footnote."""
+    notes = {}
+    for sid, (ysym, ssym, label) in OIL_SOURCES.items():
+        live = []
+        for fn, arg in ((_yahoo_daily, ysym), (_stooq_daily, ssym)):
+            try:
+                live = fn(arg, today)
+                if len(live) >= 6:
+                    break
+            except Exception as e:
+                print(f"oil {sid} via {fn.__name__}({arg}) failed: {e}", file=sys.stderr)
+        if len(live) >= 2:
+            data["fred"][sid] = live
+            notes[sid] = f"{label} settlement, {live[0]['date']}"
+        else:
+            obs = data["fred"].get(sid, [])
+            asof = obs[0]["date"] if obs else "n/a"
+            notes[sid] = f"FRED/EIA spot fallback (lagged), as of {asof}"
+            print(f"oil {sid}: live sources unavailable, using FRED as of {asof}", file=sys.stderr)
+    data["oil_sources"] = notes
+    return notes
+
+
 def pull_metals():
     r = requests.get(
         "https://api.metalpriceapi.com/v1/latest",
@@ -148,8 +233,6 @@ def pull_metals():
     METALS_CACHE.write_text(json.dumps({"gold": gold, "silver": silver, "as_of": NOW_ET.isoformat()}))
     return {"gold": gold, "silver": silver, "gold_dd": gold_dd, "silver_dd": silver_dd}
 
-
-import urllib.parse
 
 # Titles that are site landing pages / section fronts rather than real articles.
 _HOMEPAGE_TITLE_BITS = (
@@ -300,6 +383,8 @@ Tone and style:
 
 You will be given a JSON payload of the morning's pulled data: FRED indicator values (latest and prior), the authoritative release calendar (already filtered to yesterday/today/this-week), headlines, and market levels. Use those numbers — do not invent any.
 
+Every value in the payload carries its observation date. Treat a value as "current" only if its date is the last business day (or the one before). If a series is older than that, either skip it or cite it explicitly as "as of <date>" — never describe a stale observation as what happened yesterday or overnight, and never build "Top of mind" around a stale series. DCOILWTICO and DCOILBRENTEU are front-month futures settlements (CL/BZ), not EIA spot, unless `oil_sources` says otherwise.
+
 Series-ID notes for less-obvious FRED keys: TOTALSL = total consumer credit outstanding ($millions, monthly, G.19); REVOLSL = revolving consumer credit; NONREVSL = non-revolving. For a Consumer Credit release, report the latest level and the month-over-month change (latest minus prior), and note the revolving vs. non-revolving split if relevant.
 
 For the calendar sections (Yesterday's releases / Today's calendar / This week ahead), use ONLY the entries provided in the payload's calendar fields. Do not infer additional releases from your own training data, world knowledge, or assumed release cadences — the calendar is authoritative and built from each agency's published schedule. If a calendar field is empty, say so explicitly (e.g., "No major releases scheduled today.") — do NOT fill it in from memory of what usually drops on that day.
@@ -359,6 +444,7 @@ def call_llm_for_prose(today, data, calendar):
         "calendar_today": calendar_for(calendar, today),
         "calendar_week_ahead": calendar_range(calendar, week_start, week_end),
         "metals": data.get("metals", {}),
+        "oil_sources": data.get("oil_sources", {}),
         "headlines": data.get("headlines", []),
     }
     body = {
@@ -442,6 +528,14 @@ def render(today, data, calendar):
         obs = data["fred"].get(sid, [])
         if len(obs) < 2:
             return f"| {name} | — | — | — |"
+        # Flag anything older than the last two business days so a lagged
+        # series can never pass as yesterday's close.
+        try:
+            obs_date = date.fromisoformat(obs[0]["date"])
+            if (today - obs_date).days > 4:
+                name = f"{name} (as of {obs_date.strftime('%-m/%-d')})"
+        except Exception:
+            pass
         latest = float(obs[0]["value"])
         prior = float(obs[1]["value"])
         wk_ago = float(obs[5]["value"]) if len(obs) > 5 else None
@@ -477,8 +571,10 @@ def render(today, data, calendar):
     rows.append(m("S&P 500", "SP500", "{:,.2f}"))
     rows.append(m("Dow Jones", "DJIA", "{:,.2f}"))
     rows.append(m("NASDAQ Comp.", "NASDAQCOM", "{:,.2f}"))
-    rows.append(m("WTI", "DCOILWTICO", "${:.2f}"))
-    rows.append(m("Brent", "DCOILBRENTEU", "${:.2f}"))
+    oil_notes = data.get("oil_sources", {})
+    oil_live = all(not v.startswith("FRED") for v in oil_notes.values()) if oil_notes else False
+    rows.append(m("WTI (CL front-month)" if oil_live else "WTI (EIA spot)", "DCOILWTICO", "${:.2f}"))
+    rows.append(m("Brent (BZ front-month)" if oil_live else "Brent (EIA spot)", "DCOILBRENTEU", "${:.2f}"))
     metals = data.get("metals", {})
     if metals.get("gold"):
         gd = f"{metals['gold_dd']:+.2f}%" if metals.get("gold_dd") is not None else "—"
@@ -519,13 +615,13 @@ def render(today, data, calendar):
 ## Markets close
 {markets_table}
 
-*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com.*
+*DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
 {headlines_md}
 
 ---
-*Sources: FRED; metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
+*Sources: FRED; Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of {today.isoformat()}.*
 """
 
 
@@ -546,7 +642,7 @@ FRED_SERIES = [
 
 
 def main():
-    data = {"fred": {}, "metals": {}, "headlines": []}
+    data = {"fred": {}, "metals": {}, "oil_sources": {}, "headlines": []}
     calendar = load_release_calendar()
     print(f"Loaded calendar with {sum(len(v) for v in calendar.values())} entries across {len(calendar)} dates")
 
@@ -555,6 +651,12 @@ def main():
             data["fred"][sid] = fred_obs(sid, limit=12)
         except Exception as e:
             print(f"FRED {sid} failed: {e}", file=sys.stderr)
+    try:
+        data["oil_sources"] = pull_oil(data, TODAY)
+        for sid, note in data["oil_sources"].items():
+            print(f"oil {sid}: {note}")
+    except Exception as e:
+        print(f"pull_oil failed: {e}", file=sys.stderr)
     try:
         data["metals"] = pull_metals()
     except Exception as e:
