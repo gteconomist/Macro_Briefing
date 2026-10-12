@@ -1,59 +1,54 @@
-# Daily Macro Briefing — Friday, October 09, 2026
+# Daily Macro Briefing — Monday, October 12, 2026
 
 ## Your calendar today
-- **All day:** Leif Eriksson Day · _Personal_
-- **12:30 pm–1:30 pm:** Lunch with Matt · _Personal_
+- **9:30 am–10:30 am:** CEDR Staff Meeting — Microsoft Teams Meeting · _Work (Outlook)_
+- **1:30 pm–2:30 pm:** Economic Impact Study Discussion - Zoo Atlanta - GA Tech — Microsoft Teams Meeting · _Work (Outlook)_
 
 ## Top of mind
 
-The dominant market story this morning is the sharp spike in oil prices: WTI front-month settled at $91.49/bbl Thursday (+$3.21 from Wednesday's $88.28), and Brent at $104.28 (+$4.08 from $100.20). With a hurricane threatening Florida's Gulf Coast, energy infrastructure risk is a live near-term factor, but broader geopolitical pressure on crude appears to be the primary driver. That surge complicates the disinflation narrative meaningfully — PCE and CPI data through August showed core inflation cooling, but a sustained move in crude above $90 WTI feeds into headline prints quickly and could keep long-end yields elevated. The 10-year Treasury closed Thursday at 5.22% (down 6 bps from Wednesday's 5.28%), suggesting some bond-market relief on the day despite oil, but at 5.22% the rate environment remains structurally restrictive.
+The geopolitical risk premium in energy is the dominant story heading into the week. WTI front-month settled at $91.85 and Brent at $104.72 on Friday, with headlines pointing to Riyadh attacks disrupting oil executive schedules and a reported Trump-brokered "energy ceasefire" that briefly pressured prices — but the WTI/Brent spread at $12.87 reflects persistent supply-side uncertainty. Against that backdrop, the 10-year Treasury closed Thursday at 5.22% (down 6 bps from Wednesday's 5.28%), and the long end (30-year at 5.60%) remains the rate-level story for real activity — housing, cap-ex, and credit conditions are all priced off a curve that's structurally steeper than anything seen in the prior cycle.
 
----
+## Yesterday's releases (Fri 10/9)
 
-## Yesterday's releases (Thu 10/8)
+- **UMich Consumer Sentiment (Preliminary, October):** No FRED value available for a fresh October preliminary read — the most recent FRED observation for UMCSENT is the August final at 51.7, down from 55.2 in July (as of 8/1). If Friday's preliminary confirms further softening, it would extend a meaningful slide in household confidence coinciding with 5%+ long rates and elevated gas prices.
 
-- **Initial Jobless Claims (week ending 10/3):** 197,000 initial claims, down 2,000 from the prior week's 199,000. Continuing claims (week ending 9/26) came in at 1,716,000, up 17,000 from 1,699,000 — the insured unemployment side continues to drift higher even as initial filings stay historically tight. Labor market is still not cracking at the front end, but the continuing claims trend warrants watching for signs of slower re-employment.
+## Today's calendar (Mon 10/12, ET)
 
----
-
-## Today's calendar (Fri 10/9, ET)
-
-- **Consumer Sentiment, Preliminary (UMich), 10:00** — The August final read was 51.7, down from 55.2 in July, with year-ahead inflation expectations at 4.0%. Watch whether the preliminary October print stabilizes or deteriorates further; the sentiment index has been under sustained pressure and the oil spike may add to near-term inflation expectations in the survey.
-
----
+No major releases scheduled today.
 
 ## This week ahead
 
-- **Tue 10/13:** Existing Home Sales (NAR, 10:00) — August starts (1,275K) and permits (1,403K) both softened; existing sales are the higher-frequency read on demand-side conditions in housing with the 10-year at 5.22% and mortgage rates well above 7%.
-
----
+- **Tue 10/13:** Existing Home Sales (10:00, NAR) — watch for another leg down given 30-year mortgage rates tracking above 7%; August new home sales rebounded to 684K (SAAR) but permits and starts are both declining.
+- **Wed 10/14:** **CPI (8:30, BLS)** — the marquee print of the week. Last FRED read is August (CPIAUCSL 334.131, core CPILFESL 337.765); September CPI will be the Fed's freshest inflation data point ahead of the November FOMC decision and will drive rates and risk pricing for the rest of the week.
+- **Thu 10/15:** Empire State Manufacturing (8:30, NY Fed), **PPI (8:30, BLS)**, Philadelphia Fed Manufacturing (8:30, Philly Fed), **Retail Sales (8:30, Census)**, Initial Jobless Claims (8:30, DOL) — a dense morning; Retail Sales and Claims will matter most. August retail sales ran $737.8B total / $598.6B ex-autos; September will test whether the consumer held up as sentiment softened. Claims have been running well below stress territory (197K last week).
+- **Fri 10/16:** Import/Export Prices (8:30, BLS), Industrial Production (9:15, Fed) — IP was essentially flat in August (103.07 vs. 103.05 in July) with capacity utilization slipping to 76.3%; September IP will indicate whether manufacturing momentum is stalling.
 
 ## Fed watch
 
-The target range remains 3.75–4.00%, with the effective fed funds rate at 3.88% (as of 10/7) and SOFR at 3.88% — both printing squarely in the middle of the corridor. The 10Y–3M spread has re-steepened to +99 bps (from +106 bps the prior day), still positive but the pace of normalization is gradual. No FOMC decision, minutes, Beige Book, or SEP release appears on the calendar through next week per the payload. The combination of a still-tight labor market, oil back above $90 WTI, and long-end yields above 5% argues for continued patience on easing; the next meaningful test of the rate path will depend heavily on the September CPI print, which is not yet on the visible calendar.
+The target range holds at 3.75–4.00%, with the effective fed funds rate at 3.88% (as of 10/8) and SOFR at 3.87% — both printing near the middle of the corridor, as expected. The 10Y–3M spread has flipped firmly positive at +99 bps (as of 10/9), a notable shift for a spread that spent much of the prior two years deeply inverted. No FOMC statement, minutes, Beige Book, or SEP release appears in the calendar for this week. Wednesday's CPI print is the single most consequential input for Fed rate path pricing between now and the next meeting — with the 10-year at 5.22% and the front end at 4.23% (3-month T-bill), there is limited room for the Fed to signal additional easing without risking further long-end backup.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
 | UST 10y | 5.22 | -6 bp | -2 bp |
-| S&P 500 | 7,765.36 | -0.47% | +1.29% |
-| Dow Jones | 51,231.64 | +0.10% | +0.60% |
-| NASDAQ Comp. | 27,193.34 | -1.25% | +1.20% |
-| WTI (CL front-month) | $91.49 | +3.64% | -1.49% |
-| Brent (BZ front-month) | $104.28 | +4.07% | +1.93% |
-| Gold (spot) | $4,109.71 | -1.40% | — |
-| Silver (spot) | $59.79 | -2.69% | — |
+| S&P 500 | 7,811.54 | +0.59% | +1.15% |
+| Dow Jones | 51,654.95 | +0.83% | +0.93% |
+| NASDAQ Comp. | 27,366.17 | +0.64% | +0.64% |
+| WTI (CL front-month) | $91.85 | +0.39% | +0.81% |
+| Brent (BZ front-month) | $104.72 | +0.42% | +2.42% |
+| Gold (spot) | $4,194.35 | +2.06% | — |
+| Silver (spot) | $60.81 | +1.71% | — |
 | Broad USD (DTWEXBGS)* (as of 10/2) | 121.38 | -0.33% | +0.88% |
 
 *Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
-- **[ICE shooting of New York man in car with five-year-old sparks protests](https://news.google.com/rss/articles/CBMisAFBVV95cUxOckVoeWFRMEpudkFHbm1rd2pMTHA0YWNOM3hYTFVGaG1WUFZhVGtQSWhXLXozNzh5c3lVS2ZDc0E4Zlh0QTMxMUFPa2RwcGNZX0FaWXVVNTZwMVlDdVpDVXhNTjgtckRWTjREM2xDb2l2dm9JTFJqRTQydlBMdThTbmtEUmI1RTJKVngzTXlnUGZ3ck9icldZQm5DVDRFZGFpVjBYUElQSERJQjFBSm1TQdIBtgFBVV95cUxQSDU4Q1FVMFlxamlBa3pUTjZJX05iTlZIb1loOU9aWXZCc3o5dGN1MWZUNGhjN3QzbHp5Z1RJcW1kb1Bsd0J0bHZPZWlPbExLRFA4TlQtWWVxd0NXdUdkOU9Vd3Ixb1JKeGFsZjRlT1lBLU1zc1VLWVhQZUpsSFFyX2R6VHVUQm1YcFI3R0I0bmxkNEtRWVpEVjF5d0RiVnlVck9POUVoT3FkbTJ1NUp5NW5QLWxEQQ?oc=5)** — *Al Jazeera*
-- **[Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon says](https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pVlNqcnVNNU5mOGhxUE5iajdxU3psRmdDdWNEZTBGenRRT1AtTC1YcmVTbkpNTlF4SkhkY25RblUtWXlwMHlrM2RfZ2VTVUprQ183THdKTWpEb1k?oc=5)** — *BBC*
-- **[Nobel Peace Prize goes to South African human rights pioneer Navi Pillay](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZzBrbjlqRzBha3o2X1YwQzEwbXBCNGx3Rmp6bXJYelk2TWpfTWNuM3kwSzRHZkliaWxUemo1XzhFUm1Kc1NnYy13d2V2TlhZN2JSZFZiYkM3RjNiVXNsMFhsdjZpUmZ3TlBpS0d6cmVSZnFLMUtWN1dIbFZWaWY3a1pyZG0tdUxU?oc=5)** — *CNN*
-- **[Fiery Senate Debates in Maine, Michigan and Georgia: Five Takeaways](https://news.google.com/rss/articles/CBMirAFBVV95cUxNbGlyY0d3S0hIRDNTcTZoNkZ2a1MyakVXb0NTRHdhODViLW1uMHZVS1ZhekRqOE9oRFBDT0d0VFRsNFRBTFRNUVgzWDc5WjNxQ1VEV0xiZTdydlFlRDJJRDhxb014cUJTLXJkUkwwbmFzaS1Mc21NekN2enNIcE1tb2Z5M2ttZW9WbkhGY2t6X19RSUNrOHdITVZhNHFjUzZSeWx0NGJqbUFyV093?oc=5)** — *The New York Times*
-- **[Christa Pike is walking with help and eating after failed execution attempt](https://news.google.com/rss/articles/CBMic0FVX3lxTE11akZrSDhTd2tydUlrQUNQV0ZJRk1xVnBjek9ybUdEZldKbXhpTVMwdm5QeUZITVVfaGYxSmlMd0YyNURMMlMyQngwMXY0ODRJZ3FxSkJYbXpXSFB4UEpnQXBVeXJFS1IxUEt0NzVCYzZUX3c?oc=5)** — *NPR*
-- **[Florida officials urge preparation as state braces for first hurricane in two years](https://news.google.com/rss/articles/CBMipwFBVV95cUxOSHZRbklNVzhhdkNjWk5mX2ctSkw5dHROOVBfV1VLZWtSS3FCUjlXRzdIV2ZPcHdTRGVtc29xWVd1MlVKZndCV2FyVzF3bGtpQ014dW95cVgyTEdvcXFEN0ZFMlZfcldZQUZkeUNJODZqSVAtbUlJZ2RkV3hOZ2RlYVVieGttcDhjRDRLdTBvRGZGeEZhSm9RVGN2dzhDQW1qR3FOZW1LUQ?oc=5)** — *Politico*
+- **[Top oil executives dropped from event schedule after Riyadh attacks](https://news.google.com/rss/articles/CBMitwFBVV95cUxObWQtMDRPN05hVWltQzRWWGdZLUVfT3lnZXNrVDBteWp6NWJfZEFBaEgzZEVVaGRUaXJuTVhSTXNBV29fcUFvZVcxV19yRnU1Sk9zM3p5MWcwYkNsaDI0bV9DeW9tc3NQamVDb3ZZeFpGb0hPRGk1N1gyMW9QU3VidVlZMVhZZlF0RWdMZy1KcFJIbDlDXzN6c0xHajFhWHVmckI0SVZuU3lFZTVKc3hWNEZ6eTZrYkk?oc=5)** — *Reuters*
+- **[Oil prices drop as stocks rise after Trump touts 'energy ceasefire'](https://news.google.com/rss/articles/CBMipgFBVV95cUxQMnhINXRsZVZacWt1VnZWYkkxZlRSeUU1QVZoM3E2d0RVM00tWElyMTVKNzdNWGN3dmViQlZfb201MnowQ3dwSW54ekEyLTRmOUdVSmx4OHBORHlRZEVodmR5RjJrN3FwRVRWY05qeEVSYk1qbnhidjVKeGVmUmUwT1dPcm42NnlHU2FETm5ycU9INDVpaC1QNlZYbXZabnlLODktOXln?oc=5)** — *Euronews.com*
+- **[Whether Tennessee tries to execute Christa Pike again is an open question. Here’s why](https://news.google.com/rss/articles/CBMidEFVX3lxTE91eDNBcjhKNFlWV20wcEVUN1dKcTFhbWhDOEo5QVg3QlczWmF3VDVMUVNXRW16VmkwSG5vR0toXzRPWlczQU95UkNCYXRHVXFPRVRWTDRpcEd0VmF2WXRWaHlLQmNzQ0lmbjUyZWZPSEpGSV9f?oc=5)** — *CNN*
+- **[Takeaways from first S.C. Senate debate between Darline Graham, Annie Andrews](https://news.google.com/rss/articles/CBMizgFBVV95cUxNYUs0dFVhMGNuX3Z1ZEVkdnA1SlJ2dGgwc1Y4cklZSzNLZ0ZsOE9JVDFQVTByVUFPZnhLQm9WbTVnRXhiX0ZQa3k5VDc1MXdVUzczMDlYTzNDX2tCNGpfMzgyTVp4ZTZZaUhUSHQtM0p2T0tXVV85d244bng4RG9aVlluaXQ0dmhtVXFUbEItZ1dYTkRhczh4ODJlRFFEckNxUXV1SnhieUFiRGJhZ01memNpc3FPdTJsajM3ZzhMaWdPWVdrNXZzNTJCQl8tdw?oc=5)** — *The Washington Post*
+- **[Judge halts Trump administration's taxpayer-funded ads](https://news.google.com/rss/articles/CBMiekFVX3lxTE5OY3kzbGNrMEdISHpNR09oRkNEUGI0d0lnUUMtUDE1V3FGUG5hek45YXBNQXNMcTc3NUU2NFRUMDYtb3U3QkNrMFdBWmpJTnd1TkFKTm5QMDFyOVI1ZU5fVmNySlNxdkprcXJXRURIdkFiT2luTlBldXB3?oc=5)** — *Axios*
+- **[Trump faces Republican opposition to his diesel deal with Russia’s Putin](https://news.google.com/rss/articles/CBMihAFBVV95cUxOSFdBV05Zazk1Y1EzTzY1MzgzcDl3U2d0dGNPOVpQYXF5bUJKcllVQmlMalpjQXdocEhjYm4xdTIzc2E5WTNnWUdLUERmRk02TUl2OU5CdW94SkJSdmpTeExXX2hfb25tcnFUM1pUSDlMM1dtWEZfZ0J6NkdGVmdDM0lMVFE?oc=5)** — *Financial Times*
 
 ---
-*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-09.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-12.*
