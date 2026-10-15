@@ -1,54 +1,57 @@
-# Daily Macro Briefing — Wednesday, October 14, 2026
+# Daily Macro Briefing — Thursday, October 15, 2026
 
 ## Your calendar today
-- **All day:** Office Day · _Work (Outlook)_
-- **8:00 am–9:30 am:** Leadership Gwinnett - Economics Day · _Work (Outlook)_
-- **12:00 pm–5:00 pm:** Hall County* · _Work (Outlook)_
-- **1:00 pm–6:00 pm:** Basement counter install · _Alfie & Pilar_
+- **1:00 pm–2:30 pm:** PG Meeting* · _Work (Outlook)_
+- **1:00 pm–2:00 pm:** Car service - BMW · _Personal_
+- **6:00 pm–9:00 pm:** LG men - movie night · _Personal_
+- **6:45 pm–8:15 pm:** Meek LG Main Online Meeting — online · _EIG (Proton)_
 
 ## Top of mind
 
-September CPI drops at 8:30 this morning and is the dominant event for the week. The 10-year settled Tuesday at 5.21% (down 3 bps from Friday's close of 5.24%), and the 2s10s spread sits at +42 bps — markets are holding steady ahead of the print rather than making a directional bet. WTI front-month settled at $94.14 and Brent at $105.69 on Tuesday, keeping energy's pass-through contribution live; the Reuters headline on Iran escalating shipping attacks before the U.S. vote adds a geopolitical upside tail to that risk.
+September CPI dropped yesterday, and the market's reaction was the dominant move of the session — S&P 500 fell 1.1% to 7,718.94, Nasdaq shed 1.9% to 26,692.87, while the 2-year yield pushed up 3 bps to 4.82%. The FRED data confirm the September CPI print (index level 336.298 vs. 334.131 in August, a ~0.65% MoM move) alongside core at 338.896 vs. 337.765 (~0.33% MoM), readings that apparently came in hotter than expected and repriced the front end. Overlaid on that is an Iranian attack sinking two vessels in the Strait of Hormuz — WTI front-month settled at $95.09 (+$0.95) and Brent at $106.06 (+$0.37) Wednesday, and the geopolitical risk premium is live heading into today's session. Ukraine resuming strikes on Russian oil refineries adds a second supply-disruption vector worth tracking.
 
-## Yesterday's releases (Tue 10/13)
+## Yesterday's releases (Wed 10/14)
 
-- **Existing Home Sales:** No FRED series for existing home sales is in today's payload. The NAR release dropped at 10:00; watch for the SAAR figure as context for the broader housing picture — permits (1,403K, Aug) and starts (1,275K, Aug) are both trending lower, and 5.21% 10-year rates are not helping affordability.
+- **CPI (September):** Headline index 336.298 vs. 334.131 in August (~+0.65% MoM); core (CPILFESL) 338.896 vs. 337.765 (~+0.33% MoM). The headline acceleration is large enough — likely energy-driven given the oil backdrop — to keep the "higher for longer" conversation alive and explain the equity selloff and front-end yield move. Core held firm but did not cool materially.
 
-## Today's calendar (Wed 10/14, ET)
+## Today's calendar (Thu 10/15, ET)
 
-- **CPI, 8:30 ET** — The headline number. As of August, CPI stood at 334.131 and core (CPILFESL) at 337.765; the month-over-month impulse from July to August was +0.40% headline. Watch whether energy (WTI has run from the low $80s into the mid-$90s) is pushing headline above core on a monthly basis, and whether shelter continues to drag core higher. With the 10-year at 5.21% and the Fed sitting at 3.75–4.00%, any upside surprise tightens the already-uncomfortable gap between the policy rate and where markets are pricing duration risk.
+- **Empire State Manufacturing, 8:30** — Regional manufacturing surveys have been mixed; the NY Fed general activity index for September was only 7.6 (down sharply from 20.6 in August), so watch whether October shows further deterioration or stabilizes.
+- **PPI (September), 8:30** — Following the hot CPI print, the pipeline inflation read matters; any upside on final demand goods/services will reinforce the repricing underway in rates.
+- **Philadelphia Fed Manufacturing, 8:30** — The Philly index ran 37.8 in September (down from 47.4 in August) but remains solidly expansionary; check for signs the manufacturing rebound is broadening or fading.
+- **Retail Sales (September), 8:30** — The August advance figure (RSAFS) was $737.8B; September's read will be the first look at consumer spending momentum heading into Q4, with the control group critical for GDP tracking.
+- **Initial Jobless Claims (week ending ~10/10), 8:30** — Prior week (ending 10/3) printed 197K, continuing the tight sub-200K streak; continuing claims edged up to 1.716M for the week ending 9/26, worth watching for drift.
 
 ## This week ahead
 
-- **Thu 10/15:** Empire State Manufacturing (8:30), **PPI** (8:30), Philadelphia Fed Manufacturing (8:30), **Retail Sales** (8:30), Initial Jobless Claims (8:30) — a heavy morning; Retail Sales (Aug RSAFS: $737.8B, up from $729.5B in July) sets the consumption baseline heading into Q3 GDP, and PPI provides the pipeline read right behind today's CPI.
-- **Fri 10/16:** Import/Export Prices (8:30), **Industrial Production** (9:15) — IP has been essentially flat (103.07 in Aug vs. 103.05 in July) and capacity utilization dipped to 76.3%; Friday's September read will tell whether the manufacturing sector is gaining any traction.
+- **Fri 10/16:** Import/Export Prices (BLS, 8:30) — trade price pass-through relevant after the hot CPI; Industrial Production (Fed, 9:15) — August IP was essentially flat at 103.07 with capacity utilization at 76.3%, so September's read will clarify whether the manufacturing pulse visible in the regional surveys is showing up in the aggregate.
 
 ## Fed watch
 
-The target range remains 3.75–4.00% (DFEDTARU 4.00, DFEDTARL 3.75). The effective fed funds rate is printing at 3.88% (as of 10/12), and SOFR was 3.87% as of 10/9 — both hugging the middle of the band cleanly. Nothing in the calendar payload flags an FOMC decision, minutes release, Beige Book, or SEP update in the days immediately ahead. With the 10-year at 5.21% and the 3-month T-bill at 4.26%, the T10Y3M spread has turned meaningfully positive (+95 bps), marking a substantial re-steepening from the prolonged inversion — a dynamic worth watching as the Committee weighs whether long-end tightening is doing incremental work on financial conditions without additional policy rate moves.
+The target range remains 3.75–4.00%, with the effective fed funds rate at 3.88% (as of 10/13) and SOFR at 3.89% — both running near the top of the corridor, consistent with typical corridor mechanics at this target range. The 2-year at 4.82% prices in meaningful resistance to near-term cuts, and yesterday's CPI print will only reinforce that posture. No FOMC statement, minutes, Beige Book, or SEP release appears in the calendar for the next five business days. The 10Y/3M spread has turned positive at +91 bps (down from +95 the prior session), a notable shift if the inversion that characterized the last cycle has genuinely resolved — worth watching for persistence.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
-| UST 10y | 5.21 | -3 bp | -10 bp |
-| S&P 500 | 7,805.45 | -0.02% | -0.17% |
-| Dow Jones | 51,670.10 | -0.35% | +0.29% |
-| NASDAQ Comp. | 27,204.38 | -0.15% | -1.43% |
-| WTI (CL front-month) | $94.14 | +0.43% | +5.25% |
-| Brent (BZ front-month) | $105.69 | -0.90% | +5.08% |
-| Gold (spot) | $4,162.13 | -0.95% | — |
-| Silver (spot) | $60.04 | -1.72% | — |
+| UST 10y | 5.19 | -2 bp | -8 bp |
+| S&P 500 | 7,718.94 | -1.11% | -1.06% |
+| Dow Jones | 51,621.48 | -0.09% | +0.86% |
+| NASDAQ Comp. | 26,692.87 | -1.88% | -3.07% |
+| WTI (CL front-month) | $95.09 | +1.01% | +7.71% |
+| Brent (BZ front-month) | $106.06 | +0.35% | +5.85% |
+| Gold (spot) | $4,162.84 | +0.02% | — |
+| Silver (spot) | $59.16 | -1.46% | — |
 | Broad USD (DTWEXBGS)* (as of 10/9) | 121.60 | +0.13% | +0.18% |
 
 *Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
-- **[Democrats fear "more October surprises" after "bullshit" raid on Ilhan Omar's home](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQWFWei1mTzVMZ2JWTklHaWZVQ3Iyb2tnREpvU2pwLU1XVUh4T05QTmV2WHYtNllQUDZyLXZBa2dNUzJrV0xEMjJtVEtvcUx1R3FMUnFzUi0yUlBiZTV1SXhvcTM4YnhPb19QZlpBTFItWFYxaFl2LXlIUE9rckxLNmFPS245Qllm?oc=5)** — *Axios*
-- **[Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct](https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0FXNzZpd0t6T24tN0FzUS15SGt5enNiSVRCQS1WTU82MXhidDdpT1J5YlFfZVRZWXRvZ2Ffa24xaW5lVVNfN3ZyVnV6SFlMX1JkZUE5b2pmbnhVNTl6anZnekRnbEFoNGY1aDljLUtxOExQT084NVAtbGt0UTRRRjMyN1M?oc=5)** — *NPR*
-- **[Pope Leo XIV's brother Louis Prevost also battling cancer, wife tells CBS News](https://news.google.com/rss/articles/CBMijAFBVV95cUxQODNCVWxvY2NjOEtwY0sxVGlWUU5CdElXdkN5dmFpVzZYLXlKX0hwdk9SYUN6MGhBeTVmXzlHZTZac0U4X0F3U1VtSDNTbTZCUTZjSmd2clFKbFh3SVhRZ3hOZm1OYS1GRTA4cTl1ZW1VTHJBQ01sdDEyWlFFc2RZNjZyM0JuQWtYTmRyVA?oc=5)** — *CBS News*
-- **[Judge extends White House access to banned media outlets CNN, MS Now and Politico](https://news.google.com/rss/articles/CBMimwFBVV95cUxNNE84dTlMaURmaG9obkVKY2tPYzdoSHRuQjFrZUQ4Szh0dzFfOFpNeVlKcVRDNXVXQXVRYU1LZTNHQ2h4ckNLc01HSzdjWmIzQUFZTHdJUFo1OTN1bGJOVWVwRllrZFhLdUtvZTVaLUJnN0RnUDhwcWpvUGx6aVlJc3lEeGhIQUNxNFlNRkRQZGFxMHUwOVVqUENSdw?oc=5)** — *The Guardian*
-- **[Ossoff, Collins clash in second Georgia Senate debate: 4 takeaways](https://news.google.com/rss/articles/CBMiogFBVV95cUxQYXdGUGVReC1PVlF3TXNsR2g0LXltZUNOclJLNUc1ZzJfOG04eUowdHVJcVJQeDJHaW0zNmtOMWdBMlpBVlhCQVJEUW1wd3BFR0pLS25SSFl1enhPWlp3QklTYTNsWlhFbl9OZjlUclppSEM5LUtIbjNFekxoallQZ3BzV296ZElidlZGakw2dFplUlFGUk9URC13VVFScUREQXfSAacBQVVfeXFMT0t1UTl4Ui16akRudHM1WGsybHJXRUt3a25WZERaSGRiYjJ6TjlWZGxzWVNIMG95UVpBTWxmSGNoWmVtRTJXekxlQTVPMy1DRXFBckZfZTVmbWpONm5JelFBN01mcTlNZmpUSllpeWNhYkZuYkJnYU5obVR6dHpiNU1qMktNTW44dkZ4UWRwWXA5NDRCbnBWWVBqQlRra0toLW1Pb1pBZ2c?oc=5)** — *The Hill*
-- **[Iran shifting tactics to step up attacks on shipping before US vote, officials say](https://news.google.com/rss/articles/CBMiyAFBVV95cUxQOXl4Z2E1ajJabkV2V0d3VVN4TE4xZVdXU0xjY1FwX2QwNzVpSEZ2UUdWY2d2N0w0TEZCXzRFR2oyZ3l4MlZkMER3cDZtOFRMc2p4VzRSWE1OZGdJaHBvRlZieVJ3Unc4bXEyRHFvalF4MEkwTmduUEFtV0lBX3NZS2Q0M2hoSkozeWFNMS02MnF5QmNveXNFNklHVktxYy1RM1BRcHlSVm92aWYzRnJpNTJvVWYtemNjbklpM3Jna2t0bUIweUV6VQ?oc=5)** — *Reuters*
+- **[Republicans’ last hope for 2026: Another polling miss](https://news.google.com/rss/articles/CBMiogFBVV95cUxQYmZFR1NtcHZOSVVMeDFLUTlWMjFKc2k3a0ZDZWF0XzNsZnRiQmgySUo0VFhiQW5fck54YktFNG5lakEtUzhGYWEyTFJPWEpJaExqbU9kcEFsQjBCeWx6ZTVBbzU2cEVNeTZlS1VZaUpfVmxnQUk3QkowV0hBZlhBdmpDT0NBZ29RelByTXFyVEczV1dUTU1hSlhOdk51N1JBOFE?oc=5)** — *Politico*
+- **[Ukraine's Starlink restrictions raise suspicions of Musk, Trump retaliation](https://news.google.com/rss/articles/CBMiggFBVV95cUxNWHdxWXlmN2ZYWklDT2FlREFOVjhVN3VqWTNJX084YW0tVktrMVY4UTUxa3hMa2Y5M1BvZkRHdUhmSjE5LUNsbTJUSGQxZDJEdF9kaVB2T0l3T0RUSFZhTW9iODktOVZpMmpTMFN3ZXVRV2dfWXY5Vy1iM2FxSm0ySXN3?oc=5)** — *Axios*
+- **[Talarico debates Texas voters in CNN-Jubilee town hall amid tight Senate race](https://news.google.com/rss/articles/CBMie0FVX3lxTFBYQ0dISldQQ2gtRXJqVS1vSDZDc0Q0aEVuZGk1Skh0bVBCMmVxSHEtYVk0cmpub19Ya18ycWNfako3dHZkMjQyQWJFanNZX0pUZ2dTcHRFa0gwLXZncVNpR0xyTnNBWEYyN0NQclpCSWY3bjJTUnBzY05uc9IBgAFBVV95cUxOcmF6ZjVwYWEySHhPemxuTDJGTnlvWDlMbXloZ2Q5aFdZcnpUQndyLUdKV1dSZFJKanlRNHdHOFh0TkhsODJGZ3J5T3hLQnB3Yi1JNVZTZHFDMVNmc0RpSTA3WU5JU05OSVgwUU5rbndOXy1XbU90eXl1QWs2LU05Qg?oc=5)** — *The Hill*
+- **[‘We’re done’: Ukraine resumes strikes on Russian oil refineries as anger mounts with Trump](https://news.google.com/rss/articles/CBMitwFBVV95cUxOOGlmVmZvMDNPb3VjRGN2ckNvY1ZaaHRxQmdENlI4U1hLX2tNZlVHR2lzdEt1cTN1RnZldFQwRlFzMW5jMkNsbXlYYVhmWktsRXBtdU1EN0E2ODFpWWNtenBSSjVIYS1QWHluTzFiT3BiV0pzbl9IVEZHcmNWZGEyUWUtYXFONDhBYURjdHc5WDdzZFlEZ042YVJkMUFiaTNQX0hTd01hZFdqMG9yNXIzQ0ZFUGs3cms?oc=5)** — *NBC News*
+- **[Trump suggests those who leak government information should ‘be shot’](https://news.google.com/rss/articles/CBMirgFBVV95cUxPdzhrVzUtbklxa3E4NGpXTV9mcGtTS240ejROWi1yajJMcXBmRDJkQ3RZYnVBUkVtUnNFc1lmWDE5MUU1amp4Y3ZTNUM3cXRHRS1fMkVFOEVjYkRjc0RNX09xdzgxNVBJcnhQVjVJd2RGNzhWNnVtTkF5M0IyTjhNQ3lHQ3NPX0o0d3pSdnVOYmtLT3lOb1FkWkp5cWE0RWJfYW5jd2hpSklaSlNuU1HSAbMBQVVfeXFMTWU5a1VyWXpoVF9WQTVKaUd3VFZSM2RTcHAwbTQtdlRZSGpMUlZsc0pMbU5Vdm94b1N4eUFha2pqVU5KTmdDZ29FbU94bFRLcVJpMXhZVFZnLUp4X0hsSF9ZUXdoQldWQlNrUDc2eUhReFJRT0NsR21wblJYdVVLbUFUdTcyam4yV3IyZHNKWE5IVWNhMEowNVFUdlYySDQ3YkxudnVLbTJkd1pXbElQSGVENlU?oc=5)** — *Al Jazeera*
+- **[Iranian attacks sink two ships in Strait of Hormuz](https://news.google.com/rss/articles/CBMinwFBVV95cUxPNVg0eWh4OTZ1NG5IR1M1ZWJJejUxUncyYVVWeHB3QTdHaHYzUnRDOHBpaFpEZldsb0RNZG5SNVZDMWJIVUV6U0JZRVhLSmdtWEZfSnpGSDlXWVU1UlRRSF9wT0JSbktPRTRWT2dkazNCSmJoWDBaUl9wZEI3bjVpLUNZS2ZDWW9IQk9oUndRNU1qYUpHclhnUzhVYVU1RE0?oc=5)** — *The Washington Post*
 
 ---
-*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-14.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-15.*
