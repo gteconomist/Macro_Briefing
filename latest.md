@@ -1,64 +1,61 @@
-# Daily Macro Briefing — Monday, October 19, 2026
+# Daily Macro Briefing — Tuesday, October 20, 2026
 
 ## Your calendar today
-- **9:30 am–10:30 am:** CEDR Staff Meeting — Microsoft Teams Meeting · _Work (Outlook)_
-- **12:45 pm–1:30 pm:** Travel to meeting · _Work (Outlook)_
-- **1:30 pm–2:30 pm:** Partnership Gwinnett Feasibility Study Discussion — Microsoft Teams Meeting · _Work (Outlook)_
-- **2:30 pm–3:15 pm:** Travel from meeting · _Work (Outlook)_
+- **All day:** Office Day — Centergy Flex Office 3030L (Atlanta) · _Work (Outlook)_
+- **All day:** Give dogs heart worm meds · _Alfie & Pilar_
+- **2:00 pm–3:00 pm:** Alfie, Donna & David (in person) — Centergy Conference Room 3020E · _Work (Outlook)_
 
 ## Top of mind
 
-Oil is the lead story this morning. WTI front-month settled Friday at $101.41/bbl, up $3.44 from Thursday's $97.97 close — a 3.5% single-session move that takes crude back above $100 for the first time in weeks. Brent settled at $109.86, up $3.94. That surge lands against an already-elevated inflation backdrop: September CPI showed headline at 336.298 vs. August's 334.131, and PPI for final demand jumped from 157.662 to 159.78 month-over-month. A sustained oil spike complicates the last-mile disinflation story and pressures a bond market where the 10-year closed Thursday at 5.10% — still historically elevated, though it did pull back 9 bps from Wednesday's 5.19%.
+The 10-year Treasury closed Monday at 5.15%, up 6 bps from Friday's 5.09%, with the 30-year at 5.48% — both continuing a move that is now materially tightening financial conditions independent of Fed action. WTI front-month settled at $103.66 (+$2.25 on the day) and Brent at $109.55, keeping energy inflation pressure alive at a moment when the curve is already pricing fiscal and term-premium risk. The 10y–3m spread has turned positive at +88 bps (from +83 bps Friday), a modest steepening but one still consistent with markets demanding more compensation at the long end rather than signaling a clean growth outlook.
 
 ---
 
-## Yesterday's releases (Fri 10/16)
+## Yesterday's releases (Mon 10/19)
 
-- **Import/Export Prices (Sep):** No FRED series in the payload for this release; data not available here. Release covers September trade price pressures — relevant given the oil spike and ongoing goods inflation dynamics.
-- **Industrial Production (Sep):** INDPRO came in at 103.9506 vs. 103.2664 in August, a solid 0.66-point gain month-over-month. Capacity utilization ticked up to 76.85% from 76.42%. Both readings point to continued manufacturing expansion, though utilization remains below the longer-run average zone that would signal cost-push pressure.
+- **NAHB Housing Market Index:** No FRED series for NAHB HMI is in the payload, so a point estimate isn't available here — but the read feeds directly into today's Housing Starts print and warrants comparison against the August starts/permits data (1,275K and 1,403K, respectively, both as of 8/1) for directional confirmation of builder sentiment vs. actual activity.
 
 ---
 
-## Today's calendar (Mon 10/19, ET)
+## Today's calendar (Tue 10/20, ET)
 
-- **NAHB Housing Market Index, 10:00** — Watch for follow-through from the softening in starts (August housing starts 1,275K, down from July's 1,309K) and permits (1,403K vs. 1,433K). Builder sentiment has been sensitive to mortgage rate moves; with the 10-year still above 5%, any deterioration below 40 would reinforce the view that housing remains a drag on residential investment.
+- **Housing Starts, 8:30** — The prior read (August) came in at 1,275K annualized with permits at 1,403K, both down from July. With the 10-year at 5.15% and mortgage rates tracking accordingly, watch whether September starts confirm a further pullback in single-family activity or whether new home sales momentum (August NSA: 684K, up from 643K in July) is pulling builders forward despite rate headwinds.
 
 ---
 
 ## This week ahead
 
-- **Tue 10/20:** Housing Starts (Sep, Census 8:30) — first look at September starts and permits; prior month was soft on both, and 5%+ mortgage rates remain a structural headwind.
-- **Thu 10/22:** Initial Jobless Claims (week ending ~10/18, DOL 8:30) — latest print was 199K (week of 10/10), still historically tight; continuing claims edged down to 1.710M. Any sustained move above 210K would warrant attention given the uptick in UNRATE to 4.2% in September.
-- **Fri 10/23:** Consumer Sentiment Final (Oct, U of Mich 10:00) — preliminary reading will set expectations; note that the August final read was 51.7, down from 55.2 in July, and 1-year inflation expectations were at 4.0%. With oil back above $100, watch whether inflation expectations re-anchor upward in the final print.
+- **Thu 10/22:** Initial Jobless Claims (DOL, 8:30) — Last print was 199K (week of 10/10), essentially flat with the prior week's 198K; the labor market remains tight but watch for any drift given the September unemployment rate ticked up to 4.2%.
+- **Fri 10/23:** Consumer Sentiment Final (U of M, 10:00) — The last finalized read (August) was 51.7, down from 55.2 in July, with 1-year inflation expectations at 4.0%. The final October number will be the first full post-summer sentiment read and worth watching against the inflation expectations component given where energy prices are.
 
 ---
 
 ## Fed watch
 
-The target range remains 3.75–4.00% (DFEDTARU 4.00%, DFEDTARL 3.75% as of 10/18). The effective fed funds rate is running at 3.88% (10/15), with SOFR at 3.89% — both printing near the middle of the corridor. The 10Y/3M spread has turned positive at +83 bps (10/16 vs. +82 bps the prior day), a notable shift worth monitoring for persistence as a recession signal regime. No FOMC meeting, minutes, Beige Book, or SEP release appears in the calendar for this week. With the 10-year at 5.10% and oil above $100, markets will be scrutinizing any Fed communication for signals on whether the current pause holds or whether the rate-cutting cycle is effectively on ice.
+The target range remains 3.75–4.00%, with the effective fed funds rate at 3.88% (as of 10/16) and SOFR at 3.88% — both printing right at the midpoint of the band. The spread between the effective rate and the 2-year Treasury (4.77%) is now nearly 90 bps, and the 10-year at 5.15% sits 115 bps above the upper bound of the target range, meaning long-end markets are doing incremental tightening work. No FOMC statement, minutes, Beige Book, or SEP release appears in the week-ahead calendar through 10/23, so the near-term Fed signal comes from the rates market rather than any scheduled communication.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
-| UST 10y | 5.10 | -9 bp | -18 bp |
-| S&P 500 | 7,659.44 | -1.09% | -1.95% |
-| Dow Jones | 52,002.41 | -0.34% | +0.67% |
-| NASDAQ Comp. | 26,713.03 | +0.08% | -1.77% |
-| WTI (CL front-month) | $101.41 | +3.51% | +10.41% |
-| Brent (BZ front-month) | $109.86 | +3.72% | +4.91% |
-| Gold (spot) | $4,165.27 | +1.01% | — |
-| Silver (spot) | $56.95 | +2.04% | — |
-| Broad USD (DTWEXBGS)* (as of 10/9) | 121.60 | +0.13% | +0.18% |
+| UST 10y | 5.15 | +6 bp | -9 bp |
+| S&P 500 | 7,690.73 | +0.41% | -1.49% |
+| Dow Jones | 51,966.03 | -0.07% | +0.22% |
+| NASDAQ Comp. | 26,430.89 | +1.11% | -2.99% |
+| WTI (CL front-month) | $103.66 | +2.22% | +10.58% |
+| Brent (BZ front-month) | $109.55 | -0.28% | +2.72% |
+| Gold (spot) | $4,182.42 | +0.41% | — |
+| Silver (spot) | $57.39 | +0.76% | — |
+| Broad USD (DTWEXBGS)* | 121.40 | -0.14% | -0.03% |
 
 *Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
-- **[Huge Riots and Anti-Government Protests in France: What to Know](https://news.google.com/rss/articles/CBMickFVX3lxTE5GYnoxd1dncFRldUlCNW5vMDEydGR3U1VpY1RtQVNQdGJGTlItUVpoR1U2dUwyNVNoQU1uQzBDNU5LWUl2UTc2REswb3QzQjVpcFlEVGZhOWxJd3J0RTlIbU4xeUN2RmtIU1IyLWxaaGctZw?oc=5)** — *The New York Times*
-- **[Trump to close and renovate D.C. golf course, despite legal battle.](https://news.google.com/rss/articles/CBMirgFBVV95cUxOZUhyS21KRlB4S1ZYUGlhaVVxSmJraks1bjVQaTJveXFEN0FXUGRJQzdQQVFzZXdldG1wSjcxMm40UmxVS2RCMDFTcWw2WnNKUHFheTdCclkzT05sRUJ1aWNYS0Jqcnl4S3NsRlZnX0FkQWxKUjZlQ3FRODd6MTRQWDRocXAtLUJRMWRQaXowVUg5SWFuQzVRTS1FeGR4aUZhOVZCdFAtTEZiRUhuVWc?oc=5)** — *NPR*
-- **[Takeaways from JD Vance’s town hall in Michigan](https://news.google.com/rss/articles/CBMinAFBVV95cUxNb3doQ0l1QklDU1BaQ3daczVUdHQwUGxGUE5BeklsRElLYkNlU3ZCTGdzUmU2RnNremRvVUNuN1dxMWRfMFpvUmdFOXpyc083ODM4MjN3TXBpSFgtT09RcUI0N3dSeDJNQmp6eUJkZ3ZqMEdfUlMwdlNXdmt6TFFvbFFiaFJTT0ozZzlWWk92U052MDR3YkhnZWRrdXA?oc=5)** — *The Washington Post*
-- **[95% of MAGA Republicans approve of Trump. For non-MAGA Republicans, it's 47%.](https://news.google.com/rss/articles/CBMiggFBVV95cUxPX3lJdTZISU8xN3dtbDBaRV9sV05pdHdhYk1rMHMxR3kyV29lNWVjUV84cnlHcUZ2NThEOUJCNHB4ZWdHd0gzaURYeEJZRVM2SW9teXR3Y0lyaVQzdW8wWnRZeWdmX2hSSWFYcjZteHZtUlRONzhrMHZXd2JhWGtiUVN3?oc=5)** — *Axios*
-- **[Russia explores Putin, Trump, Xi summit on Ukraine deal](https://news.google.com/rss/articles/CBMimgFBVV95cUxQa19VMl9QZ0M3S0pFRXkyZVJ0WkYxV1pxbVN2bWRFa1FyUmJMaDJYRHBqMkJNQ1ZaRDFoRXZIX0VyUnZtVzd3bmpFZlk1ZllTamJLZGNDVUFFVFZsa0lhdWtBOXhHYjZmdU5kcWlTSC1OczUwV1hjaEFQZXJwVlZpa2d4UWtOc0VMeXNrUU5zbGphaFNZU2FScWJn?oc=5)** — *Politico*
-- **[Possible wreckage of Amelia Earhart's plane likely to be trees, say researchers](https://news.google.com/rss/articles/CBMiW0FVX3lxTE5XUXhZTXZuQ0FvZEsxOGhQb25Rd2Y3MW8zVGJsSXhiSkZHbkZlRU5RSkNCYmFvRUs1d2ltX0NxQkotOTJ3VVp1c0UtVlNnUmtYWks3VDFqeF9Gc2c?oc=5)** — *BBC*
+- **[The Failures of Emmanuel Macron](https://news.google.com/rss/articles/CBMigwFBVV95cUxNT2FQQ2VWYWJ0NzNxb2dVTUJCODR0MkdKdklBMjZRSVk3QXltR1g4TFBpMllnODZvWjlaY2Zyd0hSU1VCUlB5R2xSTE1NT3lrbFRjMUpfdjRNTEEzOGRUSmdEMTBjM0hZZi1PNl9NZHRjOTUwaWhjZGxSSkJ1SXZVZ25RWQ?oc=5)** — *The New York Times*
+- **[Judge leans toward extending halt on tree clearing at golf course where Trump says redesign should start ‘immediately’](https://news.google.com/rss/articles/CBMizwFBVV95cUxOY0M5d2poOUFWMFJyTWp1S09OQ0ROajF3Z01YQXlSWlNRTzZTTGJFNEpwczBPaVZMelhhSHVOWlg4dkc4bzVPMUlsbmRjeUxUcDgwT2U3WGdwTlVZbElRZHhmX0JhUGx4VEFZRlFkcklNMHpQd0NaZTRSSkg5anE4TER6dnNVdWI1NWRkZUZGZVlIYmF0VldtQWs4amhfcTMyWDRyOVQ3X1RZWHVkREd6ZTBDSVcyNmJBTGN3a2NYUVJEWGZDOXNXVXlPaV9hSEE?oc=5)** — *NBC News*
+- **[Helen Haines: Man charged with attacking Australian MP, as suspect's father says she was family friend](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxU3J6V3BSeC1MOTdjaXl4aUk3OWFiRGMyRFByRXI5aVdKVHhJRklCeTVuZEdEdFliYkZxR3N1RmJZei1QTWp1SFRGbi1BZTIxNmRIUDhR?oc=5)** — *BBC*
+- **[Alberta voters reject a move toward independence in referendum backing Canadian unity](https://news.google.com/rss/articles/CBMipAFBVV95cUxOSWZucE56Yy02MWJYWDBWQ1RVdEZoa2hZTGdHenVQbGd2Vms5bG5lVU41UmZJbWFCamJYN2dOdGxfM3NTei1oXzZaeENURkJ4alRIOW5tZHIzUHZnT3FubURtSlBaQzZaeWozNHVyc2RodHJYWWJncjl2WE9QNG5jcG94QnpaR0lQdHVzQWFtVVI2alpFX3BvbkZGVGhvUUQ4OWt1QQ?oc=5)** — *AP News*
+- **[California residents accused by feds of voter fraud react with shock, confusion and anger](https://news.google.com/rss/articles/CBMioAFBVV95cUxQYmdrZ3ZkQWF3Tl9kN21tODlhYm5FMjNXeHh3VDBzRGJ0QnFYLUFvcXc3UFVKQkk2ZkVnOTlzY1pSaXNJNGFYZ2RaSUdXQmFUcmZrT25MUTc3cGpId0pZMXFncE5lS3Vyb1NpNk9fQUNLMnFTd1NsRnZTcndqVWVMREdPaGpVRWswMTB6cjVnc3Z1dFFCdkhmT0RGMVRSV3NW?oc=5)** — *Los Angeles Times*
+- **[Trump escalates clash with Zelenskyy as Russia continues deadly attacks on Ukraine](https://news.google.com/rss/articles/CBMitwFBVV95cUxQUU1NX01SaFVaNmdiTGRGMmU4WUF6ck1wMGVRMllVSlkwdEtUeEtMbXU0TFVHZ3liemN4ektnSmtlNTFGZFdLcXRMbTJPVldOdS1zWTZmck5aTVJhaE9mMXYzdWd2RlNCRU0yV01FdFRlcGJvcHMtQnE0TUQ4aWtDalBBZDhkZENnRm9zR0VabF9EZDlGX2E5amhHOEhncFVUc045RWVVaTFOcnYwMEx4SHF0QmFqUWs?oc=5)** — *PBS*
 
 ---
-*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-19.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-20.*
