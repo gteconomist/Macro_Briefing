@@ -1,61 +1,63 @@
-# Daily Macro Briefing — Tuesday, October 20, 2026
+# Daily Macro Briefing — Wednesday, October 21, 2026
 
 ## Your calendar today
 - **All day:** Office Day — Centergy Flex Office 3030L (Atlanta) · _Work (Outlook)_
-- **All day:** Give dogs heart worm meds · _Alfie & Pilar_
-- **2:00 pm–3:00 pm:** Alfie, Donna & David (in person) — Centergy Conference Room 3020E · _Work (Outlook)_
+- **8:00 am–10:00 am:** Meeting · _Work (Outlook)_
+- **9:00 am–10:00 am:** Hair cut · _Personal_
+- **2:00 pm–3:00 pm:** Vet appointment for Petey — VCA Falcon Village Animal Hospital 2030 Lawrenceville Hwy... · _Alfie & Pilar_
+- **3:00 pm–4:00 pm:** Discussion - Hall County / Dawson County Judicial Circuit Cost Review — Microsoft Teams Meeting · _Work (Outlook)_
 
 ## Top of mind
 
-The 10-year Treasury closed Monday at 5.15%, up 6 bps from Friday's 5.09%, with the 30-year at 5.48% — both continuing a move that is now materially tightening financial conditions independent of Fed action. WTI front-month settled at $103.66 (+$2.25 on the day) and Brent at $109.55, keeping energy inflation pressure alive at a moment when the curve is already pricing fiscal and term-premium risk. The 10y–3m spread has turned positive at +88 bps (from +83 bps Friday), a modest steepening but one still consistent with markets demanding more compensation at the long end rather than signaling a clean growth outlook.
+The long end of the Treasury curve remains the dominant macro signal: the 10-year closed Tuesday at 5.12% and the 30-year at 5.42%, both well above levels that historically start to bite on equity valuations and housing affordability. Yesterday's Housing Starts print (September) showed starts fell to 1,221K from 1,288K — a 5.2% drop — while permits held essentially flat at 1,400K vs. 1,403K, suggesting the rate environment is actively curtailing construction activity rather than pipeline formation. WTI front-month settled at $101.79 (down from $103.66), and Brent at $108.79 (down from $109.55), so some energy-price relief at the margin, but crude remains well above the $90 range that preceded this cycle's latest leg up.
 
 ---
 
-## Yesterday's releases (Mon 10/19)
+## Yesterday's releases (Tue 10/20)
 
-- **NAHB Housing Market Index:** No FRED series for NAHB HMI is in the payload, so a point estimate isn't available here — but the read feeds directly into today's Housing Starts print and warrants comparison against the August starts/permits data (1,275K and 1,403K, respectively, both as of 8/1) for directional confirmation of builder sentiment vs. actual activity.
+- **Housing Starts (September):** 1,221K SAAR vs. 1,288K prior — a 5.2% month-over-month decline, consistent with a rate-constrained construction sector; the 10/30-year at 5.12%/5.42% is doing its work. Permits nearly flat at 1,400K vs. 1,403K, so builders aren't pulling back on future intent at the same pace, but if rates stay here that gap closes.
 
 ---
 
-## Today's calendar (Tue 10/20, ET)
+## Today's calendar (Wed 10/21, ET)
 
-- **Housing Starts, 8:30** — The prior read (August) came in at 1,275K annualized with permits at 1,403K, both down from July. With the 10-year at 5.15% and mortgage rates tracking accordingly, watch whether September starts confirm a further pullback in single-family activity or whether new home sales momentum (August NSA: 684K, up from 643K in July) is pulling builders forward despite rate headwinds.
+No major releases scheduled today.
 
 ---
 
 ## This week ahead
 
-- **Thu 10/22:** Initial Jobless Claims (DOL, 8:30) — Last print was 199K (week of 10/10), essentially flat with the prior week's 198K; the labor market remains tight but watch for any drift given the September unemployment rate ticked up to 4.2%.
-- **Fri 10/23:** Consumer Sentiment Final (U of M, 10:00) — The last finalized read (August) was 51.7, down from 55.2 in July, with 1-year inflation expectations at 4.0%. The final October number will be the first full post-summer sentiment read and worth watching against the inflation expectations component given where energy prices are.
+- **Thu 10/22:** Initial Jobless Claims (8:30 ET) — last print was 199K (week of 10/10), lowest since the spring; another sub-200K read would reinforce the still-tight labor market narrative despite the modest uptick from 198K.
+- **Fri 10/23:** Consumer Sentiment Final (10:00 ET, U. Michigan) — preliminary reads have been soft; watch the 1-year inflation expectation component (preliminary was 4.0%) alongside the headline index for any revision in either direction.
 
 ---
 
 ## Fed watch
 
-The target range remains 3.75–4.00%, with the effective fed funds rate at 3.88% (as of 10/16) and SOFR at 3.88% — both printing right at the midpoint of the band. The spread between the effective rate and the 2-year Treasury (4.77%) is now nearly 90 bps, and the 10-year at 5.15% sits 115 bps above the upper bound of the target range, meaning long-end markets are doing incremental tightening work. No FOMC statement, minutes, Beige Book, or SEP release appears in the week-ahead calendar through 10/23, so the near-term Fed signal comes from the rates market rather than any scheduled communication.
+Target range is 3.75–4.00%, with the effective fed funds rate at 3.88% (as of 10/19) and SOFR at 3.87% — both printing right at the midpoint of the band, clean policy transmission. The curve has decisively un-inverted: the 10Y/3M spread is +86 bps (5.12% vs. 4.26%), a structural shift from the prolonged inversion of 2023–24, reflecting either a genuine growth premium repricing or fiscal/term-premium concerns on the long end — probably both. No FOMC decision, minutes, Beige Book, or SEP release appears on the calendar for the remainder of this week; the next policy-relevant event to track is not in this window.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
-| UST 10y | 5.15 | +6 bp | -9 bp |
-| S&P 500 | 7,690.73 | +0.41% | -1.49% |
-| Dow Jones | 51,966.03 | -0.07% | +0.22% |
-| NASDAQ Comp. | 26,430.89 | +1.11% | -2.99% |
-| WTI (CL front-month) | $103.66 | +2.22% | +10.58% |
-| Brent (BZ front-month) | $109.55 | -0.28% | +2.72% |
-| Gold (spot) | $4,182.42 | +0.41% | — |
-| Silver (spot) | $57.39 | +0.76% | — |
-| Broad USD (DTWEXBGS)* | 121.40 | -0.14% | -0.03% |
+| UST 10y | 5.12 | -3 bp | -9 bp |
+| S&P 500 | 7,712.57 | +0.28% | -1.19% |
+| Dow Jones | 52,495.88 | +1.02% | +1.60% |
+| NASDAQ Comp. | 26,424.82 | -0.02% | -2.87% |
+| WTI (CL front-month) | $101.79 | -1.80% | +8.13% |
+| Brent (BZ front-month) | $108.79 | -0.69% | +2.93% |
+| Gold (spot) | $4,137.50 | -1.07% | — |
+| Silver (spot) | $57.00 | -0.67% | — |
+| Broad USD (DTWEXBGS)* (as of 10/16) | 121.40 | -0.14% | -0.03% |
 
 *Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
-- **[The Failures of Emmanuel Macron](https://news.google.com/rss/articles/CBMigwFBVV95cUxNT2FQQ2VWYWJ0NzNxb2dVTUJCODR0MkdKdklBMjZRSVk3QXltR1g4TFBpMllnODZvWjlaY2Zyd0hSU1VCUlB5R2xSTE1NT3lrbFRjMUpfdjRNTEEzOGRUSmdEMTBjM0hZZi1PNl9NZHRjOTUwaWhjZGxSSkJ1SXZVZ25RWQ?oc=5)** — *The New York Times*
-- **[Judge leans toward extending halt on tree clearing at golf course where Trump says redesign should start ‘immediately’](https://news.google.com/rss/articles/CBMizwFBVV95cUxOY0M5d2poOUFWMFJyTWp1S09OQ0ROajF3Z01YQXlSWlNRTzZTTGJFNEpwczBPaVZMelhhSHVOWlg4dkc4bzVPMUlsbmRjeUxUcDgwT2U3WGdwTlVZbElRZHhmX0JhUGx4VEFZRlFkcklNMHpQd0NaZTRSSkg5anE4TER6dnNVdWI1NWRkZUZGZVlIYmF0VldtQWs4amhfcTMyWDRyOVQ3X1RZWHVkREd6ZTBDSVcyNmJBTGN3a2NYUVJEWGZDOXNXVXlPaV9hSEE?oc=5)** — *NBC News*
-- **[Helen Haines: Man charged with attacking Australian MP, as suspect's father says she was family friend](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBxU3J6V3BSeC1MOTdjaXl4aUk3OWFiRGMyRFByRXI5aVdKVHhJRklCeTVuZEdEdFliYkZxR3N1RmJZei1QTWp1SFRGbi1BZTIxNmRIUDhR?oc=5)** — *BBC*
-- **[Alberta voters reject a move toward independence in referendum backing Canadian unity](https://news.google.com/rss/articles/CBMipAFBVV95cUxOSWZucE56Yy02MWJYWDBWQ1RVdEZoa2hZTGdHenVQbGd2Vms5bG5lVU41UmZJbWFCamJYN2dOdGxfM3NTei1oXzZaeENURkJ4alRIOW5tZHIzUHZnT3FubURtSlBaQzZaeWozNHVyc2RodHJYWWJncjl2WE9QNG5jcG94QnpaR0lQdHVzQWFtVVI2alpFX3BvbkZGVGhvUUQ4OWt1QQ?oc=5)** — *AP News*
-- **[California residents accused by feds of voter fraud react with shock, confusion and anger](https://news.google.com/rss/articles/CBMioAFBVV95cUxQYmdrZ3ZkQWF3Tl9kN21tODlhYm5FMjNXeHh3VDBzRGJ0QnFYLUFvcXc3UFVKQkk2ZkVnOTlzY1pSaXNJNGFYZ2RaSUdXQmFUcmZrT25MUTc3cGpId0pZMXFncE5lS3Vyb1NpNk9fQUNLMnFTd1NsRnZTcndqVWVMREdPaGpVRWswMTB6cjVnc3Z1dFFCdkhmT0RGMVRSV3NW?oc=5)** — *Los Angeles Times*
-- **[Trump escalates clash with Zelenskyy as Russia continues deadly attacks on Ukraine](https://news.google.com/rss/articles/CBMitwFBVV95cUxQUU1NX01SaFVaNmdiTGRGMmU4WUF6ck1wMGVRMllVSlkwdEtUeEtMbXU0TFVHZ3liemN4ektnSmtlNTFGZFdLcXRMbTJPVldOdS1zWTZmck5aTVJhaE9mMXYzdWd2RlNCRU0yV01FdFRlcGJvcHMtQnE0TUQ4aWtDalBBZDhkZENnRm9zR0VabF9EZDlGX2E5amhHOEhncFVUc045RWVVaTFOcnYwMEx4SHF0QmFqUWs?oc=5)** — *PBS*
+- **[Russia says it freed American Stephen Hubbard, 74, as Trump envoy meets with Putin](https://news.google.com/rss/articles/CBMiugFBVV95cUxOcWdKN29CS0VtMWp1c05CSU5VZGFING9fd09zOXJ2VjVYZzdnWFRreEhOa0VBUUotNElRaXNJbDRGQnMwSFFXc041RlJfemRvb3daNVZMWlVQSm84V1pVZnZsN25CU2NZSFB4ZEZGT0JJTDZDenBfMlJDS1JlNFNiRHRURVlTQ1h6Zm9CY1A3eVRnX3BXazg3Mm9WZXBmcFdld2Vic1RxRDN0bkFGV29vU2I1bzZZaHQ1d1E?oc=5)** — *NBC News*
+- **[Australian lawmaker Helen Haines had both legs amputated after car ramming attack, husband says](https://news.google.com/rss/articles/CBMiX0FVX3lxTE5YOE53Yll6U25iOVdMeTVFSGJRRjhhOThhSllmTVd2X1FlXzhLUkkxcjZheVlnQjZBc3E3amEyU1hjZzVaRDVwdEVsT0ZMNHM3RDd1eF9qU24tMEZZcUc4?oc=5)** — *The Jerusalem Post*
+- **[Some on DOJ's 20,000 "likely" noncitizen list in Calif. appear to be U.S.-born](https://news.google.com/rss/articles/CBMiiwFBVV95cUxOend6bmNZeGZJazFRU0dOZTRQNkFLZ0NCejZ1QXVYRWhvX1ZNWVdVX3pWcjZsRG5FZG5lX0NhaGhCYUd2dWo2S1l4R0ZPZzQ1UkR1UWRrWEx2QV81QTNDLTRWQmtBNGpDeVA1NTZnajVXUUQzNlZ3UkVwVVVMcXd5X2NnY095WlZ2dFMw?oc=5)** — *NPR*
+- **[United Nations report highlights significant increase in U.S. climate pollution](https://news.google.com/rss/articles/CBMipgFBVV95cUxPZm12LXd1dHRZX1QzcWo3ZDBLZDlZTWpuamFELXR2bUt0V1NhREROOHhfN293NHkxTkFzWVAxN3hYVFUyRGJQWmhnQXh0N1ZQX0l6UXdLY0lwdkdITmIyQzVqU3FKRGlFc2h6dHUwcW1hZGhQVllJMG1OanQwUVd4LWs3Y3NrZHZLYmxXZmVndDZKeWlrXzBFUW4xSWlieEpUc2Y4UzN3?oc=5)** — *NPR*
+- **[Elon Musk ordered a slowdown of Starlink in Ukraine — report](https://news.google.com/rss/articles/CBMilgFBVV95cUxPM3lITW9MUjdrRUhPdmF2T2sxWk1MUDNRRmlvTjRNT1ZTLS1yRjdPaVZkQ29JdGpJclFNVHU0bHhneWdxYlMzbldTZFlYRDdCaTY0Y3JqZHpZaXBsOUxpUURndEV5LW9qX1NlV3JFYW96SUtyWjJYbmNJM2N4VElOLWJzcmtiRXA4WURhUm9pQ3ZxdUdmMkHSAZYBQVVfeXFMTWVrblBXaUNKMHdYOE96OW5LcFU4SGRtS3hNRzV2UFNTVFplV0JnTC1oeW9Pbm4wRGEzYUFTVEpFVGhSNUpzdUJqUXVpcVhwV25UcnVYQy01MVZNOVZTQ21RYXRoMkFGMUNmeG5ENGJxUmMxVU9PYjBoVVVKbTFjaTBIRW5yYm5NajMta1U0UUhZSVE5WTRn?oc=5)** — *DW.com*
+- **[Election Dispatches: Vast Sums Flood Races as Republicans Try Fending Off Democratic Charge](https://news.google.com/rss/articles/CBMibkFVX3lxTFBFbzVycFRfYUVpU2g5WlpDcHFXWUdhcHBsTzJLRXItNDl6WEZ3bVBZdkhRVmFFNzJxaExReGtNZHZqQzVFZ0h0VGdDMjR4ZGlnMEMyWHFCeTg3cUljcF9IU0VCOVp4R00xU05RbVR3?oc=5)** — *The New York Times*
 
 ---
-*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-20.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-21.*
