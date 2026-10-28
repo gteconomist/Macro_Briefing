@@ -1,56 +1,56 @@
-# Daily Macro Briefing — Tuesday, October 27, 2026
+# Daily Macro Briefing — Wednesday, October 28, 2026
 
 ## Your calendar today
+- **All day:** Office Day · _Work (Outlook)_
 - **All day:** Alfie - out of office · _Work (Outlook)_
-- **11:30 am–12:30 pm:** Lunch with Byron · _Personal_
+- **All day:** Vince Dooley Death Day · _Personal_
 
 ## Top of mind
 
-The 10-year Treasury yield sits at exactly 5.00% (Treasury par curve, 10/26), and Wednesday's FOMC statement is the event that matters most this week — markets will be parsing whether the Committee signals any near-term inclination to move off the 3.75–4.00% target range, which has now been in place long enough that the 10Y–3M spread has rebuilt to +78 bps. WTI front-month settled at $101.76 Monday, down $1.51 from Friday, and Brent at $115.81, down $0.91 — geopolitical risk premium remains embedded given Middle East headlines, but oil is drifting lower heading into the FOMC. Gold is within striking distance of $4,000 at $3,995.
+The FOMC statement drops at 14:00 ET today — the dominant macro event of the week. The target range sits at 3.75–4.00% with DFF at 3.88% and SOFR at 3.93%, the latter running above the upper bound, a configuration worth watching. Against that backdrop, the 10-year settled at 4.99% Tuesday (down 1 bp from Monday), WTI front-month eased to $99.90 (-$1.86), and Brent to $113.88 (-$1.93) — energy still elevated but pulling back modestly ahead of the decision. The WSJ headline flagging a possible post-midterm Iran conflict renewal keeps geopolitical risk premium in the oil complex.
 
-## Yesterday's releases (Mon 10/26)
+## Yesterday's releases (Tue 10/27)
 
-- **Chicago Fed NAI (September):** CFNAI came in at +0.07 (as of 2026-09-01), up from –0.08 in August — back above zero, consistent with growth running marginally above trend. Not a signal of overheating, but removes the soft-patch narrative that the August read had started to build.
+- **Durable Goods Orders (Advance, September):** No FRED series in payload for this release. Watch for the Census print on headline and ex-transportation cuts.
+- **Case-Shiller (August):** No FRED series in payload. Home price momentum has been the key read amid rate-sensitive housing activity — starts fell to 1,221K in September (from 1,288K) and permits slipped to 1,398K, consistent with ongoing affordability drag at current mortgage rates.
+- **Consumer Confidence (October):** No FRED series in payload for Conference Board. Context: UMich sentiment for September was 48.1, down sharply from 51.7 in August, with 1-year inflation expectations rising to 4.6% from 4.0% — the backdrop heading into today's FOMC.
+- **New Home Sales (September):** FRED (HSN1F) shows 676K SAAR for September, down from 680K in August — a marginal softening but still holding in a historically narrow band given where mortgage rates are.
 
-## Today's calendar (Tue 10/27, ET)
+## Today's calendar (Wed 10/28, ET)
 
-- **Durable Goods (Advance), 8:30** — Watch core capital goods orders (ex-defense, ex-aircraft) for the clearest read on business investment momentum; the manufacturing revival in INDPRO (+0.68 pp in September) sets a constructive baseline.
-- **Case-Shiller, 9:00** — Housing starts fell sharply in September (1,221K from 1,288K), so any deceleration in home price appreciation would be consistent with affordability continuing to bite at 5% 10-year yields.
-- **Consumer Confidence (Conference Board), 10:00** — Michigan sentiment dropped to 48.1 in September (from 51.7), with 1-year inflation expectations rising to 4.6%. Conference Board tends to weight labor market conditions more heavily; the claims picture (194K initial, as of 10/17) argues for resilience, but watch the "jobs plentiful" differential.
-- **New Home Sales, 10:00** — FRED shows August new home sales at 684K (annualized), up sharply from 643K in July. September will test whether that bounce has legs given the drop in starts.
+- **FOMC Statement, 14:00** — Central question is whether the Committee signals any shift in the cutting path given 10-year yields approaching 5%, oil above $100, and consumer sentiment deteriorating. Watch the statement language on inflation balance of risks and any forward guidance modification; press conference will be the real signal.
 
 ## This week ahead
 
-- **Wed 10/28:** **FOMC Statement** (14:00) — the dominant event of the week; see Fed Watch below.
-- **Thu 10/29:** **GDP** (advance Q3, 8:30), **Personal Income & Outlays/PCE** (8:30), **Initial Jobless Claims** (8:30) — an extraordinarily data-dense morning. The GDP print will be the first look at Q3 growth; the most recent GDPNow read was 3.50% for Q2 (as of 2026-07-01, now stale as a current tracker). PCE will be the freshest inflation read the Fed sees before any December deliberations.
-- **Fri 10/30:** **Employment Cost Index** (8:30) — with wage growth in the monthly payroll data running at $32.60/hour (+$0.07 MoM in September), ECI will provide the cleaner compensation trend the Fed watches for services inflation persistence.
+- **Thu 10/29:** **GDP** (advance Q3, 8:30) — the marquee print; **Personal Income & Outlays / PCE** (8:30) — September core PCE will be the freshest inflation read the Committee just saw; **Initial Jobless Claims** (8:30) — current data: 194K for the week of 10/17, down from 200K, labor market still tight.
+- **Fri 10/30:** **Employment Cost Index** (Q3, 8:30) — a key Fed input on labor cost pressures; with AHE at $32.60 (September) and participation ticking up to 61.8%, the ECI will sharpen the picture on whether wage dynamics are re-accelerating.
 
 ## Fed watch
 
-Target range is 3.75–4.00%; the effective fed funds rate was 3.88% as of 10/23, with SOFR at 3.92% — both printing near the midpoint/upper half of the corridor, normal plumbing. Wednesday's FOMC statement (14:00 ET, 10/28) is the next scheduled policy action; no SEP or press conference is indicated in the calendar, so the statement itself carries the full signaling load. With the 10-year at 5.00%, the long end has done meaningful tightening work independent of the policy rate, which gives the Committee cover to hold and observe — the question is whether the statement language shifts toward acknowledging that financial conditions have tightened materially or whether it stays on the data-dependent boilerplate. Thursday's simultaneous GDP and PCE drop will land the morning after the decision, an unusual sequencing that could move near-term rate path pricing sharply.
+Target range: 3.75–4.00% (DFEDTARU 4.00%, DFEDTARL 3.75%). Effective fed funds at 3.88%, SOFR at 3.93% as of 10/26 — SOFR running 5 bps through the ceiling, which is unusual and worth flagging if it persists post-decision. The FOMC statement today is the week's pivot point; Thursday's advance GDP and September PCE will land less than 24 hours after the decision, giving markets an immediate stress-test of whatever guidance the Committee issues. No additional FOMC-related calendar entries (minutes, Beige Book, SEP) appear in the week-ahead payload.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
-| UST 10y | 5.00 | +0 bp | -15 bp |
-| S&P 500 | 7,623.68 | -0.52% | -0.47% |
-| Dow Jones | 52,361.58 | +0.28% | +0.76% |
-| NASDAQ Comp. | 26,169.38 | +0.82% | -0.99% |
-| WTI (CL front-month) | $101.76 | -1.46% | -1.83% |
-| Brent (BZ front-month) | $115.81 | -0.78% | +5.71% |
-| Gold (spot) | $3,995.44 | -0.01% | — |
-| Silver (spot) | $53.99 | +0.15% | — |
-| Broad USD (DTWEXBGS)* | 121.32 | -0.03% | -0.07% |
+| UST 10y | 4.99 | -1 bp | -13 bp |
+| S&P 500 | 7,722.60 | +0.60% | +0.13% |
+| Dow Jones | 52,377.57 | +0.03% | -0.23% |
+| NASDAQ Comp. | 26,477.81 | +1.18% | +0.20% |
+| WTI (CL front-month) | $99.90 | -1.83% | -1.86% |
+| Brent (BZ front-month) | $113.88 | -1.67% | +4.68% |
+| Gold (spot) | $4,015.48 | +0.50% | — |
+| Silver (spot) | $54.09 | +0.19% | — |
+| Broad USD (DTWEXBGS)* (as of 10/23) | 121.32 | -0.03% | -0.07% |
 
 *Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
-- **[Israel election results 2026: When will we know who won and what’s next?](https://news.google.com/rss/articles/CBMisAFBVV95cUxQN0dDUEVhY3FCRWxQdHAyZ054bHZJVkVlNlJNNkFxTGZsVnk5dTdpenpWaG5SeC1ub1luUjE4ZTZ5ekdHRXVBNlN6X2hmN3AwenBLM08wWnRNbEYxZEN2NDhMNTFrRkx4SE1ESHBINGpMNGtMWXpNeDNMTzk4azZOWkFvT29fZ2NQV0tmTS1QeFRpTXItTHJlUnhUMDhLYTZwOS1ma1dXcFJtelNKeHNjWNIBtgFBVV95cUxOakZpQUxULUpzU2MzRTJCOW9tdzB6Q1hxaHhoZWlCRFdmaVVXTUdTOW5ySVZnMVFVczZHdDNRRWFXNHBNc1RBSGx0eEpsNzVMLWR2Z1RPUkxHVFhhckVBVV9DWU9rR2RLcm1JTFNWWElVUlJKOVN6VGEteVpUVXFYdFRQZjJrR0M0eGxTZWlvSzl6X2RFamhsM0QzUmlmaFBLV3kwQ20zNm5LUnU0bjc2ZmE3OWxLQQ?oc=5)** — *Al Jazeera*
-- **[9th Circuit denies feds’ appeal over 20,000 ballots; district court hearing to proceed](https://news.google.com/rss/articles/CBMizwFBVV95cUxQY3N3OUxiV3FBSVAtN3BSS1M4VWtISDNqbERGTW5ZUjBpRDZQOHdobzV5T19meXJhZzVjV1cxUVNVM2ItZDlqNFJ0VEFYRnJDX2R4cGo0c3lZQm56dXQtSW4yZ1JTa2JOLWZ3MTRfR0V0cFQxNE1UWi1HRzh1T3psbDU1LUZVbkR0YUJlMnB6X1oxRkkzRUltUXlQdmwzc2wwLWhnT2tycTZNLUY3M3RJa0V1WHJpckh0RGpDZlJhTUxUVnRERmJQaHp5U3hBbU0?oc=5)** — *Los Angeles Times*
-- **[Trump campaigns in Mississippi, highlighting Republicans’ challenges](https://news.google.com/rss/articles/CBMilAFBVV95cUxONkZHeDk4QUpKb1pUNFJwT3FEMEpzSGdqUjdJcGdNTFM3ZkRMU3hnbkNkTHlRSjl4dVNwR3JyZTJEdVdZR0Jaa1lPNmpHenlpNzVlaVdRYlp1UlczRFpKLVQ4bmNJQ2JSMjUtUUl4U19wZHhCUGhpT2Yxdkh0enhLakhoZy1YZk1MUTdLcERFVGZhdEIz?oc=5)** — *AP News*
-- **[Brazil's election ignites MAGA's midterm warnings](https://news.google.com/rss/articles/CBMie0FVX3lxTE5pMTRFdUtuNUlQLV9VMDcyQzdRUDlRTEdmUEwzNkJncU1hOG92UTFvZ0prVXlidWp4aTc2RUdSX1I4aHZGek40emktMXd1RzdTZHJmRmtTbl9KY2VRR1lpdl9XYkZJRHc0WDdMa2hnLTdKVENGZE56QkI0SQ?oc=5)** — *Axios*
-- **[Netanyahu Pushed for Attack on Iran Ahead of Israeli Election, Officials Say](https://news.google.com/rss/articles/CBMikAFBVV95cUxPMERWcXFaZ1BsZ3FLanZOZHo1QVowcEtkb0VZTkE1dkF6cmktY3pwUVBYZ2FRTkVOaWpwMTZqbDZmNU15clM1MENCVU5OWWF6YlBYU1JUUUZiQ005VWhZZkxtczA1S1hDc0FFME9heGxMUFhUalJpUHV0X3Z6QjRoUXJyNHg3WERCVDVMa2hKTS0?oc=5)** — *The New York Times*
-- **[Local ceasefire brokered by Melania Trump starts in southern Ukraine](https://news.google.com/rss/articles/CBMibkFVX3lxTE96c25NUTRRUWRJQ3doVDR3cTVmWnBPdTljNDRlUDlUTlg5QUV2MVlFWlhfSGk4Y25xeHdtZ1BQdkw1eUJGZGVMTGNCUWVXQnIzaXFDMnFTV0xWUEkyNmJRR2VIZUNiTC04UTFhblVR?oc=5)** — *NPR*
+- **[Israel election: More than half of votes counted as Netanyahu and Eisenkot both set to fall short of majority](https://news.google.com/rss/articles/CBMiVkFVX3lxTE0wcDl2enJKdm5Dekg4bU9MWG9FQWF5LXk1N19XTGkySjBuMlBMdnZuTVlsaTNSYVVXRlgxU0EzYlZBekhJdU85U3diUFIzbU52andERlh3?oc=5)** — *BBC*
+- **[Brazil's Flávio Bolsonaro and family will get US visas after election loss, State Department says](https://news.google.com/rss/articles/CBMingFBVV95cUxOYVBiQjE0QTJza2Y3LV9qZi1mSWh6QzY4ZXRqYmVzNGZDb2UxU0VaODliT1N6WTFlY1pjcTJhdnB2dHFRWGhUMnlPSHBnemIyVnBiaEpwaWF5NkxNLWZPZElRTjM4U0xwRkpoZnhSekEtdllFT18wdThnQS1vU2EySTA1UlIzTV94bG5aSl9yZW1xQXBlYmJWVDFYSmNuZw?oc=5)** — *AP News*
+- **[U.S. Warns Gulf of Possible Short, Intense Renewal of Iran War After Midterms](https://news.google.com/rss/articles/CBMivwFBVV95cUxOYXd0OHZEUnBrMFNkRjJ5dHFUakFsTDU0NUxhdzhQUnpPQ0JxMllJanhoeVFQWm1GMmk2RkRUdDFWLVR2N0VwczZOQmZmbG9BanpUSTE2VEhnSS1xd29mUzFzbEdRTVBDWGRSOW1hRW41WU04eE9OSUo4QmFoSG9DUUhUNi13bzNkbEZaWlFUaVUzUzZPWGtMc2JDeEZyODg2Q09JdFZBekl1WnNJdDVBYnZQMzhieGt4bjFuOFZnMA?oc=5)** — *WSJ*
+- **[James Talarico faces off against Trump in dueling Texas rallies in election’s final days](https://news.google.com/rss/articles/CBMixgFBVV95cUxQRHJQS08yRGQzVWR2anRtYU8xVUxEWUJIRHI2TGM2T3RzM3AwTG8yaHRQdmhpMi1TQTZVdlRUQTBONVBZWmdPZVJzQzNmYUQtN1NMWmZZLThKTVJwTHJ1akNjTVdiVFNvYmFuLXNPd1oxTG5POFJJRlRxbHZ6QVpJc0VWaEtGN2ZQU3pFa0FORi13aEJXNGNnbzQ3UndRQ3FQdmgxT0tjd2thVmdDcDVVMFk0YS1uTVpiQ01jdXI0QkQya3dxNWc?oc=5)** — *NBC News*
+- **[DOJ fails to indict Cassidy Hutchinson, a key Jan. 6 witness](https://news.google.com/rss/articles/CBMihAFBVV95cUxPb2hLeERMbnBNbURFckF0VVdZRFdlaW5lSWNpUnhyYXZEN0RRQXdIRlU0RWVnNlU3ZFFWdTZXbEo4N1NjT2xJYkVNNFVjRVdMMVZlRnlCSU1tdUU5blREcVQ1RlZYenhKS3dfYXhVUm5lMTZ6emNzbzlSUTNsYm1ETXpoZV8?oc=5)** — *Axios*
+- **[Alexander brothers get 30 years each in prison after sex trafficking convictions](https://news.google.com/rss/articles/CBMiygFBVV95cUxNM3JWajVBV2JDZE1mSDduZXhDUXBBMmtkODVlclU1U2tpR3REVDF2UnVHUDY4NGl6eE9pSkIwT3g5bWV1ci1EZ2JfeG1vbkY2aE9mX1NRVVpGU0tIeWh3Q1J5bTlMMDBVT3RKZmhlVkR5bUQtS2xrT2lscTczaEpHLU5vQXBRZ2NXa1BUdTU2eGU2U0xiZEE4NmJMRlM3bnVNcVdvWjdVQVYzbkhqQU1sVEh6VlZQTVJJQXNiRmE3M1ZuNlVpNDEtVTB3?oc=5)** — *Reuters*
 
 ---
-*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-27.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-10-28.*
