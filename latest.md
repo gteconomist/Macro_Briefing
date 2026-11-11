@@ -1,55 +1,54 @@
-# Daily Macro Briefing — Tuesday, November 10, 2026
+# Daily Macro Briefing — Wednesday, November 11, 2026
 
 ## Your calendar today
-- **All day:** Birthday · _Personal_
-- **8:30 am–11:20 am:** HOLD: Board Boost — Zoom · _Work (Outlook)_
-- **10:00 am–11:00 am:** GT + Chamblee Check-Ins — Microsoft Teams Meeting · _Work (Outlook)_
-- **11:30 am–12:30 pm:** Lunch with Byron · _Personal_
-- **4:00 pm–4:30 pm:** COI - Meeks — Microsoft Teams Meeting · _Work (Outlook)_
+- **All day:** Office Day · _Work (Outlook)_
+- **All day:** Cancel Evernote · _Personal_
+- **11:00 am–1:30 pm:** Meeting * · _Work (Outlook)_
+- **7:30 pm–9:30 pm:** Soccer game — Brook Run Park 4770 N Peachtree Rd, Atlanta, GA  30338, U... · _Alfie & Pilar_
 
 ## Top of mind
 
-CPI is the number that matters this morning. The 10-year closed Monday at 4.88% (+2 bps from Friday) and the 2-year at 4.56% (+5 bps), both pressing multi-month highs, with WTI front-month settling at $86.85 (-$3.98 from Friday) and Brent at $92.57 (-$5.75) — so energy is providing some relief heading into the print. The last CPI read (September, as of 2026-09-01) showed headline at 336.298 and core at 338.896, both up from August. With Michigan 1-year inflation expectations already at 4.6% (vs. 4.0% prior) and the long end showing no sign of anchoring, a hot October print this morning would materially complicate the Fed's path and pressure an already stretched term premium.
+Yesterday's October CPI print is the dominant story. CPIAUCSL moved from 336.298 to 337.476, a +1.178-point monthly gain; CPILFESL rose from 338.896 to 339.900, up +1.004. The market reaction was sharp and unambiguous: the 2-year Treasury yield jumped 17 bps to 4.73%, the 10-year added 10 bps to 4.98% — just two basis points shy of 5% — and the 30-year hit 5.35%. Equities sold off across the board (S&P -29, Nasdaq -187). The bond market is now pricing a materially higher-for-longer path, and the 5% threshold on the 10-year is the number to watch today.
 
-## Yesterday's releases (Mon 11/9)
+## Yesterday's releases (Tue 11/10)
 
-No major releases.
+- **CPI (October):** Headline index 337.476 vs. 336.298 prior (+1.178 MoM); core (CPILFESL) 339.900 vs. 338.896 prior (+1.004 MoM). Both readings came in hot enough to detonate the front end — 2s up 17 bps on the session — and pushed the 10-year to within striking distance of 5%. Reinforces the view that the last mile on inflation remains sticky and that any residual easing bias at the Fed is on ice.
 
-## Today's calendar (Tue 11/10, ET)
+## Today's calendar (Wed 11/11, ET)
 
-- **CPI (October), 8:30 AM** — Watch headline m/m (energy drag from WTI's ~4% slide in October should temper it) and, more importantly, core services ex-shelter; that's the component the Fed has been most focused on and the one most likely to surprise given still-resilient labor income. Any upside on core will push the 2-year higher and compress what little easing is left in market pricing.
+No major releases scheduled today. (Veterans Day — bond markets closed; equity markets open on a reduced schedule.)
 
 ## This week ahead
 
-- **Thu 11/12:** Initial Jobless Claims (8:30) — continuing claims have been creeping up (1.718M as of 10/24); watch whether that drift continues. Existing Home Sales (10:00) — permits and starts already softening as of September; sales volume likely reflects the same rate-constrained environment.
-- **Fri 11/13:** PPI (8:30) — pipeline inflation signal; relevant for PCE translation. Consumer Sentiment Preliminary (10:00, U. of Mich.) — September final was 48.1 with 1-year inflation expectations at 4.6%, both deteriorating; the preliminary for November will be the first post-CPI sentiment read of the month.
+- **Thu 11/12:** Initial Jobless Claims (8:30, DOL) — watch against the 189K print for the week of 10/31, with continuing claims creeping up to 1.718M; Existing Home Sales (10:00, NAR) — context for how the approaching 5% 10-year is transmitting into contract activity.
+- **Fri 11/13:** PPI (8:30, BLS) — critical follow-on to yesterday's CPI; September PPIFIS already showed a sharp jump (157.662 → 159.780), so another firm reading would cement the inflation resurgence narrative; Consumer Sentiment Preliminary (10:00, U of Michigan) — the September final had sentiment at 48.1 and 1-year inflation expectations at 4.6%, both already deteriorating; a further drop would signal that the CPI print is feeding into household psychology.
 
 ## Fed watch
 
-Target range holds at 3.75–4.00%; effective fed funds was 3.88% as of 11/6, with SOFR at 3.89% — both running just inside the upper bound. No FOMC meeting, minutes, Beige Book, or SEP release appears in this week's calendar. The 2s10s spread sits at +32 bps (4.56% / 4.88%) and the 3-month T-bill is at 4.24%, leaving the 10Y-3M spread at +64 bps — the curve has un-inverted and is steepening from the front end, which historically signals either genuine growth repricing or a Fed that the market believes is on hold longer than previously expected. Today's CPI print will be the proximate test of which narrative dominates into year-end.
+Target range holds at 3.75–4.00%; effective fed funds rate is 3.88% (as of 11/9), and SOFR is 3.88% (as of 11/9) — both trading right at the midpoint of the band. Yesterday's CPI move has dramatically repriced the front end: at 4.73%, the 2-year is now 73 bps above the top of the target range, the widest gap in this cycle, signaling the market sees rate cuts as effectively off the table for the foreseeable future and is beginning to contemplate whether the next move could be a hike. No FOMC meeting, minutes, Beige Book, or SEP release appears in the calendar through the remainder of this week; Friday's PPI will be the next key data point shaping the Committee's deliberations ahead of the December meeting.
 
 ## Markets close
 | | Level | d/d | w/w |
 |---|---|---|---|
-| UST 10y | 4.88 | +2 bp | -3 bp |
-| S&P 500 (as of 11/5) | 7,353.73 | -4.36% | -4.75% |
-| Dow Jones | 52,389.75 | +2.15% | +0.78% |
-| NASDAQ Comp. | 25,253.14 | +2.74% | +0.35% |
-| WTI (CL front-month) | $86.85 | -4.38% | -9.96% |
-| Brent (BZ front-month) | $92.57 | -5.85% | -11.64% |
-| Gold (spot) | $4,138.66 | +2.05% | — |
-| Silver (spot) | $53.41 | +3.46% | — |
-| Broad USD (DTWEXBGS)* | 121.88 | +0.31% | +0.18% |
+| UST 10y | 4.98 | +10 bp | +3 bp |
+| S&P 500 | 7,520.93 | -0.38% | -0.63% |
+| Dow Jones | 52,231.89 | -0.30% | +0.86% |
+| NASDAQ Comp. | 25,065.87 | -0.74% | -1.21% |
+| WTI (CL front-month) | $86.04 | -0.93% | -10.46% |
+| Brent (BZ front-month) | $91.49 | -1.17% | -11.69% |
+| Gold (spot) | $4,038.54 | -2.42% | — |
+| Silver (spot) | $51.59 | -3.42% | — |
+| Broad USD (DTWEXBGS)* (as of 11/6) | 121.88 | +0.31% | +0.18% |
 
 *Treasury yields: Treasury daily par curve (prior session's close). DTWEXBGS publishes with ~1-week lag. Gold/silver from metalpriceapi.com. Crude: prior-session settlement of the front-month contract (Yahoo Finance/stooq); "(as of …)" marks any series older than two business days.*
 
 ## Overnight headlines
-- **[Republican Thomas Massie will force impeachment vote on Defence Secretary Pete Hegseth](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1aUEhMZjZyYlU4a0hnUHJCLVA0X2YwbTlvQ0lCR1hXdnJQOUN0dGZKNjhfUzIwYnJoQVYyYXM2Vmh6T0gtd09CbU9JdWRaenlZRjJ1d0RyUkZJTEU?oc=5)** — *BBC*
-- **[California Voters Reject Prop. 40 Billionaire Tax Measure](https://news.google.com/rss/articles/CBMigwFBVV95cUxNblhVQkFPV2doMWVtV2djUGtQckRRYmxWbDZQNmR6OVlPNVUyY2dIbjFzZUJMOW9mWXh5WU10Y1VReVFnTVJRRUczU2NjVkE3NmFJVFUxbTRpMlFLR0FFMVp4X3p1YkZVb29ua1dyaXJ2UkdYNFhPWmNfdy1tQks4eG5RYw?oc=5)** — *The New York Times*
-- **[House GOP leaders face their post-election reckoning](https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcUVxMFlKYzBSTl8zOXFlX0FIWTZiVGo1b19Ha3M5Z1hYWVNuN2pDbG90enQ3a1RzUEVMcGYzQ3U2YlRTMWZKZzlxd3hvWmt0QmM5NnRmZHhjMkE5U3pGUE9ibEFJc2xJamU0azJSU01TbG10R0pjdzhrWWg5aWctNnBRSHZlWDdBbjBr?oc=5)** — *Politico*
-- **[After meeting Qatar PM, Trump calls Iran war ‘effectively over’ militarily](https://news.google.com/rss/articles/CBMipwFBVV95cUxPQk10al9Za09KSVdSOEJFak01MEtXS0I0bHg2Q2wzSmUzSDlEVlpObU41Mjg0aUZhQU5zR1NIbzdTMHJLV1FDbEk5WExHLUF0aUlHVU9CSlpEMXozNVFzSm5PTm4zekxYVmR6YlZLYUtHVUEzREp3UEIzSW1NTksyMWJXZTFiWTRvNW5oSGtQOVY3ZW1uOHdNYXJuWUtnWmhkVTRQWEsxRdIBrAFBVV95cUxOeDVLZnJwdDZ1b2dWamRIanBpZXUtQXE1dVhQeXVmY0haLVRFUDFwa2Zicl9FQTEyUXhFaE40dldBQmR1amhrSkFqd2U3Z1d4RXhSZ1VFTGpmeHpMNERLc2syWFZYLVk3aGtvQk5WZFRYWlRLODE3NEs4UGF4amM2ZEVFSmZJcElHaEpQSlJ2Z2ZsTFh4TUhhb3BqblV2ZHBHaTRPWXNpcDJMeTdG?oc=5)** — *Al Jazeera*
-- **[US supreme court clears way for Trump’s border wall in Texas’s Big Bend](https://news.google.com/rss/articles/CBMilgFBVV95cUxNZU9DcnBLNEtJYkt0clh3UFlrcGxkMkJLcmhVLXk4QUl2ZU5mMzQtaDVsanRFcnk5WklaZXVIVlh1WTZWVzd6YlBsakxNc3hMM1lKOVdHYnpkQy12RURveUNxSFZnNGlsRWRlOGVqdld2X0lmMFhkbGlWMG8zVFRMbUFzZ3FXTFphaWNIa29SZ0VxYVhpekE?oc=5)** — *The Guardian*
-- **[Investigators recover the voice recorder from a jet crash in Florida that killed 9](https://news.google.com/rss/articles/CBMilwFBVV95cUxPcDh3VlNjQ0NVd2RkeVFzT2x5RU54cEpiRkY2TWFrZU5zclpmN0cyMThNWXk3N052bW50bXNpQW1XaTIyamNvRU5rNDdJMTI2NjhodkNSMGh5RlFtN2lSb3lRd1JUczlReTdWMkgzTzV3enphUThDUWJqdS0wWU9LOVlXb1hvYkI4a19IbXBGODJXNVhuV3hB?oc=5)** — *AP News*
+- **[Hegseth Impeachment Effort Is Derailed by House Republicans](https://news.google.com/rss/articles/CBMifkFVX3lxTFA3aFh0N1I3eXV5VHBNTkx3MEhtTnRKSmNtZXFNaVI3a0V5SUF2T2VfaC1SRnp0Uk5xOWt4Y0hZajRjTHp0bGhKS3RVbFd0b2pPaTJzT0JtbDhGVUc0V2FDTGFiZS1HaFFOdG5IejdJTUlMTGZlUExfZDEyc2c0dw?oc=5)** — *The New York Times*
+- **[3 dead, 3 critically injured after vehicle smashes into pedestrians in Los Angeles](https://news.google.com/rss/articles/CBMitgFBVV95cUxNS0dUSlVUZVJOSEpEOWVaeFQyWTZiMU5GdnhXM1dGb0pFc3RCcmJYU1RJcFFWMGZRcE9EY3ZhV0Nid3dsODFIZkVPM2pCTFBnSHg4b2ZWRVh3b2N2TE5ta2psYXp6R2w4aXF6R1ZPdzBvVDd6a1NYNDF2ZTlVdTVJUVhpZmNyaUh1TEF6bGVGb2lJRk5qMGZmU0ZOSDY0RkpTZzJpVHFHVlIxdDNFc0dTTFF0QWRiUQ?oc=5)** — *NBC News*
+- **[US charges 3 men with plotting terror attacks, including planned assault on UK air base](https://news.google.com/rss/articles/CBMingFBVV95cUxQM0EzV2laWjJ3YTZhWW4wRTlqaER3MnhEWlk4bG52RUIzeTlFYVFHekl2UWhFSExiUVNqUDktR25SQUVUdEU1eFlwQmJhNEV2YTRCQ1VxUEZiUjlGeHlpV0w0cENrd2NFbVgyMnZVcFRtSExnTU9lckVOTl9abERDc1hyLXdXWHhKM2pnRmRLM1RlM0h2MEFrU1c4b1ZrQQ?oc=5)** — *AP News*
+- **[Jim Jordan picked as new minority leader for House GOP](https://news.google.com/rss/articles/CBMifEFVX3lxTE9lWU1BLThydUxVby1QRGJQS0pXSzBfSnR4X0FBVUw2bG8yZHU5d25QVlhmN1dTdUp1ZnQ0Tk5qMXlTdW4xd2tDbmUtQlUtaktCZ0R4LXRZNHQtNjkxNjJnWUFrZHYzQTJVcEJ1Mkk5NVdMSGNxTEpYQTVxZzE?oc=5)** — *Roll Call*
+- **[Supreme Court grapples with arguments over federal agencies’ power to impose fines](https://news.google.com/rss/articles/CBMitAFBVV95cUxQSm9rdUp0NWM3WUFGOTNheHp5TEU4UHlIcnBNaDc4MnNUd2l6Rk0yTVpOTjM0bUQtZFEyNEhYaDRDekJuZ2xuQmRTOHg2UnRMM2V6Q2cwc0RYdzhtdVhQWTZ2cTNYWlhsMnpLZEhjWUNra2JNQWRKRTl1NzFMRnFWNTNQcTNqVC1MLTlwVGplT1Bnb0xPR2ZaeGRDVkZIU1EwSTBBcjlWdjJ6NFJzTXVOVmtieUk?oc=5)** — *The Washington Post*
+- **[In Mississippi, voters await cliffhanger Senate result with hope and frustration](https://news.google.com/rss/articles/CBMiW0FVX3lxTFBVOGdrNzRtT04yNGlCV25rcVR6VlRvcWE5ckdfWkFCX3d1VU5QYUZrcVpLUVh1Rm01UUE4WUlRaU1hS1YtQ0kxd2E3UHdDbEdiSzRFemFsMlZvQm8?oc=5)** — *BBC*
 
 ---
-*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-11-10.*
+*Sources: FRED; U.S. Treasury (par yields); Yahoo Finance/stooq (crude); metalpriceapi.com; Google News RSS (Tavily fallback); release calendar from each agency's published schedule (PFEI/Census/FOMC); interpretive sections via Anthropic Claude. Data current as of 2026-11-11.*
